@@ -23,6 +23,7 @@ overflow-x:hidden;
 
 html{
 scroll-behavior:smooth;
+overflow-x:hidden;
 }
 
 /* glass */
@@ -55,11 +56,13 @@ position:absolute;
 top:50%;
 left:50%;
 transform:translate(-50%,-50%);
-font-size:120px;
+font-size:clamp(40px,10vw,120px);
 font-weight:800;
-color:rgba(255,255,255,0.03);
+color:rgba(255,255,255,0.04);
 white-space:nowrap;
 pointer-events:none;
+line-height:1;
+padding:0.2em 0;
 }
 
 .section-main{
@@ -83,7 +86,7 @@ width:400px;
 height:400px;
 background:#8B5CF6;
 top:-100px;
-left:-100px;
+left:0;
 }
 
 .blob2{
@@ -91,7 +94,7 @@ width:350px;
 height:350px;
 background:#22D3EE;
 bottom:-100px;
-right:-100px;
+right:0;
 }
 
 /* hero */
@@ -107,12 +110,17 @@ max-width:1200px;
 margin:auto;
 }
 
-/* mobile hero */
-
 @media(max-width:768px){
 
 .hero{
 grid-template-columns:1fr;
+gap:30px;
+padding:100px 16px 40px;
+}
+
+.blob1,.blob2{
+width:200px;
+height:200px;
 }
 
 }
@@ -190,19 +198,21 @@ transform:translate(-50%,-50%);
 <body>
 <div class="cursor-glow" id="cursorGlow"></div>
 
+<div style="position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:-1">
 <div class="blob blob1"></div>
 <div class="blob blob2"></div>
+</div>
 
 <!-- NAVBAR -->
 
-<nav class="fixed top-2 w-full flex justify-center p-4 z-50">
+<nav class="fixed top-2 w-full flex justify-center px-3 py-2 z-50">
     <!-- <nav class="fixed top-6 w-full flex justify-center z-50"> -->
 
 <div class="glass max-w-6xl w-full flex justify-between items-center px-6 py-3">
 
 <div class="font-bold">ArtsByPraveen</div>
 
-<div class="hidden md:flex gap-6 text-gray-300 justify-center">
+<div class="hidden md:flex gap-6 text-gray-300 items-center">
 
 <a href="#about">About</a>
 <a href="#services">Services</a>
@@ -272,7 +282,7 @@ I build fast modern websites using WordPress, WooCommerce and Shopify.
 
 <div class="section-title">
 
-<div class="section-bg">ABOUT</div>
+<h2 class="section-bg">ABOUT</h2>
 
 <h2 class="section-main">About Me</h2>
 
@@ -292,7 +302,7 @@ I'm Praveen, a freelance developer building WordPress and ecommerce websites.
 
 <div class="section-title">
 
-<div class="section-bg">SERVICES</div>
+<h2 class="section-bg">SERVICES</h2>
 
 <h2 class="section-main">Services</h2>
 
@@ -346,7 +356,7 @@ Modern Shopify ecommerce websites.
 
 <div class="section-title">
 
-<div class="section-bg">PROJECTS</div>
+<h2 class="section-bg">PROJECTS</h2>
 
 <h2 class="section-main">Projects</h2>
 
@@ -356,7 +366,7 @@ Modern Shopify ecommerce websites.
 
 <div class="glass overflow-hidden">
 
-<img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d">
+<img class="w-full h-auto" src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d">
 
 <div class="p-6">Ecommerce Website</div>
 
@@ -364,7 +374,7 @@ Modern Shopify ecommerce websites.
 
 <div class="glass overflow-hidden">
 
-<img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c">
+<img class="w-full h-auto" src="https://images.unsplash.com/photo-1555066931-4365d14bab8c">
 
 <div class="p-6">Developer Portfolio</div>
 
@@ -372,7 +382,7 @@ Modern Shopify ecommerce websites.
 
 <div class="glass overflow-hidden">
 
-<img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f">
+<img class="w-full h-auto" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f">
 
 <div class="p-6">Business Website</div>
 
@@ -388,7 +398,7 @@ Modern Shopify ecommerce websites.
 
 <div class="section-title">
 
-<div class="section-bg">CONTACT</div>
+<h2 class="section-bg">CONTACT</h2>
 
 <h2 class="section-main">Contact</h2>
 
@@ -396,11 +406,11 @@ Modern Shopify ecommerce websites.
 
 <form class="grid gap-4">
 
-<input class="glass p-4" placeholder="Name">
+<input class="glass p-4 w-full" placeholder="Name">
 
-<input class="glass p-4" placeholder="Email">
+<input class="glass p-4 w-full" placeholder="Email">
 
-<textarea rows="5" class="glass p-4" placeholder="Message"></textarea>
+<textarea rows="5" class="glass p-4 w-full" placeholder="Message"></textarea>
 
 <button class="btn">Send Message</button>
 
@@ -408,9 +418,48 @@ Modern Shopify ecommerce websites.
 
 </section>
 
-<footer class="py-10 text-center text-gray-400">
+<footer class="py-16 px-6">
 
-<p>© 2026 ArtsByPraveen</p>
+<div class="glass max-w-6xl mx-auto px-8 py-12">
+
+<div class="grid md:grid-cols-3 gap-10 mb-10">
+
+<div>
+<div class="font-bold text-xl mb-3">ArtsByPraveen</div>
+<p class="text-gray-400 text-sm leading-relaxed">Freelance WordPress & ecommerce developer crafting fast, modern websites that convert.</p>
+</div>
+
+<div>
+<div class="font-semibold mb-4 text-gray-200">Quick Links</div>
+<div class="flex flex-col gap-2 text-gray-400 text-sm">
+<a href="#about" class="hover:text-white transition">About</a>
+<a href="#services" class="hover:text-white transition">Services</a>
+<a href="#projects" class="hover:text-white transition">Projects</a>
+<a href="#contact" class="hover:text-white transition">Contact</a>
+</div>
+</div>
+
+<div>
+<div class="font-semibold mb-4 text-gray-200">Get In Touch</div>
+<div class="flex flex-col gap-2 text-gray-400 text-sm">
+<span>hello@artsbypraveen.com</span>
+<span>Available for freelance work</span>
+</div>
+<div class="flex gap-4 mt-5">
+<a href="#" class="glass w-10 h-10 flex items-center justify-center rounded-full hover:bg-white/10 transition text-sm">in</a>
+<a href="#" class="glass w-10 h-10 flex items-center justify-center rounded-full hover:bg-white/10 transition text-sm">gh</a>
+<a href="#" class="glass w-10 h-10 flex items-center justify-center rounded-full hover:bg-white/10 transition text-sm">tw</a>
+</div>
+</div>
+
+</div>
+
+<div class="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center gap-3 text-gray-500 text-sm">
+<span>© 2026 ArtsByPraveen. All rights reserved.</span>
+<span class="gradient font-medium">Designed & Built by Praveen</span>
+</div>
+
+</div>
 
 </footer>
 
