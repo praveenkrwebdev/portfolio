@@ -19,6 +19,7 @@ font-family:Inter;
 background:#0B0F19;
 color:white;
 overflow-x:hidden;
+-webkit-overflow-scrolling: touch;
 }
 
 html{
@@ -729,11 +730,11 @@ WhatsApp
 
 <div class="typing-wrap"><span id="typedText" class="typed-text"></span><span class="cursor-blink"></span></div>
 
-<p class="text-white font-semibold text-lg md:text-xl mb-6">I'm Praveen.</p>
+<p class="text-white font-semibold text-lg md:text-xl mb-6">I'm Praveen. A Web Developer</p>
 
 <h1 class="text-5xl md:text-7xl font-bold leading-tight">
 
-A Freelance <span class="gradient">Web Developer</span>
+Freelance <span class="gradient">WordPress Developer</span>
 
 </h1>
 
@@ -762,7 +763,7 @@ View Work
 <div class="parallax">
 
 <!-- <img class="rounded-xl w-full h-auto" src="file:///C:/Users/User/Downloads/Praveen-shrama-web-design-and-development.webp"> -->
-<img class="rounded-xl" src="https://praveenkrwebdev.github.io/portfolio/Praveen-shrama-web-design-and-development.webp">
+    <img class="rounded-xl" src="https://praveenkrwebdev.github.io/portfolio/Praveen-shrama-web-design-and-development.webp">
 
 
 </div>
@@ -1170,29 +1171,62 @@ View Work
 </div>
 
 <div class="contact-form-side">
-<form class="flex flex-col gap-0">
+<form id="contactForm" action="https://formsubmit.co/praveenkr.webdev@gmail.com" method="POST" class="flex flex-col gap-0">
 
-<div class="form-field">
-<svg width="16" height="16" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" stroke="#8B5CF6" stroke-width="1.8"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" stroke="#8B5CF6" stroke-width="1.8" stroke-linecap="round"/></svg>
-<input class="form-input" placeholder="Your Name">
+  <!-- hidden settings -->
+  <input type="hidden" name="_captcha" value="true">
+  <input type="hidden" name="_subject" value="New Portfolio Message!">
+  <input type="text" name="_honey" style="display:none">
+
+  <div class="form-field">
+    <svg width="16" height="16" fill="none" viewBox="0 0 24 24">
+      <circle cx="12" cy="8" r="4" stroke="#8B5CF6" stroke-width="1.8"/>
+      <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" stroke="#8B5CF6" stroke-width="1.8" stroke-linecap="round"/>
+    </svg>
+    <input class="form-input" name="name" placeholder="Your Name" required>
+  </div>
+
+  <div class="form-field">
+    <svg width="16" height="16" fill="none" viewBox="0 0 24 24">
+      <path d="M4 4h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2z" stroke="#8B5CF6" stroke-width="1.8"/>
+      <path d="M22 6l-10 7L2 6" stroke="#8B5CF6" stroke-width="1.8" stroke-linecap="round"/>
+    </svg>
+    <input class="form-input" name="email" type="email" placeholder="Email Address" required>
+  </div>
+
+  <div class="form-field">
+  <svg width="16" height="16" fill="none" viewBox="0 0 24 24">
+    <path d="M22 16.92v3a2 2 0 01-2.18 2A19.79 19.79 0 013.09 5.18 2 2 0 015.09 3h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L9.09 10.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="#8B5CF6" stroke-width="1.8" stroke-linecap="round"/>
+  </svg>
+  <input 
+  class="form-input" 
+  name="phone" 
+  type="tel"
+  inputmode="numeric"
+  placeholder="Phone (10 digits)"
+  maxlength="10"
+  required
+>
 </div>
 
-<div class="form-field">
-<svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2z" stroke="#8B5CF6" stroke-width="1.8"/><path d="M22 6l-10 7L2 6" stroke="#8B5CF6" stroke-width="1.8" stroke-linecap="round"/></svg>
-<input class="form-input" placeholder="Email Address" type="email">
-</div>
+  <div class="form-field textarea-field">
+    <svg width="16" height="16" fill="none" viewBox="0 0 24 24">
+      <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke="#8B5CF6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <textarea rows="4" class="form-input" name="message" placeholder="Tell me about your project" required></textarea>
+  </div>
 
-<div class="form-field">
-<svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2A19.79 19.79 0 013.09 5.18 2 2 0 015.09 3h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L9.09 10.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="#8B5CF6" stroke-width="1.8" stroke-linecap="round"/></svg>
-<input class="form-input" placeholder="Phone (optional)">
-</div>
+  <button type="submit" id="submitBtn" class="btn w-full mt-2" style="border-radius:12px">
+    Send Message
+  </button>
 
-<div class="form-field textarea-field">
-<svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke="#8B5CF6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-<textarea rows="4" class="form-input" placeholder="Tell me about your project"></textarea>
-</div>
+  <!-- messages -->
+  <p id="successMsg" style="display:none; color:#22c55e; margin-top:10px;">
+    ✅ Thank you! Your message has been sent.
+  </p>
 
-<button class="btn w-full mt-2" style="border-radius:12px">Send Message</button>
+  <p id="errorMsg" style="display:none; color:#ef4444; margin-top:10px;"></p>
+
 </form>
 </div>
 
@@ -1253,6 +1287,77 @@ View Work
 
 </footer>
 
+<script>
+const form = document.getElementById("contactForm");
+const btn = document.getElementById("submitBtn");
+const successMsg = document.getElementById("successMsg");
+const errorMsg = document.getElementById("errorMsg");
+
+// auto clean phone input
+form.phone.addEventListener("input", () => {
+  form.phone.value = form.phone.value.replace(/[^0-9]/g, "").slice(0, 10);
+});
+
+form.addEventListener("submit", async function(e) {
+  e.preventDefault();
+
+  successMsg.style.display = "none";
+  errorMsg.style.display = "none";
+
+  const name = form.name.value.trim();
+  const email = form.email.value.trim();
+  const phone = form.phone.value.trim();
+  const message = form.message.value.trim();
+
+  // required validation
+  if (!name || !email || !phone || !message) {
+    errorMsg.innerText = "Please fill all fields";
+    errorMsg.style.display = "block";
+    return;
+  }
+
+  // email validation
+  const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,}$/;
+  if (!email.match(emailPattern)) {
+    errorMsg.innerText = "Enter a valid email";
+    errorMsg.style.display = "block";
+    return;
+  }
+
+  // phone validation (STRICT)
+  if (!/^[0-9]{10}$/.test(phone)) {
+    errorMsg.innerText = "Enter valid 10 digit phone number";
+    errorMsg.style.display = "block";
+    return;
+  }
+
+  // loading state
+  btn.innerText = "Sending...";
+  btn.disabled = true;
+
+  try {
+    const res = await fetch(form.action, {
+      method: "POST",
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (res.ok) {
+      successMsg.style.display = "block";
+      form.reset();
+    } else {
+      throw new Error();
+    }
+
+  } catch (err) {
+    errorMsg.innerText = "Something went wrong. Try again.";
+    errorMsg.style.display = "block";
+  }
+
+  btn.innerText = "Send Message";
+  btn.disabled = false;
+});
+</script>
 <script>
 
 /* mobile menu */
