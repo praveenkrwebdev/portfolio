@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Projects | ArtsByPraveen</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+body{
+font-family:Inter;
+background:#0B0F19;
+color:white;
+overflow-x:hidden;
+}
+
+.glass{
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(14px);
+box-shadow:inset 0 0 0 1px rgba(255,255,255,0.08),0 8px 32px rgba(0,0,0,0.3);
+border-radius:35px;
+}
+
+.gradient{
+background:linear-gradient(135deg,#8B5CF6,#ee4622);
+-webkit-background-clip:text;
+color:transparent;
+}
+
+.mobile-menu{
+position:fixed;
+top:0;right:0;
+width:300px;height:100vh;
+background:rgba(11,15,25,0.98);
+transform:translateX(100%);
+transition:.3s;
+z-index:9999;
+padding:80px 20px;
+}
+
+.mobile-menu.active{
+transform:translateX(0);
+}
+
+.project-card{
+background:rgba(255,255,255,0.04);
+border-radius:20px;
+padding:20px;
+transition:.3s;
+}
+
+.project-card:hover{
+transform:translateY(-5px);
+box-shadow:0 10px 30px rgba(139,92,246,0.2);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- ===== NAVBAR (SAME STYLE) ===== -->
+
+<nav class="fixed top-2 w-full flex justify-center px-3 py-2 z-50">
+
+<div class="glass max-w-6xl w-full flex justify-between items-center px-6 py-3">
+
+<div class="font-bold">
+<a href="index.html">ArtsByPraveen</a>
+</div>
+
+<div class="hidden md:flex gap-4 items-center">
+<a href="index.html" class="text-gray-300 hover:text-white">Home</a>
+<a href="projects.html" class="text-white font-semibold">Projects</a>
+<a href="#contact" class="text-gray-300 hover:text-white">Contact</a>
+<a href="https://wa.me/919815898567" target="_blank" class="px-4 py-2 bg-purple-500 rounded-lg text-white">Get Quote</a>
+</div>
+
+<button id="menuBtn" class="md:hidden">☰</button>
+
+</div>
+</nav>
+
+<!-- ===== MOBILE MENU ===== -->
+
+<div id="mobileMenu" class="mobile-menu">
+
+<button id="menuClose" class="mb-6">✕</button>
+
+<a href="index.html" class="block mb-4">Home</a>
+<a href="projects.html" class="block mb-4">Projects</a>
+<a href="#contact" class="block mb-4">Contact</a>
+
+<a href="https://wa.me/919815898567" target="_blank" class="text-green-400">WhatsApp</a>
+
+</div>
+
+<!-- spacing -->
+<div class="h-24"></div>
+
+<!-- ===== PAGE HEADER ===== -->
+
+<section class="text-center py-16">
+<h1 class="text-5xl font-bold mb-4">
+All <span class="gradient">Projects</span>
+</h1>
+<p class="text-gray-400">Some of my recent work</p>
+</section>
+
+<!-- ===== PROJECT GRID ===== -->
+
+<section class="px-6 pb-20">
+
+<div id="projectsContainer" class="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+</div>
+
+</section>
+
+<!-- ===== FOOTER ===== -->
+
+<footer class="text-center py-10 border-t border-white/10">
+<p class="text-gray-500">© 2026 ArtsByPraveen</p>
+</footer>
+
+<!-- ===== PROJECT DATA ===== -->
+
+<script>
+const projects = [
+{
+title:"Speech Therapy Website",
+desc:"Professional clinic website with SEO and contact form",
+tech:"WordPress",
+link:"https://praveenkrwebdev.github.io/priyanka-speech-therapy/"
+},
+{
+title:"Portfolio Website",
+desc:"Modern animated developer portfolio",
+tech:"HTML + Tailwind",
+link:"#"
+},
+{
+title:"WooCommerce Store",
+desc:"Custom ecommerce with payment gateway",
+tech:"WooCommerce",
+link:"#"
+},
+{
+title:"Shopify Store",
+desc:"Conversion focused online store",
+tech:"Shopify",
+link:"#"
+},
+{
+title:"Business Website",
+desc:"Corporate site with lead generation",
+tech:"WordPress",
+link:"#"
+}
+];
+</script>
+
+<!-- ===== RENDER PROJECTS ===== -->
+
+<script>
+const container=document.getElementById("projectsContainer");
+
+projects.forEach(p=>{
+container.innerHTML+=`
+<div class="project-card">
+<h3 class="text-xl font-semibold mb-2">${p.title}</h3>
+<p class="text-gray-400 mb-3">${p.desc}</p>
+<p class="text-sm text-gray-500 mb-4">${p.tech}</p>
+<a href="${p.link}" target="_blank" class="text-purple-400 font-medium">View Project →</a>
+</div>
+`;
+});
+</script>
+
+<!-- ===== MOBILE MENU JS ===== -->
+
+<script>
+const menuBtn=document.getElementById("menuBtn");
+const mobileMenu=document.getElementById("mobileMenu");
+const menuClose=document.getElementById("menuClose");
+
+menuBtn.onclick=()=>mobileMenu.classList.add("active");
+menuClose.onclick=()=>mobileMenu.classList.remove("active");
+</script>
+
+</body>
+</html>
