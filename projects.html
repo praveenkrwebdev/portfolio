@@ -26,6 +26,7 @@ html{
 scroll-behavior:smooth;
 overflow-x:hidden;
 }
+.main-logo{height:40px; width:auto;}
 
 /* glass */
 
@@ -427,6 +428,16 @@ z-index:0;
 transform:translate(-50%,-50%);
 }
 
+@media(max-width:768px){
+
+.blob1,.blob2{
+width:200px;
+height:200px;
+}
+.main-logo{height:36px; width:auto;}
+
+}
+
 </style>
 
 </head>
@@ -448,7 +459,7 @@ transform:translate(-50%,-50%);
 
 <div class="font-bold flex items-center gap-2">
 <a href="https://praveenkrwebdev.github.io/portfolio/">    
-<img src="praveen-logo.svg" class="main-logo" alt="ArtsByPraveen" style="object-fit:contain" onerror="this.style.display='none'"></a>
+<img src="https://praveenkrwebdev.github.io/portfolio/praveen-logo.svg" class="main-logo" alt="ArtsByPraveen" style="object-fit:contain" onerror="this.style.display='none'"></a>
 <!-- <span>ArtsByPraveen</span> -->
 </div>
 
