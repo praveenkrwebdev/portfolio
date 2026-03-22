@@ -889,8 +889,49 @@ glow.style.top=e.clientY+'px'
 
 })
 
+/* typing */
 
+const words=['Hello','नमस्ते','வணக்கம்','నమస్కారం','السلام','નમસ્તે','ਸਤ ਸ੍ਰੀ ਅਕਾਲ']
+let wi=0,ci=0,deleting=false
+const el=document.getElementById('typedText')
 
+function type(){
+const word=words[wi]
+if(!deleting){
+el.textContent=word.slice(0,ci+1)
+ci++
+if(ci===word.length){setTimeout(()=>{deleting=true;type()},1400);return}
+}else{
+el.textContent=word.slice(0,ci-1)
+ci--
+if(ci===0){deleting=false;wi=(wi+1)%words.length}
+}
+setTimeout(type,deleting?60:100)
+}
+type()
+
+/* stats counter */
+
+const statsSection=document.querySelector('.stat-card').closest('section')
+let counted=false
+
+new IntersectionObserver(entries=>{
+if(entries[0].isIntersecting && !counted){
+counted=true
+document.querySelectorAll('.stat-num').forEach(el=>{
+const target=+el.dataset.target
+const span=el.querySelector('.count')
+const duration=1800
+const step=Math.ceil(duration/target)
+let cur=0
+const timer=setInterval(()=>{
+cur++
+span.textContent=cur
+if(cur>=target)clearInterval(timer)
+},step)
+})
+}
+},{threshold:0.4}).observe(statsSection)
 
 /* proj scroll nav */
 document.getElementById('projNext').addEventListener('click',()=>{
@@ -900,9 +941,17 @@ document.getElementById('projPrev').addEventListener('click',()=>{
 document.querySelector('.proj-scroll').scrollBy({left:-364,behavior:'smooth'})
 })
 
+/* parallax — desktop only */
 
+if(window.innerWidth>768){
+window.addEventListener("scroll",()=>{
+const sc=window.scrollY
+document.querySelectorAll(".parallax").forEach(el=>{
+el.style.transform=`translateY(${sc*0.15}px)`
+})
+},{passive:true})
+}
 
 </script>
-
 </body>
 </html>
