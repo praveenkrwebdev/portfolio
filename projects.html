@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,56 +6,676 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Projects | ArtsByPraveen</title>
+<title>ArtsByPraveen Portfolio</title>
 
 <script src="https://cdn.tailwindcss.com"></script>
 
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
 <style>
+
 body{
 font-family:Inter;
 background:#0B0F19;
 color:white;
 overflow-x:hidden;
+-webkit-overflow-scrolling: touch;
 }
+
+html{
+scroll-behavior:smooth;
+overflow-x:hidden;
+}
+
+/* glass */
 
 .glass{
 background:rgba(255,255,255,0.05);
 backdrop-filter:blur(14px);
+-webkit-backdrop-filter:blur(14px);
 box-shadow:inset 0 0 0 1px rgba(255,255,255,0.08),0 8px 32px rgba(0,0,0,0.3);
 border-radius:35px;
 }
 
+/* gradient text */
+
 .gradient{
+/* background:linear-gradient(135deg,#8B5CF6,#22D3EE); */
 background:linear-gradient(135deg,#8B5CF6,#ee4622);
 -webkit-background-clip:text;
 color:transparent;
 }
+
+/* big section background title */
+
+.section-title{
+position:relative;
+text-align:center;
+margin-bottom:80px;
+}
+
+.section-bg{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+font-size:clamp(40px,10vw,120px);
+font-weight:800;
+white-space:nowrap;
+pointer-events:none;
+line-height:1;
+padding:0.2em 0;
+background:linear-gradient(to top,transparent 0%,rgba(255,255,255,0.03) 40%,rgba(255,255,255,0.08) 100%);
+-webkit-background-clip:text;
+background-clip:text;
+color:transparent;
+}
+
+.section-main{
+position:relative;
+font-size:40px;
+font-weight:700;
+}
+
+/* floating blobs */
+
+.blob{
+position:absolute;
+border-radius:50%;
+filter:blur(120px);
+opacity:.35;
+z-index:-1;
+will-change:transform;
+}
+
+.blob1{
+width:400px;
+height:400px;
+background:#8B5CF6;
+top:-100px;
+left:0;
+}
+
+.blob2{
+width:350px;
+height:350px;
+background:#22D3EE;
+bottom:-100px;
+right:0;
+}
+
+/* hero */
+
+.hero{
+min-height:90vh;
+display:grid;
+grid-template-columns:1fr 1fr;
+align-items:center;
+gap:60px;
+padding:140px 20px;
+max-width:1200px;
+margin:auto;
+}
+
+.main-logo{height:40px; width:auto;}
+
+@media(max-width:768px){
+
+.hero{
+grid-template-columns:1fr;
+gap:30px;
+padding:100px 16px 40px;
+}
+
+.blob1,.blob2{
+width:200px;
+height:200px;
+}
+.main-logo{height:36px; width:auto;}
+
+}
+
+/* typing animation */
+
+.typing-wrap{
+font-size:clamp(1rem,3vw,1.4rem);
+font-weight:500;
+color:rgba(255,255,255,0.7);
+margin-bottom:16px;
+min-height:2em;
+display:flex;
+align-items:center;
+gap:8px;
+}
+
+.typed-text{
+background:linear-gradient(135deg,#8B5CF6,#22D3EE);
+-webkit-background-clip:text;
+color:transparent;
+font-weight:700;
+}
+
+.cursor-blink{
+display:inline-block;
+width:2px;
+height:1.1em;
+background:linear-gradient(135deg,#8B5CF6,#22D3EE);
+margin-left:2px;
+vertical-align:middle;
+animation:blink .7s step-end infinite;
+}
+
+@keyframes blink{
+0%,100%{opacity:1}50%{opacity:0}
+}
+
+/* logo marquee */
+
+.marquee-outer{
+overflow:hidden;
+position:relative;
+}
+
+.marquee-outer::before,
+.marquee-outer::after{
+content:'';
+position:absolute;
+top:0;
+bottom:0;
+width:80px;
+z-index:2;
+}
+
+.marquee-outer::before{left:0;background:linear-gradient(to right,#0B0F19,transparent);}
+.marquee-outer::after{right:0;background:linear-gradient(to left,#0B0F19,transparent);}
+
+.marquee-track{
+display:flex;
+gap:32px;
+width:max-content;
+animation:marquee 30s linear infinite;
+will-change:transform;
+}
+
+.marquee-track.reverse{
+animation:marquee-rev 30s linear infinite;
+will-change:transform;
+}
+
+@keyframes marquee{
+0%{transform:translateX(0)}100%{transform:translateX(-50%)}
+}
+
+@keyframes marquee-rev{
+0%{transform:translateX(-50%)}100%{transform:translateX(0)}
+}
+
+.logo-card{
+flex-shrink:0;
+width:130px;
+height:60px;
+display:flex;
+align-items:center;
+justify-content:center;
+background:rgba(255,255,255,0.05);
+box-shadow:inset 0 0 0 1px rgba(255,255,255,0.07);
+border-radius:14px;
+padding:8px 14px;
+overflow:hidden;
+}
+
+.logo-card img{
+width:100%;
+height:100%;
+object-fit:contain;
+filter:grayscale(1) brightness(1.4);
+opacity:0.6;
+transition:.3s;
+}
+
+.logo-card:hover img{
+filter:grayscale(0) brightness(1);
+opacity:1;
+}
+
+/* whatsapp float */
+.wa-btn{
+position:fixed;
+bottom:28px;
+right:28px;
+z-index:999;
+width:58px;
+height:58px;
+border-radius:50%;
+background:#25D366;
+display:flex;
+align-items:center;
+justify-content:center;
+box-shadow:0 4px 24px rgba(37,211,102,.5);
+transition:.3s;
+}
+
+.wa-btn:hover{
+transform:scale(1.12);
+box-shadow:0 6px 32px rgba(37,211,102,.8);
+}
+
+/* proj nav */
+.proj-nav{
+display:flex;
+justify-content:flex-end;
+gap:10px;
+margin-bottom:20px;
+}
+.proj-nav button{
+width:40px;
+height:40px;
+border-radius:50%;
+background:rgba(255,255,255,0.06);
+box-shadow:inset 0 0 0 1px rgba(255,255,255,0.1);
+display:flex;
+align-items:center;
+justify-content:center;
+cursor:pointer;
+transition:.2s;
+}
+.proj-nav button:hover{background:rgba(139,92,246,0.3);}
+
+/* project cards */
+
+.proj-scroll{
+display:flex;
+gap:24px;
+overflow-x:auto;
+scroll-snap-type:x mandatory;
+-webkit-overflow-scrolling:touch;
+padding-bottom:16px;
+scrollbar-width:none;
+}
+.proj-scroll::-webkit-scrollbar{display:none;}
+
+.proj-card{
+flex-shrink:0;
+width:340px;
+border-radius:28px;
+background:rgba(255,255,255,0.04);
+backdrop-filter:blur(14px);
+-webkit-backdrop-filter:blur(14px);
+box-shadow:inset 0 0 0 1px rgba(255,255,255,0.08);
+overflow:hidden;
+scroll-snap-align:start;
+transition:transform .3s;
+}
+.proj-card:hover{
+transform:translateY(-5px);
+box-shadow:inset 0 0 0 1px rgba(255,255,255,0.13),0 10px 30px rgba(139,92,246,0.12);
+}
+.proj-img{
+position:relative;
+overflow:hidden;
+height:200px;
+}
+.proj-img img{
+width:100%;
+height:100%;
+object-fit:cover;
+transition:transform .4s;
+}
+.proj-card:hover .proj-img img{transform:scale(1.06);}
+.proj-overlay{
+position:absolute;
+inset:0;
+background:rgba(11,15,25,0.6);
+display:flex;
+align-items:center;
+justify-content:center;
+opacity:0;
+transition:.3s;
+}
+.proj-card:hover .proj-overlay{opacity:1;}
+.proj-link{
+background:linear-gradient(135deg,#8B5CF6,#22D3EE);
+color:#000;
+font-weight:700;
+padding:10px 22px;
+border-radius:50px;
+font-size:14px;
+}
+.proj-body{padding:24px;}
+.proj-tag{
+display:inline-block;
+font-size:11px;
+font-weight:600;
+padding:4px 12px;
+border-radius:50px;
+margin-bottom:12px;
+letter-spacing:.5px;
+text-transform:uppercase;
+}
+.proj-title{font-size:18px;font-weight:700;margin-bottom:8px;}
+.proj-desc{font-size:13px;color:rgba(255,255,255,0.5);line-height:1.6;margin-bottom:16px;}
+.proj-stack{display:flex;flex-wrap:wrap;gap:8px;}
+.proj-stack span{
+font-size:11px;
+padding:3px 10px;
+border-radius:50px;
+background:rgba(255,255,255,0.06);
+color:rgba(255,255,255,0.5);
+}
+
+/* skill pills */
+.skill-grid{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px;}
+.skill-pill{
+display:flex;align-items:center;gap:8px;
+padding:8px 16px;border-radius:50px;
+background:rgba(255,255,255,0.05);
+box-shadow:inset 0 0 0 1px rgba(255,255,255,0.08);
+font-size:13px;font-weight:500;color:rgba(255,255,255,0.8);
+transition:.25s;
+}
+.skill-pill:hover{background:rgba(255,255,255,0.09);transform:translateY(-2px);}
+.skill-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
+
+/* contact */
+.contact-wrap{
+border-radius:35px;overflow:hidden;
+background:rgba(255,255,255,0.04);
+backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+box-shadow:inset 0 0 0 1px rgba(255,255,255,0.08);
+display:grid;grid-template-columns:1fr 1fr;
+}
+@media(max-width:768px){.contact-wrap{grid-template-columns:1fr;}}
+.contact-info{
+padding:48px 40px;
+background:linear-gradient(135deg,rgba(139,92,246,0.12),rgba(34,211,238,0.05));
+}
+.contact-form-side{padding:48px 40px;}
+@media(max-width:768px){.contact-info,.contact-form-side{padding:32px 24px;}}
+.form-field{position:relative;margin-bottom:18px;}
+.form-field svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);pointer-events:none;opacity:.5;}
+.form-field.textarea-field svg{top:16px;transform:none;}
+.form-input{
+width:100%;background:rgba(255,255,255,0.05);
+box-shadow:inset 0 0 0 1px rgba(255,255,255,0.08);
+border-radius:12px;padding:13px 14px 13px 42px;
+color:white;font-size:14px;font-family:Inter;outline:none;transition:.2s;
+}
+.form-input::placeholder{color:rgba(255,255,255,0.3);}
+.form-input:focus{
+box-shadow:inset 0 0 0 1px rgba(139,92,246,0.7),0 0 0 3px rgba(139,92,246,0.1);
+background:rgba(139,92,246,0.06);
+}
+textarea.form-input{padding-top:13px;resize:none;}
+
+/* service cards */
+
+.service-card{
+position:relative;
+padding:40px 36px;
+border-radius:28px;
+background:rgba(255,255,255,0.03);
+backdrop-filter:blur(20px);
+-webkit-backdrop-filter:blur(20px);
+box-shadow:inset 0 0 0 1px rgba(255,255,255,0.07),0 8px 40px rgba(0,0,0,0.4);
+overflow:hidden;
+transition:transform .35s,box-shadow .35s;
+}
+
+.service-card::before{
+content:'';
+position:absolute;
+top:0;left:0;right:0;
+height:3px;
+}
+
+.service-card::after{
+content:'';
+position:absolute;
+bottom:-80px;right:-80px;
+width:200px;height:200px;
+border-radius:50%;
+opacity:0;
+transition:opacity .4s;
+pointer-events:none;
+}
+
+.service-card:nth-child(1)::before{background:linear-gradient(90deg,#8B5CF6,#22D3EE);}
+.service-card:nth-child(2)::before{background:linear-gradient(90deg,#22D3EE,#8B5CF6);}
+.service-card:nth-child(3)::before{background:linear-gradient(90deg,#EC4899,#8B5CF6);}
+
+.service-card:nth-child(1)::after{background:radial-gradient(circle,rgba(139,92,246,.18),transparent 70%);}
+.service-card:nth-child(2)::after{background:radial-gradient(circle,rgba(34,211,238,.15),transparent 70%);}
+.service-card:nth-child(3)::after{background:radial-gradient(circle,rgba(236,72,153,.15),transparent 70%);}
+
+.service-card:hover::after{opacity:1;}
+
+.service-card:nth-child(1):hover{
+transform:translateY(-8px);
+box-shadow:inset 0 0 0 1px rgba(139,92,246,0.3),0 24px 60px rgba(139,92,246,0.25);
+}
+.service-card:nth-child(2):hover{
+transform:translateY(-8px);
+box-shadow:inset 0 0 0 1px rgba(34,211,238,0.3),0 24px 60px rgba(34,211,238,0.2);
+}
+.service-card:nth-child(3):hover{
+transform:translateY(-8px);
+box-shadow:inset 0 0 0 1px rgba(236,72,153,0.3),0 24px 60px rgba(236,72,153,0.2);
+}
+
+.service-icon{
+width:64px;
+height:64px;
+border-radius:18px;
+display:flex;
+align-items:center;
+justify-content:center;
+margin-bottom:28px;
+}
+
+.service-num{
+position:absolute;
+top:32px;right:32px;
+font-size:64px;
+font-weight:900;
+line-height:1;
+opacity:0.04;
+pointer-events:none;
+letter-spacing:-2px;
+}
+
+/* stats */
+
+.stat-card{
+text-align:center;
+padding:40px 20px;
+position:relative;
+}
+
+.stat-card+.stat-card::before{
+content:'';
+position:absolute;
+left:0;top:20%;bottom:20%;
+width:1px;
+background:linear-gradient(to bottom,transparent,rgba(255,255,255,0.1),transparent);
+}
+
+@media(max-width:768px){
+.stat-card+.stat-card::before{
+left:20%;right:20%;top:0;bottom:auto;
+width:auto;height:1px;
+background:linear-gradient(to right,transparent,rgba(255,255,255,0.1),transparent);
+}
+}
+
+.stat-num{
+font-size:clamp(2.5rem,6vw,4rem);
+font-weight:800;
+background:linear-gradient(135deg,#8B5CF6,#ee4622);
+-webkit-background-clip:text;
+color:transparent;
+line-height:1;
+}
+
+/* parallax object */
+
+.parallax{
+transform:translateY(0px);
+transition:transform .1s linear;
+will-change:transform;
+}
+
+/* buttons */
+
+.btn{
+background:linear-gradient(135deg,#8B5CF6,#22D3EE);
+padding:14px 28px;
+border-radius:12px;
+font-weight:600;
+color:black;
+}
+
+/* glow button */
+.btn-glow{
+background:linear-gradient(135deg,#8b5cf6,#06b6d4);
+box-shadow:0 0 25px rgba(139,92,246,.6);
+transition:.3s;
+}
+
+.btn-glow:hover{
+box-shadow:0 0 45px rgba(139,92,246,1);
+transform:translateY(-3px);
+}
+
+/* hero buttons */
+.hero-btn-primary{
+display:inline-flex;
+align-items:center;
+gap:8px;
+padding:10px 20px;
+border-radius:12px;
+font-size:13px;
+font-weight:600;
+color:#fff;
+background:rgba(236,72,153,0.15);
+box-shadow:inset 0 0 0 1px rgba(236,72,153,0.4),0 0 18px rgba(236,72,153,0.25);
+transition:transform .25s,box-shadow .25s,background .25s;
+}
+.hero-btn-primary:hover{
+transform:translateY(-2px);
+background:rgba(236,72,153,0.22);
+box-shadow:inset 0 0 0 1px rgba(236,72,153,0.7),0 0 32px rgba(236,72,153,0.45);
+}
+
+.hero-btn-ghost{
+display:inline-flex;
+align-items:center;
+gap:8px;
+padding:10px 20px;
+border-radius:12px;
+font-size:13px;
+font-weight:600;
+color:rgba(255,255,255,0.7);
+background:rgba(255,255,255,0.04);
+box-shadow:inset 0 0 0 1px rgba(255,255,255,0.1);
+transition:transform .25s,box-shadow .25s,color .25s,background .25s;
+}
+.hero-btn-ghost:hover{
+transform:translateY(-2px);
+color:#fff;
+background:rgba(255,255,255,0.08);
+box-shadow:inset 0 0 0 1px rgba(255,255,255,0.2);
+}
+
+/* mobile menu */
 
 .mobile-menu{
 position:fixed;
 top:0;right:0;
 width:300px;height:100vh;
 background:rgba(11,15,25,0.98);
+backdrop-filter:blur(24px);
+-webkit-backdrop-filter:blur(24px);
+box-shadow:-4px 0 40px rgba(0,0,0,0.6);
+display:flex;
+flex-direction:column;
+align-items:flex-start;
+justify-content:flex-start;
+padding:72px 20px 40px;
+gap:4px;
 transform:translateX(100%);
-transition:.3s;
+transition:transform .35s cubic-bezier(.77,0,.18,1);
 z-index:9999;
-padding:80px 20px;
 }
 
 .mobile-menu.active{
 transform:translateX(0);
 }
 
-.project-card{
-background:rgba(255,255,255,0.04);
-border-radius:20px;
-padding:20px;
-transition:.3s;
+.mobile-menu a{
+font-size:14px;
+font-weight:500;
+color:rgba(255,255,255,0.6);
+padding:10px 14px;
+width:100%;
+border-radius:10px;
+transition:.2s;
+display:flex;
+align-items:center;
+gap:10px;
 }
 
-.project-card:hover{
-transform:translateY(-5px);
-box-shadow:0 10px 30px rgba(139,92,246,0.2);
+.mobile-menu a:hover{color:#fff;background:rgba(255,255,255,0.06);}
+
+.mobile-menu .menu-divider{
+width:100%;height:1px;
+background:rgba(255,255,255,0.06);
+margin:6px 0;
+}
+
+.menu-close{
+position:absolute;
+top:16px;right:16px;
+width:36px;height:36px;
+border-radius:50%;
+background:rgba(255,255,255,0.08);
+box-shadow:inset 0 0 0 1px rgba(255,255,255,0.2);
+display:flex;align-items:center;justify-content:center;
+cursor:pointer;
+transition:.2s;
+z-index:10000;
+}
+.menu-close:hover{background:rgba(139,92,246,0.5);}
+
+/* nav active */
+.nav-link{
+color:rgba(255,255,255,0.6);
+}
+.nav-link::after{
+content:'';
+position:absolute;
+bottom:-2px;left:50%;right:50%;
+height:2px;
+border-radius:2px;
+background:linear-gradient(90deg,#8B5CF6,#22D3EE);
+transition:left .25s,right .25s;
+}
+.nav-link.active{
+color:#fff;
+}
+.nav-link.active::after{
+left:12px;right:12px;
+}
+
+/* mouse glow */
+.cursor-glow{
+position:fixed;
+width:500px;
+height:500px;
+border-radius:50%;
+pointer-events:none;
+background:radial-gradient(circle,rgba(139,92,246,.07) 0%,transparent 65%);
+z-index:0;
+transform:translate(-50%,-50%);
 }
 
 </style>
@@ -62,134 +683,647 @@ box-shadow:0 10px 30px rgba(139,92,246,0.2);
 </head>
 
 <body>
+<div class="cursor-glow" id="cursorGlow"></div>
 
-<!-- ===== NAVBAR (SAME STYLE) ===== -->
+<div style="position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:-1">
+<div class="blob blob1"></div>
+<div class="blob blob2"></div>
+</div>
+
+<!-- NAVBAR -->
 
 <nav class="fixed top-2 w-full flex justify-center px-3 py-2 z-50">
+    <!-- <nav class="fixed top-6 w-full flex justify-center z-50"> -->
 
 <div class="glass max-w-6xl w-full flex justify-between items-center px-6 py-3">
 
-<div class="font-bold">
-<a href="index.html">ArtsByPraveen</a>
+<div class="font-bold flex items-center gap-2">
+<a href="https://praveenkrwebdev.github.io/portfolio/">    
+<img src="praveen-logo.svg" class="main-logo" alt="ArtsByPraveen" style="object-fit:contain" onerror="this.style.display='none'"></a>
+<!-- <span>ArtsByPraveen</span> -->
 </div>
 
-<div class="hidden md:flex gap-4 items-center">
-<a href="index.html" class="text-gray-300 hover:text-white">Home</a>
-<a href="projects.html" class="text-white font-semibold">Projects</a>
-<a href="#contact" class="text-gray-300 hover:text-white">Contact</a>
-<a href="https://wa.me/919815898567" target="_blank" class="px-4 py-2 bg-purple-500 rounded-lg text-white">Get Quote</a>
+<div class="hidden md:flex gap-1 text-gray-300 items-center">
+
+<a href="#" class="nav-link px-4 py-2 rounded-lg text-sm font-medium hover:text-white transition relative">Home</a>
+<a href="#about" class="nav-link px-4 py-2 rounded-lg text-sm font-medium hover:text-white transition relative">About</a>
+<a href="#services" class="nav-link px-4 py-2 rounded-lg text-sm font-medium hover:text-white transition relative">Services</a>
+<a href="#projects" class="nav-link px-4 py-2 rounded-lg text-sm font-medium hover:text-white transition relative">Projects</a>
+<a href="#contact" class="nav-link px-4 py-2 rounded-lg text-sm font-medium hover:text-white transition relative">Contact</a>
+
+<a href="https://wa.me/919815898567" target="_blank" class="hero-btn-primary ml-3">Get A Quote</a>
+
 </div>
 
-<button id="menuBtn" class="md:hidden">☰</button>
+<button id="menuBtn" class="md:hidden p-2 rounded-lg" style="background:rgba(255,255,255,0.06)">
+<svg width="20" height="20" fill="none" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+</button>
 
 </div>
+
 </nav>
 
-<!-- ===== MOBILE MENU ===== -->
+<!-- MOBILE MENU -->
 
 <div id="mobileMenu" class="mobile-menu">
 
-<button id="menuClose" class="mb-6">✕</button>
-
-<a href="index.html" class="block mb-4">Home</a>
-<a href="projects.html" class="block mb-4">Projects</a>
-<a href="#contact" class="block mb-4">Contact</a>
-
-<a href="https://wa.me/919815898567" target="_blank" class="text-green-400">WhatsApp</a>
-
+<!-- top bar: logo + close -->
+<div style="position:absolute;top:0;left:0;right:0;height:60px;display:flex;align-items:center;justify-content:space-between;padding:0 16px;border-bottom:1px solid rgba(255,255,255,0.06)">
+<div class="font-bold text-sm flex items-center gap-2">
+<img src="https://praveenkrwebdev.github.io/portfolio/praveen-web-design-main-logo.svg" alt="logo" style="height:32px;width:auto" onerror="this.style.display='none'">
+<!-- <span class="gradient">ArtsByPraveen</span> -->
+</div>
+<button class="menu-close" id="menuClose">
+<svg width="14" height="14" fill="none" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+</button>
 </div>
 
-<!-- spacing -->
-<div class="h-24"></div>
+<a class="menuLink" href="#">
+<svg width="15" height="15" fill="none" viewBox="0 0 24 24"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H5a1 1 0 01-1-1V9.5z" stroke="#8B5CF6" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 21V12h6v9" stroke="#8B5CF6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+Home
+</a>
+<a class="menuLink" href="#about">
+<svg width="15" height="15" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" stroke="#22D3EE" stroke-width="1.8"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" stroke="#22D3EE" stroke-width="1.8" stroke-linecap="round"/></svg>
+About
+</a>
+<a class="menuLink" href="#services">
+<svg width="15" height="15" fill="none" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3" stroke="#22D3EE" stroke-width="1.8"/><path d="M3 9h18M9 21V9" stroke="#22D3EE" stroke-width="1.8" stroke-linecap="round"/></svg>
+Services
+</a>
+<a class="menuLink" href="#projects">
+<svg width="15" height="15" fill="none" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" stroke="#EC4899" stroke-width="1.8"/><path d="M8 21h8M12 17v4" stroke="#EC4899" stroke-width="1.8" stroke-linecap="round"/></svg>
+Projects
+</a>
+<a class="menuLink" href="#contact">
+<svg width="15" height="15" fill="none" viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke="#a78bfa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+Contact
+</a>
 
-<!-- ===== PAGE HEADER ===== -->
+<div class="menu-divider"></div>
 
-<section class="text-center py-16">
-<h1 class="text-5xl font-bold mb-4">
-All <span class="gradient">Projects</span>
+<a href="https://wa.me/919815898567" target="_blank" class="mt-2" style="background:rgba(37,211,102,0.12);color:#25D366;border-radius:10px">
+<svg width="16" height="16" viewBox="0 0 32 32" fill="none"><path d="M16 3C9.373 3 4 8.373 4 15c0 2.385.668 4.61 1.832 6.5L4 29l7.75-1.812A11.94 11.94 0 0016 28c6.627 0 12-5.373 12-12S22.627 3 16 3z" fill="#25D366"/><path d="M21.5 18.5c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.49-1.76-1.66-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.68-1.63-.93-2.23-.24-.58-.49-.5-.68-.51-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.22 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z" fill="white"/></svg>
+WhatsApp
+</a>
+</div>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div>
+
+<div class="typing-wrap"><span id="typedText" class="typed-text"></span><span class="cursor-blink"></span></div>
+
+<!-- <p class="text-white font-semibold text-lg md:text-xl mb-6">I'm Praveen.</p> -->
+
+<h1 class="text-5xl md:text-7xl font-bold leading-tight">
+
+I'm Praveen - <span class="gradient">A Freelance Web Developer</span>
+
 </h1>
-<p class="text-gray-400">Some of my recent work</p>
-</section>
 
-<!-- ===== PROJECT GRID ===== -->
+<p class="text-gray-400 mt-6">
 
-<section class="px-6 pb-20">
+I build fast modern websites using WordPress, Wix, WooCommerce and Shopify.
 
-<div id="projectsContainer" class="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+</p>
+
+<div class="mt-8 flex gap-3">
+<a href="https://wa.me/919815898567" target="_blank" class="hero-btn-primary">
+<div style="width:28px;height:28px;border-radius:8px;background:rgba(236,72,153,0.25);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+<svg width="14" height="14" fill="none" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2A19.79 19.79 0 013.09 5.18 2 2 0 015.09 3h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L9.09 10.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="#EC4899" stroke-width="1.8" stroke-linecap="round"/></svg>
+</div>
+Start A Project
+</a>
+<a href="#projects" class="hero-btn-ghost">
+<div style="width:28px;height:28px;border-radius:8px;background:rgba(255,255,255,0.07);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+<svg width="14" height="14" fill="none" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" stroke="rgba(255,255,255,0.6)" stroke-width="1.8"/><path d="M8 21h8M12 17v4" stroke="rgba(255,255,255,0.6)" stroke-width="1.8" stroke-linecap="round"/></svg>
+</div>
+View My Work
+</a>
+</div>
+
+</div>
+
+<div class="parallax">
+
+<!-- <img class="rounded-xl w-full h-auto" src="file:///C:/Users/User/Downloads/Praveen-shrama-web-design-and-development.webp"> -->
+    <img class="rounded-xl" src="https://praveenkrwebdev.github.io/portfolio/Praveen-shrama-web-design-and-development.webp">
+
 
 </div>
 
 </section>
 
-<!-- ===== FOOTER ===== -->
+<!-- CLIENTS LOGO SCROLL -->
 
-<footer class="text-center py-10 border-t border-white/10">
-<p class="text-gray-500">© 2026 ArtsByPraveen</p>
+<section class="py-16 px-6">
+
+<p class="text-center text-gray-500 text-sm uppercase tracking-widest mb-10">Trusted by companies I've worked with</p>
+
+<div class="marquee-outer mb-5">
+<div class="marquee-track">
+<div class="logo-card"><img src="https://picsum.photos/seed/l1/120/50" alt="Client Logo"></div>
+<div class="logo-card"><img src="https://picsum.photos/seed/l2/120/50" alt="Client Logo"></div>
+<div class="logo-card"><img src="https://picsum.photos/seed/l3/120/50" alt="Client Logo"></div>
+<div class="logo-card"><img src="https://picsum.photos/seed/l4/120/50" alt="Client Logo"></div>
+<div class="logo-card"><img src="https://picsum.photos/seed/l5/120/50" alt="Client Logo"></div>
+<div class="logo-card"><img src="https://picsum.photos/seed/l6/120/50" alt="Client Logo"></div>
+<div class="logo-card"><img src="https://picsum.photos/seed/l7/120/50" alt="Client Logo"></div>
+<div class="logo-card"><img src="https://picsum.photos/seed/l8/120/50" alt="Client Logo"></div>
+<div class="logo-card"><img src="https://picsum.photos/seed/l9/120/50" alt="Client Logo"></div>
+<div class="logo-card"><img src="https://picsum.photos/seed/l10/120/50" alt="Client Logo"></div>
+<!-- duplicate -->
+<div class="logo-card"><img src="https://picsum.photos/seed/l1/120/50" alt="Client Logo"></div>
+<div class="logo-card"><img src="https://picsum.photos/seed/l2/120/50" alt="Client Logo"></div>
+<div class="logo-card"><img src="https://picsum.photos/seed/l3/120/50" alt="Client Logo"></div>
+<div class="logo-card"><img src="https://picsum.photos/seed/l4/120/50" alt="Client Logo"></div>
+<div class="logo-card"><img src="https://picsum.photos/seed/l5/120/50" alt="Client Logo"></div>
+<div class="logo-card"><img src="https://picsum.photos/seed/l6/120/50" alt="Client Logo"></div>
+<div class="logo-card"><img src="https://picsum.photos/seed/l7/120/50" alt="Client Logo"></div>
+<div class="logo-card"><img src="https://picsum.photos/seed/l8/120/50" alt="Client Logo"></div>
+<div class="logo-card"><img src="https://picsum.photos/seed/l9/120/50" alt="Client Logo"></div>
+<div class="logo-card"><img src="https://picsum.photos/seed/l10/120/50" alt="Client Logo"></div>
+</div>
+</div>
+
+<div class="marquee-outer">
+<div class="marquee-track reverse">
+<div class="logo-card"><img src="https://picsum.photos/seed/l11/120/50" alt="Client Logo"></div>
+<div class="logo-card"><img src="https://picsum.photos/seed/l12/120/50" alt="Client Logo"></div>
+<div class="logo-card"><img src="https://picsum.photos/seed/l13/120/50" alt="Client Logo"></div>
+<div class="logo-card"><img src="https://picsum.photos/seed/l14/120/50" alt="Client Logo"></div>
+<div class="logo-card"><img src="https://picsum.photos/seed/l15/120/50" alt="Client Logo"></div>
+<div class="logo-card"><img src="https://picsum.photos/seed/l16/120/50" alt="Client Logo"></div>
+<div class="logo-card"><img src="https://picsum.photos/seed/l17/120/50" alt="Client Logo"></div>
+<div class="logo-card"><img src="https://picsum.photos/seed/l18/120/50" alt="Client Logo"></div>
+<div class="logo-card"><img src="https://picsum.photos/seed/l19/120/50" alt="Client Logo"></div>
+<div class="logo-card"><img src="https://picsum.photos/seed/l20/120/50" alt="Client Logo"></div>
+<!-- duplicate -->
+<div class="logo-card"><img src="https://picsum.photos/seed/l11/120/50" alt="Client Logo"></div>
+<div class="logo-card"><img src="https://picsum.photos/seed/l12/120/50" alt="Client Logo"></div>
+<div class="logo-card"><img src="https://picsum.photos/seed/l13/120/50" alt="Client Logo"></div>
+<div class="logo-card"><img src="https://picsum.photos/seed/l14/120/50" alt="Client Logo"></div>
+<div class="logo-card"><img src="https://picsum.photos/seed/l15/120/50" alt="Client Logo"></div>
+<div class="logo-card"><img src="https://picsum.photos/seed/l16/120/50" alt="Client Logo"></div>
+<div class="logo-card"><img src="https://picsum.photos/seed/l17/120/50" alt="Client Logo"></div>
+<div class="logo-card"><img src="https://picsum.photos/seed/l18/120/50" alt="Client Logo"></div>
+<div class="logo-card"><img src="https://picsum.photos/seed/l19/120/50" alt="Client Logo"></div>
+<div class="logo-card"><img src="https://picsum.photos/seed/l20/120/50" alt="Client Logo"></div>
+</div>
+</div>
+
+</section>
+
+<!-- EXPERIENCE STATS -->
+
+<section class="py-20 px-6 max-w-4xl mx-auto">
+
+<div class="glass grid grid-cols-1 md:grid-cols-3">
+
+<div class="stat-card">
+<div class="stat-num" data-target="5"><span class="count">0</span>+</div>
+<div class="text-gray-300 font-semibold mt-2">Years Experience</div>
+</div>
+
+<div class="stat-card">
+<div class="stat-num" data-target="50"><span class="count">0</span>+</div>
+<div class="text-gray-300 font-semibold mt-2">Projects Delivered</div>
+</div>
+
+<div class="stat-card">
+<div class="stat-num" data-target="50"><span class="count">0</span>+</div>
+<div class="text-gray-300 font-semibold mt-2">Satisfied Clients</div>
+</div>
+
+</div>
+
+</section>
+
+
+
+
+
+<!-- PROJECTS -->
+
+<section id="projects" class="py-28 px-6 max-w-6xl mx-auto">
+
+<div class="section-title">
+<h2 class="section-bg">PROJECTS</h2>
+<h2 class="section-main">Projects</h2>
+</div>
+
+<div class="proj-nav">
+<button id="projPrev"><svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+<button id="projNext"><svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+</div>
+
+<div class="proj-scroll">
+
+<div class="proj-card">
+<div class="proj-img"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80" alt="Ecommerce"><div class="proj-overlay"><a href="#" class="proj-link">View Live ↗</a></div></div>
+<div class="proj-body">
+<div class="proj-tag" style="background:rgba(139,92,246,0.15);color:#a78bfa">WooCommerce</div>
+<h3 class="proj-title">Ecommerce Website</h3>
+<p class="proj-desc">Full-featured online store with custom checkout, product filters and payment gateway.</p>
+<div class="proj-stack"><span>WordPress</span><span>WooCommerce</span><span>Elementor</span></div>
+</div></div>
+
+<div class="proj-card">
+<div class="proj-img"><img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&q=80" alt="Portfolio"><div class="proj-overlay"><a href="#" class="proj-link">View Live ↗</a></div></div>
+<div class="proj-body">
+<div class="proj-tag" style="background:rgba(34,211,238,0.15);color:#67e8f9">Portfolio</div>
+<h3 class="proj-title">Developer Portfolio</h3>
+<p class="proj-desc">Animated personal portfolio with dark theme, project showcase and contact form.</p>
+<div class="proj-stack"><span>WordPress</span><span>Custom Theme</span><span>GSAP</span></div>
+</div></div>
+
+<div class="proj-card">
+<div class="proj-img"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80" alt="Business"><div class="proj-overlay"><a href="#" class="proj-link">View Live ↗</a></div></div>
+<div class="proj-body">
+<div class="proj-tag" style="background:rgba(236,72,153,0.15);color:#f9a8d4">Business</div>
+<h3 class="proj-title">Business Website</h3>
+<p class="proj-desc">Corporate site with service pages, team section, blog and lead capture forms.</p>
+<div class="proj-stack"><span>WordPress</span><span>ACF</span><span>SEO</span></div>
+</div></div>
+
+<div class="proj-card">
+<div class="proj-img"><img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&q=80" alt="Shopify"><div class="proj-overlay"><a href="#" class="proj-link">View Live ↗</a></div></div>
+<div class="proj-body">
+<div class="proj-tag" style="background:rgba(251,191,36,0.15);color:#fcd34d">Shopify</div>
+<h3 class="proj-title">Shopify Fashion Store</h3>
+<p class="proj-desc">Premium fashion brand store with custom Liquid theme and upsell flows.</p>
+<div class="proj-stack"><span>Shopify</span><span>Liquid</span><span>Custom Apps</span></div>
+</div></div>
+
+<div class="proj-card">
+<div class="proj-img"><img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=600&q=80" alt="Dashboard"><div class="proj-overlay"><a href="#" class="proj-link">View Live ↗</a></div></div>
+<div class="proj-body">
+<div class="proj-tag" style="background:rgba(34,211,238,0.15);color:#67e8f9">Dashboard</div>
+<h3 class="proj-title">Analytics Dashboard</h3>
+<p class="proj-desc">Custom WordPress admin dashboard with charts, reports and user management.</p>
+<div class="proj-stack"><span>WordPress</span><span>Chart.js</span><span>REST API</span></div>
+</div></div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact" class="py-28 px-6 max-w-5xl mx-auto">
+
+<div class="section-title">
+<h2 class="section-bg">CONTACT</h2>
+<h2 class="section-main">Contact</h2>
+</div>
+
+<div class="contact-wrap">
+
+<div class="contact-info">
+<h3 class="text-2xl font-bold mb-3">Let's work <span class="gradient">together</span></h3>
+<p class="text-gray-400 text-sm leading-relaxed mb-8">Have a project in mind? I'd love to hear about it. Send me a message and I'll get back to you within 24 hours.</p>
+
+<div class="flex flex-col gap-5">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style="background:rgba(139,92,246,0.15)">
+<svg width="18" height="18" fill="none" viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2z" stroke="#8B5CF6" stroke-width="1.8"/><path d="M22 6l-10 7L2 6" stroke="#22D3EE" stroke-width="1.8" stroke-linecap="round"/></svg>
+</div>
+<div><div class="text-xs text-gray-500 mb-0.5">Email</div><div class="text-sm text-gray-200">praveenkr.webdev@gmail.com</div></div>
+</div>
+
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style="background:rgba(37,211,102,0.15)">
+<svg width="18" height="18" fill="none" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2A19.79 19.79 0 013.09 5.18 2 2 0 015.09 3h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L9.09 10.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="#25D366" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</div>
+<div><div class="text-xs text-gray-500 mb-0.5">WhatsApp</div><div class="text-sm text-gray-200">+91 98158 98567</div></div>
+</div>
+
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style="background:rgba(34,211,238,0.12)">
+<svg width="18" height="18" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="#22D3EE" stroke-width="1.8"/><path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20" stroke="#22D3EE" stroke-width="1.8" stroke-linecap="round"/></svg>
+</div>
+<div><div class="text-xs text-gray-500 mb-0.5">Website</div><div class="text-sm text-gray-200">artsbypraveen.in</div></div>
+</div>
+</div>
+</div>
+
+<div class="contact-form-side">
+<form id="contactForm" action="https://formsubmit.co/praveenkr.webdev@gmail.com" method="POST" class="flex flex-col gap-0">
+
+  <!-- hidden settings -->
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_subject" value="New Portfolio Message!">
+  <input type="text" name="_honey" style="display:none">
+
+  <div class="form-field">
+    <svg width="16" height="16" fill="none" viewBox="0 0 24 24">
+      <circle cx="12" cy="8" r="4" stroke="#8B5CF6" stroke-width="1.8"/>
+      <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" stroke="#8B5CF6" stroke-width="1.8" stroke-linecap="round"/>
+    </svg>
+    <input class="form-input" name="name" placeholder="Your Name" required>
+  </div>
+
+  <div class="form-field">
+    <svg width="16" height="16" fill="none" viewBox="0 0 24 24">
+      <path d="M4 4h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2z" stroke="#8B5CF6" stroke-width="1.8"/>
+      <path d="M22 6l-10 7L2 6" stroke="#8B5CF6" stroke-width="1.8" stroke-linecap="round"/>
+    </svg>
+    <input class="form-input" name="email" type="email" placeholder="Email Address" required>
+  </div>
+
+  <div class="form-field">
+  <svg width="16" height="16" fill="none" viewBox="0 0 24 24">
+    <path d="M22 16.92v3a2 2 0 01-2.18 2A19.79 19.79 0 013.09 5.18 2 2 0 015.09 3h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L9.09 10.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="#8B5CF6" stroke-width="1.8" stroke-linecap="round"/>
+  </svg>
+  <input 
+  class="form-input" 
+  name="phone" 
+  type="tel"
+  inputmode="numeric"
+  placeholder="Phone (10 digits)"
+  maxlength="10"
+  required
+>
+</div>
+
+  <div class="form-field textarea-field">
+    <svg width="16" height="16" fill="none" viewBox="0 0 24 24">
+      <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke="#8B5CF6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <textarea rows="4" class="form-input" name="message" placeholder="Tell me about your project" required></textarea>
+  </div>
+
+  <button type="submit" id="submitBtn" class="btn w-full mt-2" style="border-radius:12px">
+    Send Message
+  </button>
+
+  <!-- messages -->
+  <p id="successMsg" style="display:none; color:#22c55e; margin-top:10px;">
+    ✅ Thank you! Your message has been sent.
+  </p>
+
+  <p id="errorMsg" style="display:none; color:#ef4444; margin-top:10px;"></p>
+
+</form>
+</div>
+
+</div>
+
+</section>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/919815898567" target="_blank" class="wa-btn" aria-label="Chat on WhatsApp">
+<svg width="30" height="30" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16 3C9.373 3 4 8.373 4 15c0 2.385.668 4.61 1.832 6.5L4 29l7.75-1.812A11.94 11.94 0 0016 28c6.627 0 12-5.373 12-12S22.627 3 16 3z" fill="white"/>
+<path d="M21.5 18.5c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.49-1.76-1.66-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.68-1.63-.93-2.23-.24-.58-.49-.5-.68-.51-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.22 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z" fill="#25D366"/>
+</svg>
+</a>
+
+<footer class="py-16 px-6">
+
+<div class="glass max-w-6xl mx-auto px-8 py-12">
+
+<div class="grid md:grid-cols-3 gap-10 mb-10">
+
+<div>
+<!-- <div class="font-bold text-xl mb-3">ArtsByPraveen</div> -->
+<div class="font-bold flex items-center gap-2  mb-3">
+<img src="https://praveenkrwebdev.github.io/portfolio/praveen-web-design-main-logo.svg" alt="ArtsByPraveen" style="height:36px;width:auto;object-fit:contain" onerror="this.style.display='none'">
+<!-- <span>ArtsByPraveen</span> -->
+</div>
+<p class="text-gray-400 text-sm leading-relaxed">Freelance WordPress & ecommerce developer crafting fast, modern websites that convert.</p>
+</div>
+
+<div>
+<div class="font-semibold mb-4 text-gray-200">Quick Links</div>
+<div class="flex flex-col gap-2 text-gray-400 text-sm">
+<a href="#about" class="hover:text-white transition">About</a>
+<a href="#services" class="hover:text-white transition">Services</a>
+<a href="#projects" class="hover:text-white transition">Projects</a>
+<a href="#contact" class="hover:text-white transition">Contact</a>
+</div>
+</div>
+
+<div>
+<div class="font-semibold mb-4 text-gray-200">Get In Touch</div>
+<div class="flex flex-col gap-2 text-gray-400 text-sm">
+<span>praveenkr.webdev@gmail.com</span>
+<span>Available for freelance work</span>
+</div>
+<div class="flex gap-4 mt-5">
+<a href="#" class="glass w-10 h-10 flex items-center justify-center rounded-full hover:bg-white/10 transition text-sm">in</a>
+<a href="#" class="glass w-10 h-10 flex items-center justify-center rounded-full hover:bg-white/10 transition text-sm">gh</a>
+<a href="#" class="glass w-10 h-10 flex items-center justify-center rounded-full hover:bg-white/10 transition text-sm">tw</a>
+</div>
+</div>
+
+</div>
+
+<div class="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center gap-3 text-gray-500 text-sm">
+<span>© 2026 ArtsByPraveen. All rights reserved.</span>
+<span class="gradient font-medium">Designed & Built by Praveen</span>
+</div>
+
+</div>
+
 </footer>
 
-<!-- ===== PROJECT DATA ===== -->
-
 <script>
-const projects = [
-{
-title:"Speech Therapy Website",
-desc:"Professional clinic website with SEO and contact form",
-tech:"WordPress",
-link:"https://praveenkrwebdev.github.io/priyanka-speech-therapy/"
-},
-{
-title:"Portfolio Website",
-desc:"Modern animated developer portfolio",
-tech:"HTML + Tailwind",
-link:"#"
-},
-{
-title:"WooCommerce Store",
-desc:"Custom ecommerce with payment gateway",
-tech:"WooCommerce",
-link:"#"
-},
-{
-title:"Shopify Store",
-desc:"Conversion focused online store",
-tech:"Shopify",
-link:"#"
-},
-{
-title:"Business Website",
-desc:"Corporate site with lead generation",
-tech:"WordPress",
-link:"#"
-}
-];
-</script>
+const form = document.getElementById("contactForm");
+const btn = document.getElementById("submitBtn");
+const successMsg = document.getElementById("successMsg");
+const errorMsg = document.getElementById("errorMsg");
 
-<!-- ===== RENDER PROJECTS ===== -->
+// auto clean phone input
+form.phone.addEventListener("input", () => {
+  form.phone.value = form.phone.value.replace(/[^0-9]/g, "").slice(0, 10);
+});
 
-<script>
-const container=document.getElementById("projectsContainer");
+form.addEventListener("submit", async function(e) {
+  e.preventDefault();
 
-projects.forEach(p=>{
-container.innerHTML+=`
-<div class="project-card">
-<h3 class="text-xl font-semibold mb-2">${p.title}</h3>
-<p class="text-gray-400 mb-3">${p.desc}</p>
-<p class="text-sm text-gray-500 mb-4">${p.tech}</p>
-<a href="${p.link}" target="_blank" class="text-purple-400 font-medium">View Project →</a>
-</div>
-`;
+  successMsg.style.display = "none";
+  errorMsg.style.display = "none";
+
+  const name = form.name.value.trim();
+  const email = form.email.value.trim();
+  const phone = form.phone.value.trim();
+  const message = form.message.value.trim();
+
+  // required validation
+  if (!name || !email || !phone || !message) {
+    errorMsg.innerText = "Please fill all fields";
+    errorMsg.style.display = "block";
+    return;
+  }
+
+  // email validation
+  const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,}$/;
+  if (!email.match(emailPattern)) {
+    errorMsg.innerText = "Enter a valid email";
+    errorMsg.style.display = "block";
+    return;
+  }
+
+  // phone validation (STRICT)
+  if (!/^[0-9]{10}$/.test(phone)) {
+    errorMsg.innerText = "Enter valid 10 digit phone number";
+    errorMsg.style.display = "block";
+    return;
+  }
+
+  // loading state
+  btn.innerText = "Sending...";
+  btn.disabled = true;
+
+  try {
+    const res = await fetch(form.action, {
+      method: "POST",
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (res.ok) {
+      successMsg.style.display = "block";
+      form.reset();
+    } else {
+      throw new Error();
+    }
+
+  } catch (err) {
+    errorMsg.innerText = "Something went wrong. Try again.";
+    errorMsg.style.display = "block";
+  }
+
+  btn.innerText = "Send Message";
+  btn.disabled = false;
 });
 </script>
-
-<!-- ===== MOBILE MENU JS ===== -->
-
 <script>
-const menuBtn=document.getElementById("menuBtn");
-const mobileMenu=document.getElementById("mobileMenu");
-const menuClose=document.getElementById("menuClose");
 
-menuBtn.onclick=()=>mobileMenu.classList.add("active");
-menuClose.onclick=()=>mobileMenu.classList.remove("active");
+/* mobile menu */
+
+/* active nav highlight */
+const navLinks=document.querySelectorAll('.nav-link')
+const sections=document.querySelectorAll('section[id]')
+
+const setActive=(id)=>{
+navLinks.forEach(a=>{
+a.classList.remove('active')
+const href=a.getAttribute('href')
+if(href==='#'+id||(href==='#'&&id==='hero'))a.classList.add('active')
+})
+}
+
+new IntersectionObserver((entries)=>{
+entries.forEach(e=>{
+if(e.isIntersecting)setActive('hero')
+})
+},{rootMargin:'-40% 0px -55% 0px'}).observe(document.querySelector('.hero'))
+
+sections.forEach(sec=>{
+new IntersectionObserver((entries)=>{
+entries.forEach(e=>{
+if(e.isIntersecting)setActive(e.target.id)
+})
+},{rootMargin:'-40% 0px -55% 0px'}).observe(sec)
+})
+
+const menuBtn=document.getElementById("menuBtn")
+const mobileMenu=document.getElementById("mobileMenu")
+
+menuBtn.addEventListener("click",()=>{
+mobileMenu.classList.toggle("active")
+})
+document.getElementById('menuClose').addEventListener('click',()=>{
+mobileMenu.classList.remove("active")
+})
+
+document.querySelectorAll(".menuLink").forEach(link=>{
+
+link.addEventListener("click",()=>{
+mobileMenu.classList.remove("active")
+})
+
+/* cursor glow */
+const glow=document.getElementById('cursorGlow')
+
+window.addEventListener('mousemove',e=>{
+
+glow.style.left=e.clientX+'px'
+
+glow.style.top=e.clientY+'px'
+
+})
+
+})
+
+/* typing */
+
+const words=['Hello','नमस्ते','வணக்கம்','నమస్కారం','السلام','નમસ્તે','ਸਤ ਸ੍ਰੀ ਅਕਾਲ']
+let wi=0,ci=0,deleting=false
+const el=document.getElementById('typedText')
+
+function type(){
+const word=words[wi]
+if(!deleting){
+el.textContent=word.slice(0,ci+1)
+ci++
+if(ci===word.length){setTimeout(()=>{deleting=true;type()},1400);return}
+}else{
+el.textContent=word.slice(0,ci-1)
+ci--
+if(ci===0){deleting=false;wi=(wi+1)%words.length}
+}
+setTimeout(type,deleting?60:100)
+}
+type()
+
+/* stats counter */
+
+const statsSection=document.querySelector('.stat-card').closest('section')
+let counted=false
+
+new IntersectionObserver(entries=>{
+if(entries[0].isIntersecting && !counted){
+counted=true
+document.querySelectorAll('.stat-num').forEach(el=>{
+const target=+el.dataset.target
+const span=el.querySelector('.count')
+const duration=1800
+const step=Math.ceil(duration/target)
+let cur=0
+const timer=setInterval(()=>{
+cur++
+span.textContent=cur
+if(cur>=target)clearInterval(timer)
+},step)
+})
+}
+},{threshold:0.4}).observe(statsSection)
+
+/* proj scroll nav */
+document.getElementById('projNext').addEventListener('click',()=>{
+document.querySelector('.proj-scroll').scrollBy({left:364,behavior:'smooth'})
+})
+document.getElementById('projPrev').addEventListener('click',()=>{
+document.querySelector('.proj-scroll').scrollBy({left:-364,behavior:'smooth'})
+})
+
+/* parallax — desktop only */
+
+if(window.innerWidth>768){
+window.addEventListener("scroll",()=>{
+const sc=window.scrollY
+document.querySelectorAll(".parallax").forEach(el=>{
+el.style.transform=`translateY(${sc*0.15}px)`
+})
+},{passive:true})
+}
+
 </script>
 
 </body>
