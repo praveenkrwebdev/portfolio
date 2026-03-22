@@ -104,140 +104,6 @@ bottom:-100px;
 right:0;
 }
 
-/* hero */
-
-.hero{
-min-height:90vh;
-display:grid;
-grid-template-columns:1fr 1fr;
-align-items:center;
-gap:60px;
-padding:140px 20px;
-max-width:1200px;
-margin:auto;
-}
-
-.main-logo{height:40px; width:auto;}
-
-@media(max-width:768px){
-
-.hero{
-grid-template-columns:1fr;
-gap:30px;
-padding:100px 16px 40px;
-}
-
-.blob1,.blob2{
-width:200px;
-height:200px;
-}
-.main-logo{height:36px; width:auto;}
-
-}
-
-/* typing animation */
-
-.typing-wrap{
-font-size:clamp(1rem,3vw,1.4rem);
-font-weight:500;
-color:rgba(255,255,255,0.7);
-margin-bottom:16px;
-min-height:2em;
-display:flex;
-align-items:center;
-gap:8px;
-}
-
-.typed-text{
-background:linear-gradient(135deg,#8B5CF6,#22D3EE);
--webkit-background-clip:text;
-color:transparent;
-font-weight:700;
-}
-
-.cursor-blink{
-display:inline-block;
-width:2px;
-height:1.1em;
-background:linear-gradient(135deg,#8B5CF6,#22D3EE);
-margin-left:2px;
-vertical-align:middle;
-animation:blink .7s step-end infinite;
-}
-
-@keyframes blink{
-0%,100%{opacity:1}50%{opacity:0}
-}
-
-/* logo marquee */
-
-.marquee-outer{
-overflow:hidden;
-position:relative;
-}
-
-.marquee-outer::before,
-.marquee-outer::after{
-content:'';
-position:absolute;
-top:0;
-bottom:0;
-width:80px;
-z-index:2;
-}
-
-.marquee-outer::before{left:0;background:linear-gradient(to right,#0B0F19,transparent);}
-.marquee-outer::after{right:0;background:linear-gradient(to left,#0B0F19,transparent);}
-
-.marquee-track{
-display:flex;
-gap:32px;
-width:max-content;
-animation:marquee 30s linear infinite;
-will-change:transform;
-}
-
-.marquee-track.reverse{
-animation:marquee-rev 30s linear infinite;
-will-change:transform;
-}
-
-@keyframes marquee{
-0%{transform:translateX(0)}100%{transform:translateX(-50%)}
-}
-
-@keyframes marquee-rev{
-0%{transform:translateX(-50%)}100%{transform:translateX(0)}
-}
-
-.logo-card{
-flex-shrink:0;
-width:130px;
-height:60px;
-display:flex;
-align-items:center;
-justify-content:center;
-background:rgba(255,255,255,0.05);
-box-shadow:inset 0 0 0 1px rgba(255,255,255,0.07);
-border-radius:14px;
-padding:8px 14px;
-overflow:hidden;
-}
-
-.logo-card img{
-width:100%;
-height:100%;
-object-fit:contain;
-filter:grayscale(1) brightness(1.4);
-opacity:0.6;
-transition:.3s;
-}
-
-.logo-card:hover img{
-filter:grayscale(0) brightness(1);
-opacity:1;
-}
-
 /* whatsapp float */
 .wa-btn{
 position:fixed;
@@ -363,18 +229,6 @@ background:rgba(255,255,255,0.06);
 color:rgba(255,255,255,0.5);
 }
 
-/* skill pills */
-.skill-grid{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px;}
-.skill-pill{
-display:flex;align-items:center;gap:8px;
-padding:8px 16px;border-radius:50px;
-background:rgba(255,255,255,0.05);
-box-shadow:inset 0 0 0 1px rgba(255,255,255,0.08);
-font-size:13px;font-weight:500;color:rgba(255,255,255,0.8);
-transition:.25s;
-}
-.skill-pill:hover{background:rgba(255,255,255,0.09);transform:translateY(-2px);}
-.skill-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
 
 /* contact */
 .contact-wrap{
@@ -407,97 +261,7 @@ background:rgba(139,92,246,0.06);
 }
 textarea.form-input{padding-top:13px;resize:none;}
 
-/* service cards */
 
-.service-card{
-position:relative;
-padding:40px 36px;
-border-radius:28px;
-background:rgba(255,255,255,0.03);
-backdrop-filter:blur(20px);
--webkit-backdrop-filter:blur(20px);
-box-shadow:inset 0 0 0 1px rgba(255,255,255,0.07),0 8px 40px rgba(0,0,0,0.4);
-overflow:hidden;
-transition:transform .35s,box-shadow .35s;
-}
-
-.service-card::before{
-content:'';
-position:absolute;
-top:0;left:0;right:0;
-height:3px;
-}
-
-.service-card::after{
-content:'';
-position:absolute;
-bottom:-80px;right:-80px;
-width:200px;height:200px;
-border-radius:50%;
-opacity:0;
-transition:opacity .4s;
-pointer-events:none;
-}
-
-.service-card:nth-child(1)::before{background:linear-gradient(90deg,#8B5CF6,#22D3EE);}
-.service-card:nth-child(2)::before{background:linear-gradient(90deg,#22D3EE,#8B5CF6);}
-.service-card:nth-child(3)::before{background:linear-gradient(90deg,#EC4899,#8B5CF6);}
-
-.service-card:nth-child(1)::after{background:radial-gradient(circle,rgba(139,92,246,.18),transparent 70%);}
-.service-card:nth-child(2)::after{background:radial-gradient(circle,rgba(34,211,238,.15),transparent 70%);}
-.service-card:nth-child(3)::after{background:radial-gradient(circle,rgba(236,72,153,.15),transparent 70%);}
-
-.service-card:hover::after{opacity:1;}
-
-.service-card:nth-child(1):hover{
-transform:translateY(-8px);
-box-shadow:inset 0 0 0 1px rgba(139,92,246,0.3),0 24px 60px rgba(139,92,246,0.25);
-}
-.service-card:nth-child(2):hover{
-transform:translateY(-8px);
-box-shadow:inset 0 0 0 1px rgba(34,211,238,0.3),0 24px 60px rgba(34,211,238,0.2);
-}
-.service-card:nth-child(3):hover{
-transform:translateY(-8px);
-box-shadow:inset 0 0 0 1px rgba(236,72,153,0.3),0 24px 60px rgba(236,72,153,0.2);
-}
-
-.service-icon{
-width:64px;
-height:64px;
-border-radius:18px;
-display:flex;
-align-items:center;
-justify-content:center;
-margin-bottom:28px;
-}
-
-.service-num{
-position:absolute;
-top:32px;right:32px;
-font-size:64px;
-font-weight:900;
-line-height:1;
-opacity:0.04;
-pointer-events:none;
-letter-spacing:-2px;
-}
-
-/* stats */
-
-.stat-card{
-text-align:center;
-padding:40px 20px;
-position:relative;
-}
-
-.stat-card+.stat-card::before{
-content:'';
-position:absolute;
-left:0;top:20%;bottom:20%;
-width:1px;
-background:linear-gradient(to bottom,transparent,rgba(255,255,255,0.1),transparent);
-}
 
 @media(max-width:768px){
 .stat-card+.stat-card::before{
@@ -507,22 +271,7 @@ background:linear-gradient(to right,transparent,rgba(255,255,255,0.1),transparen
 }
 }
 
-.stat-num{
-font-size:clamp(2.5rem,6vw,4rem);
-font-weight:800;
-background:linear-gradient(135deg,#8B5CF6,#ee4622);
--webkit-background-clip:text;
-color:transparent;
-line-height:1;
-}
 
-/* parallax object */
-
-.parallax{
-transform:translateY(0px);
-transition:transform .1s linear;
-will-change:transform;
-}
 
 /* buttons */
 
@@ -767,139 +516,7 @@ WhatsApp
 </a>
 </div>
 
-<!-- HERO -->
 
-<section class="hero">
-
-<div>
-
-<div class="typing-wrap"><span id="typedText" class="typed-text"></span><span class="cursor-blink"></span></div>
-
-<!-- <p class="text-white font-semibold text-lg md:text-xl mb-6">I'm Praveen.</p> -->
-
-<h1 class="text-5xl md:text-7xl font-bold leading-tight">
-
-I'm Praveen - <span class="gradient">A Freelance Web Developer</span>
-
-</h1>
-
-<p class="text-gray-400 mt-6">
-
-I build fast modern websites using WordPress, Wix, WooCommerce and Shopify.
-
-</p>
-
-<div class="mt-8 flex gap-3">
-<a href="https://wa.me/919815898567" target="_blank" class="hero-btn-primary">
-<div style="width:28px;height:28px;border-radius:8px;background:rgba(236,72,153,0.25);display:flex;align-items:center;justify-content:center;flex-shrink:0">
-<svg width="14" height="14" fill="none" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2A19.79 19.79 0 013.09 5.18 2 2 0 015.09 3h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L9.09 10.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="#EC4899" stroke-width="1.8" stroke-linecap="round"/></svg>
-</div>
-Start A Project
-</a>
-<a href="#projects" class="hero-btn-ghost">
-<div style="width:28px;height:28px;border-radius:8px;background:rgba(255,255,255,0.07);display:flex;align-items:center;justify-content:center;flex-shrink:0">
-<svg width="14" height="14" fill="none" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" stroke="rgba(255,255,255,0.6)" stroke-width="1.8"/><path d="M8 21h8M12 17v4" stroke="rgba(255,255,255,0.6)" stroke-width="1.8" stroke-linecap="round"/></svg>
-</div>
-View My Work
-</a>
-</div>
-
-</div>
-
-<div class="parallax">
-
-<!-- <img class="rounded-xl w-full h-auto" src="file:///C:/Users/User/Downloads/Praveen-shrama-web-design-and-development.webp"> -->
-    <img class="rounded-xl" src="https://praveenkrwebdev.github.io/portfolio/Praveen-shrama-web-design-and-development.webp">
-
-
-</div>
-
-</section>
-
-<!-- CLIENTS LOGO SCROLL -->
-
-<section class="py-16 px-6">
-
-<p class="text-center text-gray-500 text-sm uppercase tracking-widest mb-10">Trusted by companies I've worked with</p>
-
-<div class="marquee-outer mb-5">
-<div class="marquee-track">
-<div class="logo-card"><img src="https://picsum.photos/seed/l1/120/50" alt="Client Logo"></div>
-<div class="logo-card"><img src="https://picsum.photos/seed/l2/120/50" alt="Client Logo"></div>
-<div class="logo-card"><img src="https://picsum.photos/seed/l3/120/50" alt="Client Logo"></div>
-<div class="logo-card"><img src="https://picsum.photos/seed/l4/120/50" alt="Client Logo"></div>
-<div class="logo-card"><img src="https://picsum.photos/seed/l5/120/50" alt="Client Logo"></div>
-<div class="logo-card"><img src="https://picsum.photos/seed/l6/120/50" alt="Client Logo"></div>
-<div class="logo-card"><img src="https://picsum.photos/seed/l7/120/50" alt="Client Logo"></div>
-<div class="logo-card"><img src="https://picsum.photos/seed/l8/120/50" alt="Client Logo"></div>
-<div class="logo-card"><img src="https://picsum.photos/seed/l9/120/50" alt="Client Logo"></div>
-<div class="logo-card"><img src="https://picsum.photos/seed/l10/120/50" alt="Client Logo"></div>
-<!-- duplicate -->
-<div class="logo-card"><img src="https://picsum.photos/seed/l1/120/50" alt="Client Logo"></div>
-<div class="logo-card"><img src="https://picsum.photos/seed/l2/120/50" alt="Client Logo"></div>
-<div class="logo-card"><img src="https://picsum.photos/seed/l3/120/50" alt="Client Logo"></div>
-<div class="logo-card"><img src="https://picsum.photos/seed/l4/120/50" alt="Client Logo"></div>
-<div class="logo-card"><img src="https://picsum.photos/seed/l5/120/50" alt="Client Logo"></div>
-<div class="logo-card"><img src="https://picsum.photos/seed/l6/120/50" alt="Client Logo"></div>
-<div class="logo-card"><img src="https://picsum.photos/seed/l7/120/50" alt="Client Logo"></div>
-<div class="logo-card"><img src="https://picsum.photos/seed/l8/120/50" alt="Client Logo"></div>
-<div class="logo-card"><img src="https://picsum.photos/seed/l9/120/50" alt="Client Logo"></div>
-<div class="logo-card"><img src="https://picsum.photos/seed/l10/120/50" alt="Client Logo"></div>
-</div>
-</div>
-
-<div class="marquee-outer">
-<div class="marquee-track reverse">
-<div class="logo-card"><img src="https://picsum.photos/seed/l11/120/50" alt="Client Logo"></div>
-<div class="logo-card"><img src="https://picsum.photos/seed/l12/120/50" alt="Client Logo"></div>
-<div class="logo-card"><img src="https://picsum.photos/seed/l13/120/50" alt="Client Logo"></div>
-<div class="logo-card"><img src="https://picsum.photos/seed/l14/120/50" alt="Client Logo"></div>
-<div class="logo-card"><img src="https://picsum.photos/seed/l15/120/50" alt="Client Logo"></div>
-<div class="logo-card"><img src="https://picsum.photos/seed/l16/120/50" alt="Client Logo"></div>
-<div class="logo-card"><img src="https://picsum.photos/seed/l17/120/50" alt="Client Logo"></div>
-<div class="logo-card"><img src="https://picsum.photos/seed/l18/120/50" alt="Client Logo"></div>
-<div class="logo-card"><img src="https://picsum.photos/seed/l19/120/50" alt="Client Logo"></div>
-<div class="logo-card"><img src="https://picsum.photos/seed/l20/120/50" alt="Client Logo"></div>
-<!-- duplicate -->
-<div class="logo-card"><img src="https://picsum.photos/seed/l11/120/50" alt="Client Logo"></div>
-<div class="logo-card"><img src="https://picsum.photos/seed/l12/120/50" alt="Client Logo"></div>
-<div class="logo-card"><img src="https://picsum.photos/seed/l13/120/50" alt="Client Logo"></div>
-<div class="logo-card"><img src="https://picsum.photos/seed/l14/120/50" alt="Client Logo"></div>
-<div class="logo-card"><img src="https://picsum.photos/seed/l15/120/50" alt="Client Logo"></div>
-<div class="logo-card"><img src="https://picsum.photos/seed/l16/120/50" alt="Client Logo"></div>
-<div class="logo-card"><img src="https://picsum.photos/seed/l17/120/50" alt="Client Logo"></div>
-<div class="logo-card"><img src="https://picsum.photos/seed/l18/120/50" alt="Client Logo"></div>
-<div class="logo-card"><img src="https://picsum.photos/seed/l19/120/50" alt="Client Logo"></div>
-<div class="logo-card"><img src="https://picsum.photos/seed/l20/120/50" alt="Client Logo"></div>
-</div>
-</div>
-
-</section>
-
-<!-- EXPERIENCE STATS -->
-
-<section class="py-20 px-6 max-w-4xl mx-auto">
-
-<div class="glass grid grid-cols-1 md:grid-cols-3">
-
-<div class="stat-card">
-<div class="stat-num" data-target="5"><span class="count">0</span>+</div>
-<div class="text-gray-300 font-semibold mt-2">Years Experience</div>
-</div>
-
-<div class="stat-card">
-<div class="stat-num" data-target="50"><span class="count">0</span>+</div>
-<div class="text-gray-300 font-semibold mt-2">Projects Delivered</div>
-</div>
-
-<div class="stat-card">
-<div class="stat-num" data-target="50"><span class="count">0</span>+</div>
-<div class="text-gray-300 font-semibold mt-2">Satisfied Clients</div>
-</div>
-
-</div>
-
-</section>
 
 
 
@@ -1261,49 +878,8 @@ glow.style.top=e.clientY+'px'
 
 })
 
-/* typing */
 
-const words=['Hello','नमस्ते','வணக்கம்','నమస్కారం','السلام','નમસ્તે','ਸਤ ਸ੍ਰੀ ਅਕਾਲ']
-let wi=0,ci=0,deleting=false
-const el=document.getElementById('typedText')
 
-function type(){
-const word=words[wi]
-if(!deleting){
-el.textContent=word.slice(0,ci+1)
-ci++
-if(ci===word.length){setTimeout(()=>{deleting=true;type()},1400);return}
-}else{
-el.textContent=word.slice(0,ci-1)
-ci--
-if(ci===0){deleting=false;wi=(wi+1)%words.length}
-}
-setTimeout(type,deleting?60:100)
-}
-type()
-
-/* stats counter */
-
-const statsSection=document.querySelector('.stat-card').closest('section')
-let counted=false
-
-new IntersectionObserver(entries=>{
-if(entries[0].isIntersecting && !counted){
-counted=true
-document.querySelectorAll('.stat-num').forEach(el=>{
-const target=+el.dataset.target
-const span=el.querySelector('.count')
-const duration=1800
-const step=Math.ceil(duration/target)
-let cur=0
-const timer=setInterval(()=>{
-cur++
-span.textContent=cur
-if(cur>=target)clearInterval(timer)
-},step)
-})
-}
-},{threshold:0.4}).observe(statsSection)
 
 /* proj scroll nav */
 document.getElementById('projNext').addEventListener('click',()=>{
@@ -1313,16 +889,7 @@ document.getElementById('projPrev').addEventListener('click',()=>{
 document.querySelector('.proj-scroll').scrollBy({left:-364,behavior:'smooth'})
 })
 
-/* parallax — desktop only */
 
-if(window.innerWidth>768){
-window.addEventListener("scroll",()=>{
-const sc=window.scrollY
-document.querySelectorAll(".parallax").forEach(el=>{
-el.style.transform=`translateY(${sc*0.15}px)`
-})
-},{passive:true})
-}
 
 </script>
 
