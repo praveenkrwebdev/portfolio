@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,16 +5,56 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ArtsByPraveen Portfolio</title>
+<!-- Title -->
+<title>ArtsByPraveen | Professional Web Developer & Modern Web Solutions</title>
+
+<!-- SEO -->
+<meta name="description" content="Modern, high-performance, and responsive websites built with clean design and scalable solutions by ArtsByPraveen.">
+<meta name="keywords" content="web developer, web design, web development, frontend developer, portfolio, modern websites">
+
+<!-- Canonical -->
+<link rel="canonical" href="https://artsbypraveen.in">
+
+<!-- Open Graph (Facebook, LinkedIn, WhatsApp) -->
+<meta property="og:title" content="ArtsByPraveen | Professional Web Developer & Modern Web Solutions">
+<meta property="og:description" content="Modern, high-performance, and responsive websites built with clean design and scalable solutions.">
+<meta property="og:image" content="https://artsbypraveen.in/images/preview.webp">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://artsbypraveen.in">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ArtsByPraveen">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ArtsByPraveen | Professional Web Developer & Modern Web Solutions">
+<meta name="twitter:description" content="Modern, high-performance, and responsive websites built with clean design and scalable solutions.">
+<meta name="twitter:image" content="https://artsbypraveen.in/images/preview.webp">
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Praveen",
+  "url": "https://artsbypraveen.in",
+  "jobTitle": "Web Developer",
+  "sameAs": [
+    "https://github.com/praveenkrwebdev"
+  ]
+}
+</script>
+
+<!-- Favicon -->
+<link rel="icon" href="/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
 
 <script src="https://cdn.tailwindcss.com"></script>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-<!-- Favicon -->
-<link rel="icon" href="./images/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="./imagess/favicon-16x16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+
 <style>
 
 body{
@@ -267,52 +306,44 @@ box-shadow:0 6px 32px rgba(37,211,102,.8);
 /* proj nav */
 .proj-nav{
 display:flex;
-justify-content:flex-end;
-gap:10px;
-margin-bottom:20px;
+justify-content:space-between;
+align-items:center;
+margin-bottom:28px;
 }
+.proj-nav-btns{display:flex;gap:10px;}
 .proj-nav button{
-width:40px;
-height:40px;
+width:42px;height:42px;
 border-radius:50%;
 background:rgba(255,255,255,0.06);
 box-shadow:inset 0 0 0 1px rgba(255,255,255,0.1);
-display:flex;
-align-items:center;
-justify-content:center;
-cursor:pointer;
-transition:.2s;
+display:flex;align-items:center;justify-content:center;
+cursor:pointer;transition:.2s;
 }
-.proj-nav button:hover{background:rgba(139,92,246,0.3);}
+.proj-nav button:hover{background:rgba(139,92,246,0.35);box-shadow:inset 0 0 0 1px rgba(139,92,246,0.5),0 0 16px rgba(139,92,246,0.3);}
 
-/* project cards */
-
-.proj-scroll{
+/* infinite carousel */
+.proj-carousel{overflow:hidden;position:relative;}
+.proj-track{
 display:flex;
 gap:24px;
-overflow-x:auto;
-scroll-snap-type:x mandatory;
--webkit-overflow-scrolling:touch;
-padding-bottom:16px;
-scrollbar-width:none;
+will-change:transform;
 }
-.proj-scroll::-webkit-scrollbar{display:none;}
 
+/* project cards */
 .proj-card{
 flex-shrink:0;
 width:340px;
-border-radius:28px;
+border-radius:24px;
 background:rgba(255,255,255,0.04);
-backdrop-filter:blur(14px);
--webkit-backdrop-filter:blur(14px);
-box-shadow:inset 0 0 0 1px rgba(255,255,255,0.08);
+backdrop-filter:blur(16px);
+-webkit-backdrop-filter:blur(16px);
+box-shadow:inset 0 0 0 1px rgba(255,255,255,0.08),0 4px 24px rgba(0,0,0,0.3);
 overflow:hidden;
-scroll-snap-align:start;
-transition:transform .3s;
+transition:transform .35s,box-shadow .35s;
 }
 .proj-card:hover{
-transform:translateY(-5px);
-box-shadow:inset 0 0 0 1px rgba(255,255,255,0.13),0 10px 30px rgba(139,92,246,0.12);
+transform:translateY(-8px);
+box-shadow:inset 0 0 0 1px rgba(139,92,246,0.3),0 20px 50px rgba(139,92,246,0.2),0 8px 20px rgba(0,0,0,0.4);
 }
 .proj-img{
 position:relative;
@@ -320,52 +351,51 @@ overflow:hidden;
 height:200px;
 }
 .proj-img img{
-width:100%;
-height:100%;
-object-fit:cover;
-transition:transform .4s;
+width:100%;height:100%;object-fit:cover;
+transition:transform .5s;
 }
-.proj-card:hover .proj-img img{transform:scale(1.06);}
+.proj-card:hover .proj-img img{transform:scale(1.08);}
 .proj-overlay{
-position:absolute;
-inset:0;
-background:rgba(11,15,25,0.6);
-display:flex;
-align-items:center;
-justify-content:center;
-opacity:0;
-transition:.3s;
+position:absolute;inset:0;
+background:linear-gradient(to top,rgba(11,15,25,0.9) 0%,rgba(11,15,25,0.2) 60%,transparent 100%);
+display:flex;align-items:flex-end;justify-content:center;
+padding-bottom:18px;gap:10px;
+opacity:0;transition:.3s;
 }
 .proj-card:hover .proj-overlay{opacity:1;}
 .proj-link{
+display:inline-flex;align-items:center;gap:5px;
 background:linear-gradient(135deg,#8B5CF6,#22D3EE);
-color:#000;
-font-weight:700;
-padding:10px 22px;
-border-radius:50px;
-font-size:14px;
+color:#000;font-weight:700;padding:9px 20px;
+border-radius:50px;font-size:12px;
 }
-.proj-body{padding:24px;}
+.proj-link-ghost{
+display:inline-flex;align-items:center;gap:5px;
+background:rgba(255,255,255,0.13);backdrop-filter:blur(8px);
+color:#fff;font-weight:600;padding:9px 16px;
+border-radius:50px;font-size:12px;
+}
+.proj-body{padding:20px 22px 22px;}
+
+/* tag in body */
 .proj-tag{
-display:inline-block;
-font-size:11px;
-font-weight:600;
-padding:4px 12px;
-border-radius:50px;
-margin-bottom:12px;
-letter-spacing:.5px;
-text-transform:uppercase;
+display:inline-flex;align-items:center;gap:5px;
+font-size:10px;font-weight:700;
+padding:4px 10px 4px 8px;border-radius:50px;
+margin-bottom:10px;letter-spacing:.5px;text-transform:uppercase;
 }
-.proj-title{font-size:18px;font-weight:700;margin-bottom:8px;}
-.proj-desc{font-size:13px;color:rgba(255,255,255,0.5);line-height:1.6;margin-bottom:16px;}
-.proj-stack{display:flex;flex-wrap:wrap;gap:8px;}
+.proj-tag-dot{width:5px;height:5px;border-radius:50%;flex-shrink:0;}
+
+.proj-title{font-size:16px;font-weight:700;margin-bottom:6px;line-height:1.4;}
+.proj-desc{font-size:12px;color:rgba(255,255,255,0.45);line-height:1.65;margin-bottom:14px;}
+.proj-stack{display:flex;flex-wrap:wrap;gap:6px;}
 .proj-stack span{
-font-size:11px;
-padding:3px 10px;
-border-radius:50px;
+font-size:10px;padding:3px 10px;border-radius:50px;
 background:rgba(255,255,255,0.06);
-color:rgba(255,255,255,0.5);
+box-shadow:inset 0 0 0 1px rgba(255,255,255,0.09);
+color:rgba(255,255,255,0.5);transition:.2s;
 }
+.proj-card:hover .proj-stack span{color:rgba(255,255,255,0.8);background:rgba(255,255,255,0.1);}
 
 /* skill pills */
 .skill-grid{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px;}
@@ -1125,84 +1155,154 @@ View My Work
 </section>
 
 <!-- PROJECTS -->
-
 <section id="projects" class="py-28 px-6 max-w-6xl mx-auto">
-
 <div class="section-title">
 <h2 class="section-bg">PROJECTS</h2>
-<h2 class="section-main">Projects</h2>
+<h2 class="section-main">Featured Work</h2>
+<p style="position:relative;color:rgba(255,255,255,0.4);font-size:14px;margin-top:10px">Real projects — live & delivering results</p>
 </div>
 
 <div class="proj-nav">
-<button id="projPrev"><svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-<button id="projNext"><svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+<p style="font-size:13px;color:rgba(255,255,255,0.3)">Showing <span id="projCount">1</span> of 7</p>
+<div class="proj-nav-btns">
+<button type="button" id="projPrev"><svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+<button type="button" id="projNext"><svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+</div>
 </div>
 
-<div class="proj-scroll">
+<div class="proj-carousel">
+<div class="proj-track" id="projTrack">
 
+<!-- 1: BridgeStone -->
 <div class="proj-card">
-<div class="proj-img"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80" alt="Ecommerce"><div class="proj-overlay"><a href="#" class="proj-link">View Live ↗</a></div></div>
+<div class="proj-img">
+<img src="./images/project-cwc.webp" alt="BridgeStone">
+<div class="proj-overlay">
+<a href="#" target="_blank" class="proj-link">View Live ↗</a>
+<a href="projects.html" class="proj-link-ghost">Details</a>
+</div>
+</div>
 <div class="proj-body">
-<div class="proj-tag" style="background:rgba(139,92,246,0.15);color:#a78bfa">WooCommerce</div>
-<h3 class="proj-title">Ecommerce Website</h3>
-<p class="proj-desc">Full-featured online store with custom checkout, product filters and payment gateway.</p>
-<div class="proj-stack"><span>WordPress</span><span>WooCommerce</span><span>Elementor</span></div>
-</div></div>
-
-<div class="proj-card">
-<div class="proj-img"><img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&q=80" alt="Portfolio"><div class="proj-overlay"><a href="#" class="proj-link">View Live ↗</a></div></div>
-<div class="proj-body">
-<div class="proj-tag" style="background:rgba(34,211,238,0.15);color:#67e8f9">Portfolio</div>
-<h3 class="proj-title">Developer Portfolio</h3>
-<p class="proj-desc">Animated personal portfolio with dark theme, project showcase and contact form.</p>
-<div class="proj-stack"><span>WordPress</span><span>Custom Theme</span><span>GSAP</span></div>
-</div></div>
-
-<div class="proj-card">
-<div class="proj-img"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80" alt="Business"><div class="proj-overlay"><a href="#" class="proj-link">View Live ↗</a></div></div>
-<div class="proj-body">
-<div class="proj-tag" style="background:rgba(236,72,153,0.15);color:#f9a8d4">Business</div>
-<h3 class="proj-title">Business Website</h3>
-<p class="proj-desc">Corporate site with service pages, team section, blog and lead capture forms.</p>
-<div class="proj-stack"><span>WordPress</span><span>ACF</span><span>SEO</span></div>
-</div></div>
-
-<div class="proj-card">
-<div class="proj-img"><img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&q=80" alt="Shopify"><div class="proj-overlay"><a href="#" class="proj-link">View Live ↗</a></div></div>
-<div class="proj-body">
-<div class="proj-tag" style="background:rgba(251,191,36,0.15);color:#fcd34d">Shopify</div>
-<h3 class="proj-title">Shopify Fashion Store</h3>
-<p class="proj-desc">Premium fashion brand store with custom Liquid theme and upsell flows.</p>
-<div class="proj-stack"><span>Shopify</span><span>Liquid</span><span>Custom Apps</span></div>
-</div></div>
-
-<div class="proj-card">
-<div class="proj-img"><img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=600&q=80" alt="Dashboard"><div class="proj-overlay"><a href="#" class="proj-link">View Live ↗</a></div></div>
-<div class="proj-body">
-<div class="proj-tag" style="background:rgba(34,211,238,0.15);color:#67e8f9">Dashboard</div>
-<h3 class="proj-title">Analytics Dashboard</h3>
-<p class="proj-desc">Custom WordPress admin dashboard with charts, reports and user management.</p>
-<div class="proj-stack"><span>WordPress</span><span>Chart.js</span><span>REST API</span></div>
-</div></div>
-
+<div class="proj-tag" style="background:rgba(150,88,138,0.2);box-shadow:inset 0 0 0 1px rgba(150,88,138,0.45);color:#e0b8dc"><span class="proj-tag-dot" style="background:#96588a"></span>WooCommerce</div>
+<h3 class="proj-title">BridgeStone</h3>
+<p class="proj-desc">Custom WordPress & WooCommerce build with tailored functionality and bespoke design.</p>
+<div class="proj-stack"><span>WordPress</span><span>WooCommerce</span><span>Custom Work</span></div>
+</div>
 </div>
 
-<div class="mt-8 flex gap-3 justify-center items-center">
-<a href="https://praveenkrwebdev.github.io/portfolio/projects.html" target="_blank" class="hero-btn-primary">
+<!-- 2: Cartridge World Cyprus -->
+<div class="proj-card">
+<div class="proj-img">
+<img src="./images/project-cwc.webp" alt="Cartridge World Cyprus">
+<div class="proj-overlay">
+<a href="https://cwcyprus.com/" target="_blank" class="proj-link">View Live ↗</a>
+<a href="projects.html" class="proj-link-ghost">Details</a>
+</div>
+</div>
+<div class="proj-body">
+<div class="proj-tag" style="background:rgba(150,88,138,0.2);box-shadow:inset 0 0 0 1px rgba(150,88,138,0.45);color:#e0b8dc"><span class="proj-tag-dot" style="background:#96588a"></span>WooCommerce</div>
+<h3 class="proj-title">Cartridge World Cyprus</h3>
+<p class="proj-desc">Full ecommerce store with API integration, custom shipping, payment gateway and ACF-powered content.</p>
+<div class="proj-stack"><span>WordPress</span><span>WooCommerce</span><span>API</span><span>ACF</span><span>Custom Plugin</span></div>
+</div>
+</div>
+
+<!-- 3: Hercules Group -->
+<div class="proj-card">
+<div class="proj-img">
+<img src="./images/project-cwc.webp" alt="Hercules Group">
+<div class="proj-overlay">
+<a href="https://hercules-group.com/" target="_blank" class="proj-link">View Live ↗</a>
+<a href="projects.html" class="proj-link-ghost">Details</a>
+</div>
+</div>
+<div class="proj-body">
+<div class="proj-tag" style="background:rgba(150,88,138,0.2);box-shadow:inset 0 0 0 1px rgba(150,88,138,0.45);color:#e0b8dc"><span class="proj-tag-dot" style="background:#96588a"></span>WooCommerce</div>
+<h3 class="proj-title">Hercules Group</h3>
+<p class="proj-desc">Complex WooCommerce store with custom pricing, shipping logic, API integration and Figma-to-code build.</p>
+<div class="proj-stack"><span>WordPress</span><span>WooCommerce</span><span>Figma</span><span>Custom Price</span><span>API</span></div>
+</div>
+</div>
+
+<!-- 4: Solar Dynamics -->
+<div class="proj-card">
+<div class="proj-img">
+<img src="./images/project-cwc.webp" alt="Solar Dynamics">
+<div class="proj-overlay">
+<a href="https://solardynamics.co/" target="_blank" class="proj-link">View Live ↗</a>
+<a href="projects.html" class="proj-link-ghost">Details</a>
+</div>
+</div>
+<div class="proj-body">
+<div class="proj-tag" style="background:rgba(33,117,155,0.2);box-shadow:inset 0 0 0 1px rgba(33,117,155,0.45);color:#7ecfee"><span class="proj-tag-dot" style="background:#21759b"></span>WordPress</div>
+<h3 class="proj-title">Solar Dynamics</h3>
+<p class="proj-desc">Clean WordPress CMS site built with Elementor for a solar energy company with lead generation focus.</p>
+<div class="proj-stack"><span>WordPress</span><span>Elementor</span><span>CMS</span></div>
+</div>
+</div>
+
+<!-- 5: 876 Produce -->
+<div class="proj-card">
+<div class="proj-img">
+<img src="./images/876-logo.webp" alt="876 Produce" style="object-fit:contain;padding:40px;background:#111">
+<div class="proj-overlay">
+<a href="https://www.876produce.com/" target="_blank" class="proj-link">View Live ↗</a>
+<a href="projects.html" class="proj-link-ghost">Details</a>
+</div>
+</div>
+<div class="proj-body">
+<div class="proj-tag" style="background:rgba(149,191,71,0.2);box-shadow:inset 0 0 0 1px rgba(149,191,71,0.45);color:#c2e07a"><span class="proj-tag-dot" style="background:#95bf47"></span>Shopify</div>
+<h3 class="proj-title">876 Produce</h3>
+<p class="proj-desc">Shopify store with custom Liquid theme for a Jamaican produce brand targeting international markets.</p>
+<div class="proj-stack"><span>Shopify</span><span>Liquid</span><span>Custom Theme</span></div>
+</div>
+</div>
+
+<!-- 6: Lemesos Estates -->
+<div class="proj-card">
+<div class="proj-img">
+<img src="./images/lemesosestate-logo.png" alt="Lemesos Estates" style="object-fit:contain;padding:40px;background:#111">
+<div class="proj-overlay">
+<a href="https://lemesosestates.com/" target="_blank" class="proj-link">View Live ↗</a>
+<a href="projects.html" class="proj-link-ghost">Details</a>
+</div>
+</div>
+<div class="proj-body">
+<div class="proj-tag" style="background:rgba(33,117,155,0.2);box-shadow:inset 0 0 0 1px rgba(33,117,155,0.45);color:#7ecfee"><span class="proj-tag-dot" style="background:#21759b"></span>WordPress</div>
+<h3 class="proj-title">Lemesos Estates</h3>
+<p class="proj-desc">Real estate WordPress site with custom property listings, search filters and inquiry forms.</p>
+<div class="proj-stack"><span>WordPress</span><span>Real Estate</span><span>Custom Work</span></div>
+</div>
+</div>
+
+<!-- 7: Mentalth -->
+<div class="proj-card">
+<div class="proj-img">
+<img src="./images/Mentalth-AI-Logo.webp" alt="Mentalth" style="object-fit:contain;padding:40px;background:#111">
+<div class="proj-overlay">
+<a href="https://mentalth.org/" target="_blank" class="proj-link">View Live ↗</a>
+<a href="projects.html" class="proj-link-ghost">Details</a>
+</div>
+</div>
+<div class="proj-body">
+<div class="proj-tag" style="background:rgba(139,92,246,0.2);box-shadow:inset 0 0 0 1px rgba(139,92,246,0.45);color:#c4b5fd"><span class="proj-tag-dot" style="background:#8B5CF6"></span>WordPress</div>
+<h3 class="proj-title">Mentalth</h3>
+<p class="proj-desc">Mental health platform built on WordPress with Elementor and an integrated AI chatbot for user support.</p>
+<div class="proj-stack"><span>WordPress</span><span>Elementor</span><span>AI Chatbot</span></div>
+</div>
+</div>
+
+</div><!-- end proj-track -->
+</div><!-- end proj-carousel -->
+
+<div class="mt-10 flex gap-3 justify-center">
+<a href="projects.html" class="hero-btn-primary">
 <div style="width:28px;height:28px;border-radius:8px;background:rgba(236,72,153,0.25);display:flex;align-items:center;justify-content:center;flex-shrink:0">
-<svg width="14" height="14" fill="none" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" stroke="rgba(255,255,255,0.6)" stroke-width="1.8"/><path d="M8 21h8M12 17v4" stroke="rgba(255,255,255,0.6)" stroke-width="1.8" stroke-linecap="round"/></svg>
+<svg width="14" height="14" fill="none" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" stroke="rgba(255,255,255,0.7)" stroke-width="1.8"/><path d="M8 21h8M12 17v4" stroke="rgba(255,255,255,0.7)" stroke-width="1.8" stroke-linecap="round"/></svg>
 </div>
-View All Project
+View All Projects
 </a>
-<!-- <a href="#projects" class="hero-btn-ghost">
-<div style="width:28px;height:28px;border-radius:8px;background:rgba(255,255,255,0.07);display:flex;align-items:center;justify-content:center;flex-shrink:0">
-<svg width="14" height="14" fill="none" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" stroke="rgba(255,255,255,0.6)" stroke-width="1.8"/><path d="M8 21h8M12 17v4" stroke="rgba(255,255,255,0.6)" stroke-width="1.8" stroke-linecap="round"/></svg>
 </div>
-View My Work
-</a> -->
-</div>
-
-
 </section>
 
 <!-- CONTACT -->
@@ -1478,22 +1578,16 @@ mobileMenu.classList.remove("active")
 })
 
 document.querySelectorAll(".menuLink").forEach(link=>{
-
 link.addEventListener("click",()=>{
 mobileMenu.classList.remove("active")
+})
 })
 
 /* cursor glow */
 const glow=document.getElementById('cursorGlow')
-
 window.addEventListener('mousemove',e=>{
-
 glow.style.left=e.clientX+'px'
-
 glow.style.top=e.clientY+'px'
-
-})
-
 })
 
 /* typing */
@@ -1540,13 +1634,57 @@ if(cur>=target)clearInterval(timer)
 }
 },{threshold:0.4}).observe(statsSection)
 
-/* proj scroll nav */
-document.getElementById('projNext').addEventListener('click',()=>{
-document.querySelector('.proj-scroll').scrollBy({left:364,behavior:'smooth'})
-})
-document.getElementById('projPrev').addEventListener('click',()=>{
-document.querySelector('.proj-scroll').scrollBy({left:-364,behavior:'smooth'})
-})
+/* carousel */
+var projTrack=document.getElementById('projTrack');
+var projOrig=Array.from(projTrack.querySelectorAll('.proj-card'));
+var projTotal=projOrig.length;
+
+/* clone cards for seamless loop */
+projOrig.forEach(function(c){projTrack.appendChild(c.cloneNode(true));});
+
+var projIdx=0;
+
+function projW(){return projOrig[0].offsetWidth+24;}
+
+function projMove(n,anim){
+projTrack.style.transition=anim?'transform .45s ease':'none';
+projTrack.style.transform='translateX(-'+(n*projW())+'px)';
+var c=document.getElementById('projCount');
+if(c)c.textContent=(n%projTotal)+1;
+}
+projMove(0,false);
+
+function projNext(){
+projIdx++;
+projMove(projIdx,true);
+/* when we land on the clone set, silently snap to real */
+if(projIdx>=projTotal){
+setTimeout(function(){projIdx=0;projMove(0,false);},450);
+}
+}
+function projPrev(){
+if(projIdx<=0){
+/* jump to clone position instantly, then animate back */
+projIdx=projTotal;
+projMove(projIdx,false);
+setTimeout(function(){projIdx=projTotal-1;projMove(projIdx,true);},20);
+}else{
+projIdx--;
+projMove(projIdx,true);
+}
+}
+
+document.getElementById('projNext').onclick=projNext;
+document.getElementById('projPrev').onclick=projPrev;
+
+var projTx=0;
+projTrack.addEventListener('touchstart',function(e){projTx=e.touches[0].clientX;},{passive:true});
+projTrack.addEventListener('touchend',function(e){
+var d=projTx-e.changedTouches[0].clientX;
+if(d>40)projNext();
+else if(d<-40)projPrev();
+},{passive:true});
+window.addEventListener('resize',function(){projMove(projIdx,false);});
 
 /* parallax — desktop only */
 
