@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,56 +6,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Title -->
-<title>ArtsByPraveen | Professional Web Developer & Modern Web Solutions</title>
-
-<!-- SEO -->
-<meta name="description" content="Modern, high-performance, and responsive websites built with clean design and scalable solutions by ArtsByPraveen.">
-<meta name="keywords" content="web developer, web design, web development, frontend developer, portfolio, modern websites">
-
-<!-- Canonical -->
-<link rel="canonical" href="https://artsbypraveen.in">
-
-<!-- Open Graph (Facebook, LinkedIn, WhatsApp) -->
-<meta property="og:title" content="ArtsByPraveen | Professional Web Developer & Modern Web Solutions">
-<meta property="og:description" content="Modern, high-performance, and responsive websites built with clean design and scalable solutions.">
-<meta property="og:image" content="https://artsbypraveen.in/images/preview.webp">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:url" content="https://artsbypraveen.in">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="ArtsByPraveen">
-
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="ArtsByPraveen | Professional Web Developer & Modern Web Solutions">
-<meta name="twitter:description" content="Modern, high-performance, and responsive websites built with clean design and scalable solutions.">
-<meta name="twitter:image" content="https://artsbypraveen.in/images/preview.webp">
-
-<!-- Structured Data -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Praveen",
-  "url": "https://artsbypraveen.in",
-  "jobTitle": "Web Developer",
-  "sameAs": [
-    "https://github.com/praveenkrwebdev"
-  ]
-}
-</script>
-
-<!-- Favicon -->
-<link rel="icon" href="/images/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+<title>ArtsByPraveen Portfolio</title>
 
 <script src="https://cdn.tailwindcss.com"></script>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-
+<!-- Favicon -->
+<link rel="icon" href="/portfolio/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/portfolio/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/portfolio/images/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/portfolio/images/apple-touch-icon.png">
 <style>
 
 body{
@@ -79,6 +40,7 @@ backdrop-filter:blur(14px);
 box-shadow:inset 0 0 0 1px rgba(255,255,255,0.08),0 8px 32px rgba(0,0,0,0.3);
 border-radius:35px;
 }
+@media(max-width:1023px){.glass{backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);}}
 
 /* gradient text */
 
@@ -128,8 +90,8 @@ border-radius:50%;
 filter:blur(120px);
 opacity:.35;
 z-index:-1;
-will-change:transform;
 }
+@media(max-width:1023px){.blob{filter:blur(60px);opacity:.2;will-change:auto;}}
 
 .blob1{
 width:400px;
@@ -334,13 +296,12 @@ will-change:transform;
 flex-shrink:0;
 width:340px;
 border-radius:24px;
-background:rgba(255,255,255,0.04);
-backdrop-filter:blur(16px);
--webkit-backdrop-filter:blur(16px);
+background:rgba(255,255,255,0.06);
 box-shadow:inset 0 0 0 1px rgba(255,255,255,0.08),0 4px 24px rgba(0,0,0,0.3);
 overflow:hidden;
 transition:transform .35s,box-shadow .35s;
 }
+@media(min-width:1024px){.proj-card{backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);}}
 .proj-card:hover{
 transform:translateY(-8px);
 box-shadow:inset 0 0 0 1px rgba(139,92,246,0.3),0 20px 50px rgba(139,92,246,0.2),0 8px 20px rgba(0,0,0,0.4);
@@ -413,11 +374,11 @@ transition:.25s;
 /* contact */
 .contact-wrap{
 border-radius:35px;overflow:hidden;
-background:rgba(255,255,255,0.04);
-backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+background:rgba(255,255,255,0.06);
 box-shadow:inset 0 0 0 1px rgba(255,255,255,0.08);
 display:grid;grid-template-columns:1fr 1fr;
 }
+@media(min-width:1024px){.contact-wrap{backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);}}
 @media(max-width:768px){.contact-wrap{grid-template-columns:1fr;}}
 .contact-info{
 padding:48px 40px;
@@ -447,13 +408,12 @@ textarea.form-input{padding-top:13px;resize:none;}
 position:relative;
 padding:40px 36px;
 border-radius:28px;
-background:rgba(255,255,255,0.03);
-backdrop-filter:blur(20px);
--webkit-backdrop-filter:blur(20px);
+background:rgba(255,255,255,0.05);
 box-shadow:inset 0 0 0 1px rgba(255,255,255,0.07),0 8px 40px rgba(0,0,0,0.4);
 overflow:hidden;
 transition:transform .35s,box-shadow .35s;
 }
+@media(min-width:1024px){.service-card{backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);}}
 
 .service-card::before{
 content:'';
@@ -555,8 +515,8 @@ line-height:1;
 .parallax{
 transform:translateY(0px);
 transition:transform .1s linear;
-will-change:transform;
 }
+@media(min-width:1024px){.parallax{will-change:transform;}}
 
 /* buttons */
 
