@@ -1,15 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Projects — ArtsByPraveen</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-<link rel="icon" href="../favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Title -->
+  <title>Projects — ArtsByPraveen | Web Developer Portfolio</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Explore web development projects by Praveen including WordPress, Shopify, Wix, and custom website solutions.">
+  <meta name="keywords" content="web developer projects, portfolio, WordPress projects, Shopify projects, Wix developer, frontend projects">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Praveen Kumar">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://artsbypraveen.in/projects/">
+
+  <!-- Open Graph (Facebook, LinkedIn, WhatsApp) -->
+  <meta property="og:title" content="Projects — ArtsByPraveen Portfolio">
+  <meta property="og:description" content="View my latest web development projects including WordPress, Shopify, Wix, and custom builds.">
+  <meta property="og:image" content="https://artsbypraveen.in/images/preview.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://artsbypraveen.in/projects/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ArtsByPraveen">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Projects — ArtsByPraveen Portfolio">
+  <meta name="twitter:description" content="Explore web development projects including WordPress, Shopify, Wix, and custom builds.">
+  <meta name="twitter:image" content="https://artsbypraveen.in/images/preview.webp">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Praveen Kumar",
+    "url": "https://artsbypraveen.in",
+    "jobTitle": "Web Developer",
+    "sameAs": [
+      "https://github.com/praveenkrwebdev"
+    ]
+  }
+  </script>
+
+  <!-- Favicon (ROOT based - important) -->
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
 <style>
 body{font-family:Inter;background:#0B0F19;color:white;overflow-x:hidden;-webkit-overflow-scrolling:touch;}
 html{scroll-behavior:smooth;overflow-x:hidden;}
@@ -59,11 +107,11 @@ html{scroll-behavior:smooth;overflow-x:hidden;}
     </a>
   </div>
   <div class="hidden md:flex gap-1 text-gray-300 items-center">
-    <a href="../index.html" class="nav-link px-4 py-2 rounded-lg text-sm font-medium hover:text-white transition relative">Home</a>
-    <a href="../index.html#about" class="nav-link px-4 py-2 rounded-lg text-sm font-medium hover:text-white transition relative">About</a>
-    <a href="../index.html#services" class="nav-link px-4 py-2 rounded-lg text-sm font-medium hover:text-white transition relative">Services</a>
-    <a href="../index.html#projects" class="nav-link active px-4 py-2 rounded-lg text-sm font-medium hover:text-white transition relative">Projects</a>
-    <a href="../index.html#contact" class="nav-link px-4 py-2 rounded-lg text-sm font-medium hover:text-white transition relative">Contact</a>
+    <a href="../" class="nav-link px-4 py-2 rounded-lg text-sm font-medium hover:text-white transition relative">Home</a>
+    <a href="../#about" class="nav-link px-4 py-2 rounded-lg text-sm font-medium hover:text-white transition relative">About</a>
+    <a href="../#services" class="nav-link px-4 py-2 rounded-lg text-sm font-medium hover:text-white transition relative">Services</a>
+    <a href="../#projects" class="nav-link active px-4 py-2 rounded-lg text-sm font-medium hover:text-white transition relative">Projects</a>
+    <a href="../#contact" class="nav-link px-4 py-2 rounded-lg text-sm font-medium hover:text-white transition relative">Contact</a>
     <a href="https://wa.me/919815898567" target="_blank" class="hero-btn-primary ml-3">Get A Quote</a>
   </div>
   <button id="menuBtn" class="md:hidden p-2 rounded-lg" style="background:rgba(255,255,255,0.06)">
@@ -82,23 +130,23 @@ html{scroll-behavior:smooth;overflow-x:hidden;}
       <svg width="14" height="14" fill="none" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
     </button>
   </div>
-  <a class="menuLink" href="../index.html">
+  <a class="menuLink" href="../">
     <svg width="15" height="15" fill="none" viewBox="0 0 24 24"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H5a1 1 0 01-1-1V9.5z" stroke="#8B5CF6" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 21V12h6v9" stroke="#8B5CF6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
     Home
   </a>
-  <a class="menuLink" href="../index.html#about">
+  <a class="menuLink" href="../#about">
     <svg width="15" height="15" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" stroke="#22D3EE" stroke-width="1.8"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" stroke="#22D3EE" stroke-width="1.8" stroke-linecap="round"/></svg>
     About
   </a>
-  <a class="menuLink" href="../index.html#services">
+  <a class="menuLink" href="../#services">
     <svg width="15" height="15" fill="none" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3" stroke="#22D3EE" stroke-width="1.8"/><path d="M3 9h18M9 21V9" stroke="#22D3EE" stroke-width="1.8" stroke-linecap="round"/></svg>
     Services
   </a>
-  <a class="menuLink" href="../index.html#projects">
+  <a class="menuLink" href="../#projects">
     <svg width="15" height="15" fill="none" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" stroke="#EC4899" stroke-width="1.8"/><path d="M8 21h8M12 17v4" stroke="#EC4899" stroke-width="1.8" stroke-linecap="round"/></svg>
     Projects
   </a>
-  <a class="menuLink" href="../index.html#contact">
+  <a class="menuLink" href="../#contact">
     <svg width="15" height="15" fill="none" viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke="#a78bfa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
     Contact
   </a>
@@ -124,7 +172,7 @@ html{scroll-behavior:smooth;overflow-x:hidden;}
         <svg width="15" height="15" fill="none" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2A19.79 19.79 0 013.09 5.18 2 2 0 015.09 3h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L9.09 10.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="#EC4899" stroke-width="1.8" stroke-linecap="round"/></svg>
         Start A Project
       </a>
-      <a href="../index.html#contact" class="hero-btn-ghost">Get In Touch</a>
+      <a href="../#contact" class="hero-btn-ghost">Get In Touch</a>
     </div>
   </div>
 </section>
@@ -501,10 +549,10 @@ html{scroll-behavior:smooth;overflow-x:hidden;}
     <div>
       <div class="font-semibold mb-4 text-gray-200">Quick Links</div>
       <div class="flex flex-col gap-2 text-gray-400 text-sm">
-        <a href="../index.html#about" class="hover:text-white transition">About</a>
-        <a href="../index.html#services" class="hover:text-white transition">Services</a>
-        <a href="../index.html#projects" class="hover:text-white transition">Projects</a>
-        <a href="../index.html#contact" class="hover:text-white transition">Contact</a>
+        <a href="../#about" class="hover:text-white transition">About</a>
+        <a href="../#services" class="hover:text-white transition">Services</a>
+        <a href="../#projects" class="hover:text-white transition">Projects</a>
+        <a href="../#contact" class="hover:text-white transition">Contact</a>
       </div>
     </div>
     <div>
