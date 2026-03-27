@@ -1,0 +1,1701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Title -->
+<title>ArtsByPraveen | Professional Web Developer & Modern Web Solutions</title>
+
+<!-- SEO -->
+<meta name="description" content="Modern, high-performance, and responsive websites built with clean design and scalable solutions by ArtsByPraveen.">
+<meta name="keywords" content="web developer, web design, web development, frontend developer, portfolio, modern websites">
+
+<!-- Canonical -->
+<link rel="canonical" href="https://artsbypraveen.in">
+
+<!-- Open Graph (Facebook, LinkedIn, WhatsApp) -->
+<meta property="og:title" content="ArtsByPraveen | Professional Web Developer & Modern Web Solutions">
+<meta property="og:description" content="Modern, high-performance, and responsive websites built with clean design and scalable solutions.">
+<meta property="og:image" content="https://artsbypraveen.in/images/preview.webp">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://artsbypraveen.in">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ArtsByPraveen">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ArtsByPraveen | Professional Web Developer & Modern Web Solutions">
+<meta name="twitter:description" content="Modern, high-performance, and responsive websites built with clean design and scalable solutions.">
+<meta name="twitter:image" content="https://artsbypraveen.in/images/preview.webp">
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Praveen",
+  "url": "https://artsbypraveen.in",
+  "jobTitle": "Web Developer",
+  "sameAs": [
+    "https://github.com/praveenkrwebdev"
+  ]
+}
+</script>
+
+<!-- Favicon -->
+<link rel="icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+
+body{
+font-family:Inter;
+background:#0B0F19;
+color:white;
+overflow-x:hidden;
+-webkit-overflow-scrolling: touch;
+}
+
+html{
+scroll-behavior:smooth;
+overflow-x:hidden;
+}
+
+/* glass */
+
+.glass{
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(14px);
+-webkit-backdrop-filter:blur(14px);
+box-shadow:inset 0 0 0 1px rgba(255,255,255,0.08),0 8px 32px rgba(0,0,0,0.3);
+border-radius:35px;
+}
+@media(max-width:1023px){.glass{backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);}}
+
+/* gradient text */
+
+.gradient{
+/* background:linear-gradient(135deg,#8B5CF6,#22D3EE); */
+background:linear-gradient(135deg,#8B5CF6,#ee4622);
+-webkit-background-clip:text;
+color:transparent;
+}
+
+/* big section background title */
+
+.section-title{
+position:relative;
+text-align:center;
+margin-bottom:80px;
+}
+
+.section-bg{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+font-size:clamp(40px,10vw,120px);
+font-weight:800;
+white-space:nowrap;
+pointer-events:none;
+line-height:1;
+padding:0.2em 0;
+background:linear-gradient(to top,transparent 0%,rgba(255,255,255,0.03) 40%,rgba(255,255,255,0.08) 100%);
+-webkit-background-clip:text;
+background-clip:text;
+color:transparent;
+}
+
+.section-main{
+position:relative;
+font-size:40px;
+font-weight:700;
+}
+
+/* floating blobs */
+
+.blob{
+position:absolute;
+border-radius:50%;
+filter:blur(120px);
+opacity:.35;
+z-index:-1;
+}
+@media(max-width:1023px){.blob{filter:blur(60px);opacity:.2;will-change:auto;}}
+
+.blob1{
+width:400px;
+height:400px;
+background:#8B5CF6;
+top:-100px;
+left:0;
+}
+
+.blob2{
+width:350px;
+height:350px;
+background:#22D3EE;
+bottom:-100px;
+right:0;
+}
+
+/* hero */
+
+.hero{
+min-height:90vh;
+display:grid;
+grid-template-columns:1fr 1fr;
+align-items:center;
+gap:60px;
+padding:140px 20px;
+max-width:1200px;
+margin:auto;
+}
+
+.main-logo{height:40px; width:auto;}
+
+@media(max-width:768px){
+
+.hero{
+grid-template-columns:1fr;
+gap:30px;
+padding:100px 16px 40px;
+}
+
+.blob1,.blob2{
+width:200px;
+height:200px;
+}
+.main-logo{height:36px; width:auto;}
+
+}
+
+/* typing animation */
+
+.typing-wrap{
+font-size:clamp(1rem,3vw,1.4rem);
+font-weight:500;
+color:rgba(255,255,255,0.7);
+margin-bottom:16px;
+min-height:2em;
+display:flex;
+align-items:center;
+gap:8px;
+}
+
+.typed-text{
+background:linear-gradient(135deg,#8B5CF6,#22D3EE);
+-webkit-background-clip:text;
+color:transparent;
+font-weight:700;
+}
+
+.cursor-blink{
+display:inline-block;
+width:2px;
+height:1.1em;
+background:linear-gradient(135deg,#8B5CF6,#22D3EE);
+margin-left:2px;
+vertical-align:middle;
+animation:blink .7s step-end infinite;
+}
+
+@keyframes blink{
+0%,100%{opacity:1}50%{opacity:0}
+}
+
+/* logo marquee */
+
+.marquee-outer{
+overflow:hidden;
+position:relative;
+}
+
+.marquee-outer::before,
+.marquee-outer::after{
+content:'';
+position:absolute;
+top:0;
+bottom:0;
+width:80px;
+z-index:2;
+}
+
+.marquee-outer::before{left:0;background:linear-gradient(to right,#0B0F19,transparent);}
+.marquee-outer::after{right:0;background:linear-gradient(to left,#0B0F19,transparent);}
+
+.marquee-track{
+display:flex;
+gap:32px;
+width:max-content;
+animation:marquee 30s linear infinite;
+will-change:transform;
+}
+
+.marquee-track.reverse{
+animation:marquee-rev 30s linear infinite;
+will-change:transform;
+}
+
+@keyframes marquee{
+0%{transform:translateX(0)}100%{transform:translateX(-50%)}
+}
+
+@keyframes marquee-rev{
+0%{transform:translateX(-50%)}100%{transform:translateX(0)}
+}
+
+.logo-card{
+flex-shrink:0;
+width:130px;
+height:60px;
+display:flex;
+align-items:center;
+justify-content:center;
+background:rgba(255,255,255,0.05);
+box-shadow:inset 0 0 0 1px rgba(255,255,255,0.07);
+border-radius:14px;
+padding:8px 14px;
+overflow:hidden;
+}
+
+.logo-card img{
+width:100%;
+height:100%;
+object-fit:contain;
+filter:grayscale(1) brightness(1.4);
+opacity:0.6;
+transition:.3s;
+}
+
+.logo-card:hover img{
+filter:grayscale(0) brightness(1);
+opacity:1;
+}
+
+/* whatsapp float */
+.wa-btn{
+position:fixed;
+bottom:28px;
+right:28px;
+z-index:999;
+width:58px;
+height:58px;
+border-radius:50%;
+background:#25D366;
+display:flex;
+align-items:center;
+justify-content:center;
+box-shadow:0 4px 24px rgba(37,211,102,.5);
+transition:.3s;
+}
+
+.wa-btn:hover{
+transform:scale(1.12);
+box-shadow:0 6px 32px rgba(37,211,102,.8);
+}
+
+/* proj nav */
+.proj-nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:28px;
+}
+.proj-nav-btns{display:flex;gap:10px;}
+.proj-nav button{
+width:42px;height:42px;
+border-radius:50%;
+background:rgba(255,255,255,0.06);
+box-shadow:inset 0 0 0 1px rgba(255,255,255,0.1);
+display:flex;align-items:center;justify-content:center;
+cursor:pointer;transition:.2s;
+}
+.proj-nav button:hover{background:rgba(139,92,246,0.35);box-shadow:inset 0 0 0 1px rgba(139,92,246,0.5),0 0 16px rgba(139,92,246,0.3);}
+
+/* infinite carousel */
+.proj-carousel{overflow:hidden;position:relative;}
+.proj-track{
+display:flex;
+gap:24px;
+will-change:transform;
+}
+
+/* project cards */
+.proj-card{
+flex-shrink:0;
+width:340px;
+border-radius:24px;
+background:rgba(255,255,255,0.06);
+box-shadow:inset 0 0 0 1px rgba(255,255,255,0.08),0 4px 24px rgba(0,0,0,0.3);
+overflow:hidden;
+transition:transform .35s,box-shadow .35s;
+}
+@media(min-width:1024px){.proj-card{backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);}}
+.proj-card:hover{
+transform:translateY(-8px);
+box-shadow:inset 0 0 0 1px rgba(139,92,246,0.3),0 20px 50px rgba(139,92,246,0.2),0 8px 20px rgba(0,0,0,0.4);
+}
+.proj-img{
+position:relative;
+overflow:hidden;
+height:200px;
+}
+.proj-img img{
+width:100%;height:100%;object-fit:cover;
+transition:transform .5s;
+}
+.proj-card:hover .proj-img img{transform:scale(1.08);}
+.proj-overlay{
+position:absolute;inset:0;
+background:linear-gradient(to top,rgba(11,15,25,0.9) 0%,rgba(11,15,25,0.2) 60%,transparent 100%);
+display:flex;align-items:flex-end;justify-content:center;
+padding-bottom:18px;gap:10px;
+opacity:0;transition:.3s;
+}
+.proj-card:hover .proj-overlay{opacity:1;}
+.proj-link{
+display:inline-flex;align-items:center;gap:5px;
+background:linear-gradient(135deg,#8B5CF6,#22D3EE);
+color:#000;font-weight:700;padding:9px 20px;
+border-radius:50px;font-size:12px;
+}
+.proj-link-ghost{
+display:inline-flex;align-items:center;gap:5px;
+background:rgba(255,255,255,0.13);backdrop-filter:blur(8px);
+color:#fff;font-weight:600;padding:9px 16px;
+border-radius:50px;font-size:12px;
+}
+.proj-body{padding:20px 22px 22px;}
+
+/* tag in body */
+.proj-tag{
+display:inline-flex;align-items:center;gap:5px;
+font-size:10px;font-weight:700;
+padding:4px 10px 4px 8px;border-radius:50px;
+margin-bottom:10px;letter-spacing:.5px;text-transform:uppercase;
+}
+.proj-tag-dot{width:5px;height:5px;border-radius:50%;flex-shrink:0;}
+
+.proj-title{font-size:16px;font-weight:700;margin-bottom:6px;line-height:1.4;}
+.proj-desc{font-size:12px;color:rgba(255,255,255,0.45);line-height:1.65;margin-bottom:14px;}
+.proj-stack{display:flex;flex-wrap:wrap;gap:6px;}
+.proj-stack span{
+font-size:10px;padding:3px 10px;border-radius:50px;
+background:rgba(255,255,255,0.06);
+box-shadow:inset 0 0 0 1px rgba(255,255,255,0.09);
+color:rgba(255,255,255,0.5);transition:.2s;
+}
+.proj-card:hover .proj-stack span{color:rgba(255,255,255,0.8);background:rgba(255,255,255,0.1);}
+
+/* skill pills */
+.skill-grid{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px;}
+.skill-pill{
+display:flex;align-items:center;gap:8px;
+padding:8px 16px;border-radius:50px;
+background:rgba(255,255,255,0.05);
+box-shadow:inset 0 0 0 1px rgba(255,255,255,0.08);
+font-size:13px;font-weight:500;color:rgba(255,255,255,0.8);
+transition:.25s;
+}
+.skill-pill:hover{background:rgba(255,255,255,0.09);transform:translateY(-2px);}
+.skill-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
+
+/* contact */
+.contact-wrap{
+border-radius:35px;overflow:hidden;
+background:rgba(255,255,255,0.06);
+box-shadow:inset 0 0 0 1px rgba(255,255,255,0.08);
+display:grid;grid-template-columns:1fr 1fr;
+}
+@media(min-width:1024px){.contact-wrap{backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);}}
+@media(max-width:768px){.contact-wrap{grid-template-columns:1fr;}}
+.contact-info{
+padding:48px 40px;
+background:linear-gradient(135deg,rgba(139,92,246,0.12),rgba(34,211,238,0.05));
+}
+.contact-form-side{padding:48px 40px;}
+@media(max-width:768px){.contact-info,.contact-form-side{padding:32px 24px;}}
+.form-field{position:relative;margin-bottom:18px;}
+.form-field svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);pointer-events:none;opacity:.5;}
+.form-field.textarea-field svg{top:16px;transform:none;}
+.form-input{
+width:100%;background:rgba(255,255,255,0.05);
+box-shadow:inset 0 0 0 1px rgba(255,255,255,0.08);
+border-radius:12px;padding:13px 14px 13px 42px;
+color:white;font-size:14px;font-family:Inter;outline:none;transition:.2s;
+}
+.form-input::placeholder{color:rgba(255,255,255,0.3);}
+.form-input:focus{
+box-shadow:inset 0 0 0 1px rgba(139,92,246,0.7),0 0 0 3px rgba(139,92,246,0.1);
+background:rgba(139,92,246,0.06);
+}
+textarea.form-input{padding-top:13px;resize:none;}
+
+/* service cards */
+
+.service-card{
+position:relative;
+padding:40px 36px;
+border-radius:28px;
+background:rgba(255,255,255,0.05);
+box-shadow:inset 0 0 0 1px rgba(255,255,255,0.07),0 8px 40px rgba(0,0,0,0.4);
+overflow:hidden;
+transition:transform .35s,box-shadow .35s;
+}
+@media(min-width:1024px){.service-card{backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);}}
+
+.service-card::before{
+content:'';
+position:absolute;
+top:0;left:0;right:0;
+height:3px;
+}
+
+.service-card::after{
+content:'';
+position:absolute;
+bottom:-80px;right:-80px;
+width:200px;height:200px;
+border-radius:50%;
+opacity:0;
+transition:opacity .4s;
+pointer-events:none;
+}
+
+.service-card:nth-child(1)::before{background:linear-gradient(90deg,#8B5CF6,#22D3EE);}
+.service-card:nth-child(2)::before{background:linear-gradient(90deg,#22D3EE,#8B5CF6);}
+.service-card:nth-child(3)::before{background:linear-gradient(90deg,#EC4899,#8B5CF6);}
+
+.service-card:nth-child(1)::after{background:radial-gradient(circle,rgba(139,92,246,.18),transparent 70%);}
+.service-card:nth-child(2)::after{background:radial-gradient(circle,rgba(34,211,238,.15),transparent 70%);}
+.service-card:nth-child(3)::after{background:radial-gradient(circle,rgba(236,72,153,.15),transparent 70%);}
+
+.service-card:hover::after{opacity:1;}
+
+.service-card:nth-child(1):hover{
+transform:translateY(-8px);
+box-shadow:inset 0 0 0 1px rgba(139,92,246,0.3),0 24px 60px rgba(139,92,246,0.25);
+}
+.service-card:nth-child(2):hover{
+transform:translateY(-8px);
+box-shadow:inset 0 0 0 1px rgba(34,211,238,0.3),0 24px 60px rgba(34,211,238,0.2);
+}
+.service-card:nth-child(3):hover{
+transform:translateY(-8px);
+box-shadow:inset 0 0 0 1px rgba(236,72,153,0.3),0 24px 60px rgba(236,72,153,0.2);
+}
+
+.service-icon{
+width:64px;
+height:64px;
+border-radius:18px;
+display:flex;
+align-items:center;
+justify-content:center;
+margin-bottom:28px;
+}
+
+.service-num{
+position:absolute;
+top:32px;right:32px;
+font-size:64px;
+font-weight:900;
+line-height:1;
+opacity:0.04;
+pointer-events:none;
+letter-spacing:-2px;
+}
+
+/* stats */
+
+.stat-card{
+text-align:center;
+padding:40px 20px;
+position:relative;
+}
+
+.stat-card+.stat-card::before{
+content:'';
+position:absolute;
+left:0;top:20%;bottom:20%;
+width:1px;
+background:linear-gradient(to bottom,transparent,rgba(255,255,255,0.1),transparent);
+}
+
+@media(max-width:768px){
+.stat-card+.stat-card::before{
+left:20%;right:20%;top:0;bottom:auto;
+width:auto;height:1px;
+background:linear-gradient(to right,transparent,rgba(255,255,255,0.1),transparent);
+}
+}
+
+.stat-num{
+font-size:clamp(2.5rem,6vw,4rem);
+font-weight:800;
+background:linear-gradient(135deg,#8B5CF6,#ee4622);
+-webkit-background-clip:text;
+color:transparent;
+line-height:1;
+}
+
+/* parallax object */
+
+.parallax{
+transform:translateY(0px);
+transition:transform .1s linear;
+}
+@media(min-width:1024px){.parallax{will-change:transform;}}
+
+/* buttons */
+
+.btn{
+background:linear-gradient(135deg,#8B5CF6,#22D3EE);
+padding:14px 28px;
+border-radius:12px;
+font-weight:600;
+color:black;
+}
+
+/* glow button */
+.btn-glow{
+background:linear-gradient(135deg,#8b5cf6,#06b6d4);
+box-shadow:0 0 25px rgba(139,92,246,.6);
+transition:.3s;
+}
+
+.btn-glow:hover{
+box-shadow:0 0 45px rgba(139,92,246,1);
+transform:translateY(-3px);
+}
+
+/* hero buttons */
+.hero-btn-primary{
+display:inline-flex;
+align-items:center;
+gap:8px;
+padding:10px 20px;
+border-radius:12px;
+font-size:13px;
+font-weight:600;
+color:#fff;
+background:rgba(236,72,153,0.15);
+box-shadow:inset 0 0 0 1px rgba(236,72,153,0.4),0 0 18px rgba(236,72,153,0.25);
+transition:transform .25s,box-shadow .25s,background .25s;
+}
+.hero-btn-primary:hover{
+transform:translateY(-2px);
+background:rgba(236,72,153,0.22);
+box-shadow:inset 0 0 0 1px rgba(236,72,153,0.7),0 0 32px rgba(236,72,153,0.45);
+}
+
+.hero-btn-ghost{
+display:inline-flex;
+align-items:center;
+gap:8px;
+padding:10px 20px;
+border-radius:12px;
+font-size:13px;
+font-weight:600;
+color:rgba(255,255,255,0.7);
+background:rgba(255,255,255,0.04);
+box-shadow:inset 0 0 0 1px rgba(255,255,255,0.1);
+transition:transform .25s,box-shadow .25s,color .25s,background .25s;
+}
+.hero-btn-ghost:hover{
+transform:translateY(-2px);
+color:#fff;
+background:rgba(255,255,255,0.08);
+box-shadow:inset 0 0 0 1px rgba(255,255,255,0.2);
+}
+
+/* mobile menu */
+
+.mobile-menu{
+position:fixed;
+top:0;right:0;
+width:300px;height:100vh;
+background:rgba(11,15,25,0.98);
+backdrop-filter:blur(24px);
+-webkit-backdrop-filter:blur(24px);
+box-shadow:-4px 0 40px rgba(0,0,0,0.6);
+display:flex;
+flex-direction:column;
+align-items:flex-start;
+justify-content:flex-start;
+padding:72px 20px 40px;
+gap:4px;
+transform:translateX(100%);
+transition:transform .35s cubic-bezier(.77,0,.18,1);
+z-index:9999;
+}
+
+.mobile-menu.active{
+transform:translateX(0);
+}
+
+.mobile-menu a{
+font-size:14px;
+font-weight:500;
+color:rgba(255,255,255,0.6);
+padding:10px 14px;
+width:100%;
+border-radius:10px;
+transition:.2s;
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.mobile-menu a:hover{color:#fff;background:rgba(255,255,255,0.06);}
+
+.mobile-menu .menu-divider{
+width:100%;height:1px;
+background:rgba(255,255,255,0.06);
+margin:6px 0;
+}
+
+.menu-close{
+position:absolute;
+top:16px;right:16px;
+width:36px;height:36px;
+border-radius:50%;
+background:rgba(255,255,255,0.08);
+box-shadow:inset 0 0 0 1px rgba(255,255,255,0.2);
+display:flex;align-items:center;justify-content:center;
+cursor:pointer;
+transition:.2s;
+z-index:10000;
+}
+.menu-close:hover{background:rgba(139,92,246,0.5);}
+
+/* nav active */
+.nav-link{
+color:rgba(255,255,255,0.6);
+}
+.nav-link::after{
+content:'';
+position:absolute;
+bottom:-2px;left:50%;right:50%;
+height:2px;
+border-radius:2px;
+background:linear-gradient(90deg,#8B5CF6,#22D3EE);
+transition:left .25s,right .25s;
+}
+.nav-link.active{
+color:#fff;
+}
+.nav-link.active::after{
+left:12px;right:12px;
+}
+
+/* mouse glow */
+.cursor-glow{
+position:fixed;
+width:500px;
+height:500px;
+border-radius:50%;
+pointer-events:none;
+background:radial-gradient(circle,rgba(139,92,246,.07) 0%,transparent 65%);
+z-index:0;
+transform:translate(-50%,-50%);
+}
+
+</style>
+
+</head>
+
+<body>
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<div style="position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:-1">
+<div class="blob blob1"></div>
+<div class="blob blob2"></div>
+</div>
+
+<!-- NAVBAR -->
+
+<nav class="fixed top-2 w-full flex justify-center px-3 py-2 z-50">
+    <!-- <nav class="fixed top-6 w-full flex justify-center z-50"> -->
+
+<div class="glass max-w-6xl w-full flex justify-between items-center px-6 py-3">
+
+<div class="font-bold flex items-center gap-2">
+<a href="https://praveenkrwebdev.github.io/portfolio/">    
+<img src="praveen-logo.svg" class="main-logo" alt="ArtsByPraveen" style="object-fit:contain" onerror="this.style.display='none'"></a>
+<!-- <span>ArtsByPraveen</span> -->
+</div>
+
+<div class="hidden md:flex gap-1 text-gray-300 items-center">
+
+<a href="#" class="nav-link px-4 py-2 rounded-lg text-sm font-medium hover:text-white transition relative">Home</a>
+<a href="#about" class="nav-link px-4 py-2 rounded-lg text-sm font-medium hover:text-white transition relative">About</a>
+<a href="#services" class="nav-link px-4 py-2 rounded-lg text-sm font-medium hover:text-white transition relative">Services</a>
+<a href="#projects" class="nav-link px-4 py-2 rounded-lg text-sm font-medium hover:text-white transition relative">Projects</a>
+<a href="#contact" class="nav-link px-4 py-2 rounded-lg text-sm font-medium hover:text-white transition relative">Contact</a>
+
+<a href="https://wa.me/919815898567" target="_blank" class="hero-btn-primary ml-3">Get A Quote</a>
+
+</div>
+
+<button id="menuBtn" class="md:hidden p-2 rounded-lg" style="background:rgba(255,255,255,0.06)">
+<svg width="20" height="20" fill="none" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+</button>
+
+</div>
+
+</nav>
+
+<!-- MOBILE MENU -->
+
+<div id="mobileMenu" class="mobile-menu">
+
+<!-- top bar: logo + close -->
+<div style="position:absolute;top:0;left:0;right:0;height:60px;display:flex;align-items:center;justify-content:space-between;padding:0 16px;border-bottom:1px solid rgba(255,255,255,0.06)">
+<div class="font-bold text-sm flex items-center gap-2">
+<img src="https://praveenkrwebdev.github.io/portfolio/praveen-web-design-main-logo.svg" alt="logo" style="height:32px;width:auto" onerror="this.style.display='none'">
+<!-- <span class="gradient">ArtsByPraveen</span> -->
+</div>
+<button class="menu-close" id="menuClose">
+<svg width="14" height="14" fill="none" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+</button>
+</div>
+
+<a class="menuLink" href="#">
+<svg width="15" height="15" fill="none" viewBox="0 0 24 24"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H5a1 1 0 01-1-1V9.5z" stroke="#8B5CF6" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 21V12h6v9" stroke="#8B5CF6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+Home
+</a>
+<a class="menuLink" href="#about">
+<svg width="15" height="15" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" stroke="#22D3EE" stroke-width="1.8"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" stroke="#22D3EE" stroke-width="1.8" stroke-linecap="round"/></svg>
+About
+</a>
+<a class="menuLink" href="#services">
+<svg width="15" height="15" fill="none" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3" stroke="#22D3EE" stroke-width="1.8"/><path d="M3 9h18M9 21V9" stroke="#22D3EE" stroke-width="1.8" stroke-linecap="round"/></svg>
+Services
+</a>
+<a class="menuLink" href="#projects">
+<svg width="15" height="15" fill="none" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" stroke="#EC4899" stroke-width="1.8"/><path d="M8 21h8M12 17v4" stroke="#EC4899" stroke-width="1.8" stroke-linecap="round"/></svg>
+Projects
+</a>
+<a class="menuLink" href="#contact">
+<svg width="15" height="15" fill="none" viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke="#a78bfa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+Contact
+</a>
+
+<div class="menu-divider"></div>
+
+<a href="https://wa.me/919815898567" target="_blank" class="mt-2" style="background:rgba(37,211,102,0.12);color:#25D366;border-radius:10px">
+<svg width="16" height="16" viewBox="0 0 32 32" fill="none"><path d="M16 3C9.373 3 4 8.373 4 15c0 2.385.668 4.61 1.832 6.5L4 29l7.75-1.812A11.94 11.94 0 0016 28c6.627 0 12-5.373 12-12S22.627 3 16 3z" fill="#25D366"/><path d="M21.5 18.5c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.49-1.76-1.66-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.68-1.63-.93-2.23-.24-.58-.49-.5-.68-.51-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.22 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z" fill="white"/></svg>
+WhatsApp
+</a>
+</div>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div>
+
+<div class="typing-wrap"><span id="typedText" class="typed-text"></span><span class="cursor-blink"></span></div>
+
+<!-- <p class="text-white font-semibold text-lg md:text-xl mb-6">I'm Praveen.</p> -->
+
+<h1 class="text-5xl md:text-7xl font-bold leading-tight">
+
+I'm Praveen - <span class="gradient">A Freelance Web Developer</span>
+
+</h1>
+
+<p class="text-gray-400 mt-6">
+
+I build fast modern websites using WordPress, Wix, WooCommerce and Shopify.
+
+</p>
+
+<div class="mt-8 flex gap-3">
+<a href="https://wa.me/919815898567" target="_blank" class="hero-btn-primary">
+<div style="width:28px;height:28px;border-radius:8px;background:rgba(236,72,153,0.25);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+<svg width="14" height="14" fill="none" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2A19.79 19.79 0 013.09 5.18 2 2 0 015.09 3h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L9.09 10.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="#EC4899" stroke-width="1.8" stroke-linecap="round"/></svg>
+</div>
+Start A Project
+</a>
+<a href="#projects" class="hero-btn-ghost">
+<div style="width:28px;height:28px;border-radius:8px;background:rgba(255,255,255,0.07);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+<svg width="14" height="14" fill="none" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" stroke="rgba(255,255,255,0.6)" stroke-width="1.8"/><path d="M8 21h8M12 17v4" stroke="rgba(255,255,255,0.6)" stroke-width="1.8" stroke-linecap="round"/></svg>
+</div>
+View My Work
+</a>
+</div>
+
+</div>
+
+<div class="parallax">
+
+<!-- <img class="rounded-xl w-full h-auto" src="file:///C:/Users/User/Downloads/Praveen-shrama-web-design-and-development.webp"> -->
+    <img class="rounded-xl" src="https://praveenkrwebdev.github.io/portfolio/Praveen-shrama-web-design-and-development.webp">
+
+
+</div>
+
+</section>
+
+<!-- CLIENTS LOGO SCROLL -->
+
+<section class="py-16 px-6">
+
+<p class="text-center text-gray-500 text-sm uppercase tracking-widest mb-10">Trusted by companies I've worked with</p>
+
+<div class="marquee-outer mb-5">
+<div class="marquee-track">
+<div class="logo-card"><img src="./images/achieverfinancials.png" alt="Client Logo"></div>
+<div class="logo-card"><img src="./images/aquariquo.png" alt="Client Logo"></div>
+<div class="logo-card"><img src="./images/jdt-news.png" alt="Client Logo"></div>
+<div class="logo-card"><img src="./images/kc-logo.webp" alt="Client Logo"></div>
+<div class="logo-card"><img src="./images/lemesosestate-logo.png" alt="Client Logo"></div>
+<div class="logo-card"><img src="./images/magebytes-main-logo-white.png" alt="Client Logo"></div>
+<div class="logo-card"><img src="./images/Nuvion-Logo-Design-1 (1).png" alt="Client Logo"></div>
+<div class="logo-card"><img src="./images/rctlux-logo.png" alt="Client Logo"></div>
+<div class="logo-card"><img src="./images/red-logo.png" alt="Client Logo"></div>
+<div class="logo-card"><img src="./images/weclean.png" alt="Client Logo"></div>
+    <div class="logo-card"><img src="./images/Aditus-logo.webp" alt="Client Logo"></div>
+    <div class="logo-card"><img src="./images/876-logo.webp" alt="Client Logo"></div>
+<!-- duplicate -->
+<div class="logo-card"><img src="./images/achieverfinancials.png" alt="Client Logo"></div>
+<div class="logo-card"><img src="./images/aquariquo.png" alt="Client Logo"></div>
+<div class="logo-card"><img src="./images/jdt-news.png" alt="Client Logo"></div>
+<div class="logo-card"><img src="./images/kc-logo.webp" alt="Client Logo"></div>
+<div class="logo-card"><img src="./images/lemesosestate-logo.png" alt="Client Logo"></div>
+<div class="logo-card"><img src="./images/magebytes-main-logo-white.png" alt="Client Logo"></div>
+<div class="logo-card"><img src="./images/Nuvion-Logo-Design-1 (1).png" alt="Client Logo"></div>
+<div class="logo-card"><img src="./images/rctlux-logo.png" alt="Client Logo"></div>
+<div class="logo-card"><img src="./images/red-logo.png" alt="Client Logo"></div>
+<div class="logo-card"><img src="./images/weclean.png" alt="Client Logo"></div>
+    <div class="logo-card"><img src="./images/Aditus-logo.webp" alt="Client Logo"></div>
+    <div class="logo-card"><img src="./images/876-logo.webp" alt="Client Logo"></div>
+</div>
+</div>
+
+<div class="marquee-outer">
+<div class="marquee-track reverse">
+<div class="logo-card"><img src="./images/tcc-logo.webp" alt="Client Logo"></div>
+<div class="logo-card"><img src="./images/sd-logo.webp" alt="Client Logo"></div>
+<div class="logo-card"><img src="./images/sc-logo.webp" alt="Client Logo"></div>
+<div class="logo-card"><img src="./images/satori-logo.webp" alt="Client Logo"></div>
+<div class="logo-card"><img src="./images/noe-logo.webp" alt="Client Logo"></div>
+<div class="logo-card"><img src="./images/mms-logo.webp" alt="Client Logo"></div>
+<div class="logo-card"><img src="./images/hg-logo.webp" alt="Client Logo"></div>
+<div class="logo-card"><img src="./images/gl-logo.webp" alt="Client Logo"></div>
+<div class="logo-card"><img src="./images/Mentalth-AI-Logo.webp" alt="Client Logo"></div>
+<div class="logo-card"><img src="./images/INREALTY-LOGO.webp" alt="Client Logo"></div>
+<div class="logo-card"><img src="./images/ERPAsset-7.webp" alt="Client Logo"></div>
+<div class="logo-card"><img src="./images/CW_Logo.webp" alt="Client Logo"></div>
+<!-- duplicate -->
+<div class="logo-card"><img src="./images/tcc-logo.webp" alt="Client Logo"></div>
+<div class="logo-card"><img src="./images/sd-logo.webp" alt="Client Logo"></div>
+<div class="logo-card"><img src="./images/sc-logo.webp" alt="Client Logo"></div>
+<div class="logo-card"><img src="./images/satori-logo.webp" alt="Client Logo"></div>
+<div class="logo-card"><img src="./images/noe-logo.webp" alt="Client Logo"></div>
+<div class="logo-card"><img src="./images/mms-logo.webp" alt="Client Logo"></div>
+<div class="logo-card"><img src="./images/hg-logo.webp" alt="Client Logo"></div>
+<div class="logo-card"><img src="./images/gl-logo.webp" alt="Client Logo"></div>
+<div class="logo-card"><img src="./images/Mentalth-AI-Logo.webp" alt="Client Logo"></div>
+<div class="logo-card"><img src="./images/INREALTY-LOGO.webp" alt="Client Logo"></div>
+<div class="logo-card"><img src="./images/ERPAsset-7.webp" alt="Client Logo"></div>
+<div class="logo-card"><img src="./images/CW_Logo.webp" alt="Client Logo"></div>
+</div>
+</div>
+
+</section>
+
+<!-- EXPERIENCE STATS -->
+
+<section class="py-20 px-6 max-w-4xl mx-auto">
+
+<div class="glass grid grid-cols-1 md:grid-cols-3">
+
+<div class="stat-card">
+<div class="stat-num" data-target="5"><span class="count">0</span>+</div>
+<div class="text-gray-300 font-semibold mt-2">Years Experience</div>
+</div>
+
+<div class="stat-card">
+<div class="stat-num" data-target="50"><span class="count">0</span>+</div>
+<div class="text-gray-300 font-semibold mt-2">Projects Delivered</div>
+</div>
+
+<div class="stat-card">
+<div class="stat-num" data-target="50"><span class="count">0</span>+</div>
+<div class="text-gray-300 font-semibold mt-2">Satisfied Clients</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about" class="py-28 px-6 max-w-6xl mx-auto relative">
+
+<div class="section-title">
+<h2 class="section-bg">ABOUT</h2>
+<h2 class="section-main">About Me</h2>
+</div>
+
+<!-- top row: bio + image -->
+<div class="grid md:grid-cols-2 gap-12 items-center mb-12">
+
+<div>
+<div class="flex items-center gap-3 mb-6">
+<div style="width:40px;height:2px;background:linear-gradient(90deg,#8B5CF6,#22D3EE)"></div>
+<span class="text-xs uppercase tracking-widest" style="color:#a78bfa">Who I Am</span>
+</div>
+<h3 class="text-3xl font-bold mb-5 leading-snug">Crafting digital experiences that <span class="gradient">convert & perform</span></h3>
+<p class="leading-relaxed mb-4" style="font-family:'Roboto',sans-serif;color:rgba(255,255,255,0.7);font-size:15px">Hi, I'm <span class="text-white font-semibold">Praveen Sharma</span> — a freelance web developer with 5+ years of experience building fast, modern and conversion-focused websites for businesses worldwide.</p>
+<p class="leading-relaxed mb-4" style="font-family:'Roboto',sans-serif;color:rgba(255,255,255,0.55);font-size:15px">I specialise in WordPress, WooCommerce and Shopify. From custom theme development to full ecommerce builds, I deliver pixel-perfect results that perform. I've worked with 50+ clients across India, UAE, UK and the US.</p>
+<p class="leading-relaxed mb-8" style="font-family:'Roboto',sans-serif;color:rgba(255,255,255,0.55);font-size:15px">When I'm not coding, I'm exploring design trends, contributing to open-source and helping small businesses grow their online presence.</p>
+
+<!-- highlights -->
+<div class="grid grid-cols-2 gap-3">
+<div class="flex items-center gap-3 p-3 rounded-xl" style="background:rgba(139,92,246,0.08);box-shadow:inset 0 0 0 1px rgba(139,92,246,0.2)">
+<div style="width:32px;height:32px;border-radius:8px;background:rgba(139,92,246,0.2);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+<svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z" stroke="#a78bfa" stroke-width="1.8" stroke-linejoin="round"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke="#a78bfa" stroke-width="1.8" stroke-linecap="round"/></svg>
+</div>
+<span style="font-size:13px;color:rgba(255,255,255,0.8);font-weight:500">Clean Code</span>
+</div>
+<div class="flex items-center gap-3 p-3 rounded-xl" style="background:rgba(34,211,238,0.08);box-shadow:inset 0 0 0 1px rgba(34,211,238,0.2)">
+<div style="width:32px;height:32px;border-radius:8px;background:rgba(34,211,238,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+<svg width="16" height="16" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="#22D3EE" stroke-width="1.8"/><path d="M12 6v6l4 2" stroke="#22D3EE" stroke-width="1.8" stroke-linecap="round"/></svg>
+</div>
+<span style="font-size:13px;color:rgba(255,255,255,0.8);font-weight:500">On-Time Delivery</span>
+</div>
+<div class="flex items-center gap-3 p-3 rounded-xl" style="background:rgba(236,72,153,0.08);box-shadow:inset 0 0 0 1px rgba(236,72,153,0.2)">
+<div style="width:32px;height:32px;border-radius:8px;background:rgba(236,72,153,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+<svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="#EC4899" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</div>
+<span style="font-size:13px;color:rgba(255,255,255,0.8);font-weight:500">Fast Performance</span>
+</div>
+<div class="flex items-center gap-3 p-3 rounded-xl" style="background:rgba(251,191,36,0.08);box-shadow:inset 0 0 0 1px rgba(251,191,36,0.2)">
+<div style="width:32px;height:32px;border-radius:8px;background:rgba(251,191,36,0.12);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+<svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="#fbbf24" stroke-width="1.8" stroke-linejoin="round"/></svg>
+</div>
+<span style="font-size:13px;color:rgba(255,255,255,0.8);font-weight:500">5★ Rated Work</span>
+</div>
+</div>
+</div>
+
+<!-- profile image card -->
+<div style="position:relative">
+<div style="position:absolute;inset:-3px;border-radius:32px;background:linear-gradient(135deg,#8B5CF6,#22D3EE,#EC4899);padding:3px;z-index:0">
+<div style="width:100%;height:100%;border-radius:30px;background:#0B0F19"></div>
+</div>
+<div style="position:relative;z-index:1;border-radius:28px;overflow:hidden;background:linear-gradient(135deg,rgba(139,92,246,0.1),rgba(34,211,238,0.05));backdrop-filter:blur(20px);box-shadow:inset 0 0 0 1px rgba(255,255,255,0.07);padding:32px">
+<div style="position:absolute;top:-60px;right:-60px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(139,92,246,0.18),transparent 70%);pointer-events:none"></div>
+<div style="position:absolute;bottom:-50px;left:-50px;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(34,211,238,0.12),transparent 70%);pointer-events:none"></div>
+
+<!-- header -->
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:24px">
+<div style="display:flex;align-items:center;gap:10px">
+<div style="width:28px;height:2px;background:linear-gradient(90deg,#8B5CF6,#22D3EE)"></div>
+<span style="font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:#a78bfa">Tech Stack &amp; Tools</span>
+</div>
+<div style="display:inline-flex;align-items:center;gap:5px;background:rgba(37,211,102,0.12);border-radius:50px;padding:5px 12px;box-shadow:inset 0 0 0 1px rgba(37,211,102,0.25)">
+<div style="width:6px;height:6px;border-radius:50%;background:#25D366;animation:blink .7s step-end infinite"></div>
+<span style="font-size:11px;color:#25D366;font-weight:600">Available</span>
+</div>
+</div>
+
+<!-- tech grid -->
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px">
+
+<div class="flex flex-col items-center gap-2 p-3 rounded-2xl" style="background:rgba(255,255,255,0.05);box-shadow:inset 0 0 0 1px rgba(255,255,255,0.07);transition:.2s" onmouseover="this.style.background='rgba(227,76,38,0.12)';this.style.transform='translateY(-4px)'" onmouseout="this.style.background='rgba(255,255,255,0.05)';this.style.transform='translateY(0)'">
+<div style="width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,rgba(227,76,38,0.25),rgba(227,76,38,0.1));display:flex;align-items:center;justify-content:center">
+<svg width="18" height="18" fill="none" viewBox="0 0 24 24"><path d="M4 3h16l-1.5 16.5L12 21l-6.5-1.5L4 3z" stroke="#e34c26" stroke-width="1.8" stroke-linejoin="round"/><path d="M8 8h8M8.5 12h7l-.5 5-3 1-3-1-.2-2" stroke="#e34c26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</div>
+<span class="text-xs font-medium text-gray-300">HTML5</span>
+<div style="width:100%;height:2px;border-radius:2px;background:linear-gradient(90deg,#e34c26,transparent)"></div>
+</div>
+
+<div class="flex flex-col items-center gap-2 p-3 rounded-2xl" style="background:rgba(255,255,255,0.05);box-shadow:inset 0 0 0 1px rgba(255,255,255,0.07);transition:.2s" onmouseover="this.style.background='rgba(38,77,228,0.12)';this.style.transform='translateY(-4px)'" onmouseout="this.style.background='rgba(255,255,255,0.05)';this.style.transform='translateY(0)'">
+<div style="width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,rgba(38,77,228,0.25),rgba(38,77,228,0.1));display:flex;align-items:center;justify-content:center">
+<svg width="18" height="18" fill="none" viewBox="0 0 24 24"><path d="M4 3h16l-1.5 16.5L12 21l-6.5-1.5L4 3z" stroke="#264de4" stroke-width="1.8" stroke-linejoin="round"/><path d="M8 8h8M8 12h8" stroke="#264de4" stroke-width="1.5" stroke-linecap="round"/></svg>
+</div>
+<span class="text-xs font-medium text-gray-300">CSS3</span>
+<div style="width:100%;height:2px;border-radius:2px;background:linear-gradient(90deg,#264de4,transparent)"></div>
+</div>
+
+<div class="flex flex-col items-center gap-2 p-3 rounded-2xl" style="background:rgba(255,255,255,0.05);box-shadow:inset 0 0 0 1px rgba(255,255,255,0.07);transition:.2s" onmouseover="this.style.background='rgba(247,223,30,0.1)';this.style.transform='translateY(-4px)'" onmouseout="this.style.background='rgba(255,255,255,0.05)';this.style.transform='translateY(0)'">
+<div style="width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,rgba(247,223,30,0.2),rgba(247,223,30,0.08));display:flex;align-items:center;justify-content:center">
+<svg width="18" height="18" fill="none" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" stroke="#f7df1e" stroke-width="1.8"/><path d="M8 17v-6M16 11c0-1.1-.9-2-2-2s-2 .9-2 2v2c0 1.1.9 2 2 2s2-.9 2-2" stroke="#f7df1e" stroke-width="1.5" stroke-linecap="round"/></svg>
+</div>
+<span class="text-xs font-medium text-gray-300">JavaScript</span>
+<div style="width:100%;height:2px;border-radius:2px;background:linear-gradient(90deg,#f7df1e,transparent)"></div>
+</div>
+
+<div class="flex flex-col items-center gap-2 p-3 rounded-2xl" style="background:rgba(255,255,255,0.05);box-shadow:inset 0 0 0 1px rgba(255,255,255,0.07);transition:.2s" onmouseover="this.style.background='rgba(119,107,180,0.15)';this.style.transform='translateY(-4px)'" onmouseout="this.style.background='rgba(255,255,255,0.05)';this.style.transform='translateY(0)'">
+<div style="width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,rgba(119,107,180,0.25),rgba(119,107,180,0.1));display:flex;align-items:center;justify-content:center">
+<svg width="18" height="18" fill="none" viewBox="0 0 24 24"><path d="M12 3C7 3 3 5.5 3 8.5c0 1.5 1 2.8 2.5 3.8L5 17l4-1.5c1 .3 2 .5 3 .5 5 0 9-2.5 9-5.5S17 3 12 3z" stroke="#777bb4" stroke-width="1.8" stroke-linejoin="round"/></svg>
+</div>
+<span class="text-xs font-medium text-gray-300">PHP</span>
+<div style="width:100%;height:2px;border-radius:2px;background:linear-gradient(90deg,#777bb4,transparent)"></div>
+</div>
+
+<div class="flex flex-col items-center gap-2 p-3 rounded-2xl" style="background:rgba(255,255,255,0.05);box-shadow:inset 0 0 0 1px rgba(255,255,255,0.07);transition:.2s" onmouseover="this.style.background='rgba(33,117,155,0.15)';this.style.transform='translateY(-4px)'" onmouseout="this.style.background='rgba(255,255,255,0.05)';this.style.transform='translateY(0)'">
+<div style="width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,rgba(33,117,155,0.25),rgba(33,117,155,0.1));display:flex;align-items:center;justify-content:center">
+<svg width="18" height="18" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke="#21759b" stroke-width="1.8"/><path d="M12 3a9 9 0 010 18M3 12h18" stroke="#21759b" stroke-width="1.5" stroke-linecap="round"/></svg>
+</div>
+<span class="text-xs font-medium text-gray-300">WordPress</span>
+<div style="width:100%;height:2px;border-radius:2px;background:linear-gradient(90deg,#21759b,transparent)"></div>
+</div>
+
+<div class="flex flex-col items-center gap-2 p-3 rounded-2xl" style="background:rgba(255,255,255,0.05);box-shadow:inset 0 0 0 1px rgba(255,255,255,0.07);transition:.2s" onmouseover="this.style.background='rgba(150,88,138,0.15)';this.style.transform='translateY(-4px)'" onmouseout="this.style.background='rgba(255,255,255,0.05)';this.style.transform='translateY(0)'">
+<div style="width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,rgba(150,88,138,0.25),rgba(150,88,138,0.1));display:flex;align-items:center;justify-content:center">
+<svg width="18" height="18" fill="none" viewBox="0 0 24 24"><path d="M6 2h12a2 2 0 012 2v16a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z" stroke="#96588a" stroke-width="1.8"/><path d="M9 11l2 2 4-4" stroke="#96588a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</div>
+<span class="text-xs font-medium text-gray-300">WooCommerce</span>
+<div style="width:100%;height:2px;border-radius:2px;background:linear-gradient(90deg,#96588a,transparent)"></div>
+</div>
+
+<div class="flex flex-col items-center gap-2 p-3 rounded-2xl" style="background:rgba(255,255,255,0.05);box-shadow:inset 0 0 0 1px rgba(255,255,255,0.07);transition:.2s" onmouseover="this.style.background='rgba(149,191,71,0.12)';this.style.transform='translateY(-4px)'" onmouseout="this.style.background='rgba(255,255,255,0.05)';this.style.transform='translateY(0)'">
+<div style="width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,rgba(149,191,71,0.25),rgba(149,191,71,0.1));display:flex;align-items:center;justify-content:center">
+<svg width="18" height="18" fill="none" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z" stroke="#95bf47" stroke-width="1.8" stroke-linejoin="round"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke="#95bf47" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</div>
+<span class="text-xs font-medium text-gray-300">Shopify</span>
+<div style="width:100%;height:2px;border-radius:2px;background:linear-gradient(90deg,#95bf47,transparent)"></div>
+</div>
+
+<div class="flex flex-col items-center gap-2 p-3 rounded-2xl" style="background:rgba(255,255,255,0.05);box-shadow:inset 0 0 0 1px rgba(255,255,255,0.07);transition:.2s" onmouseover="this.style.background='rgba(0,185,232,0.12)';this.style.transform='translateY(-4px)'" onmouseout="this.style.background='rgba(255,255,255,0.05)';this.style.transform='translateY(0)'">
+<div style="width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,rgba(0,185,232,0.25),rgba(0,185,232,0.1));display:flex;align-items:center;justify-content:center">
+<svg width="18" height="18" fill="none" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3" stroke="#00b9e8" stroke-width="1.8"/><path d="M8 12h8M12 8v8" stroke="#00b9e8" stroke-width="1.5" stroke-linecap="round"/></svg>
+</div>
+<span class="text-xs font-medium text-gray-300">Wix</span>
+<div style="width:100%;height:2px;border-radius:2px;background:linear-gradient(90deg,#00b9e8,transparent)"></div>
+</div>
+
+<div class="flex flex-col items-center gap-2 p-3 rounded-2xl" style="background:rgba(255,255,255,0.05);box-shadow:inset 0 0 0 1px rgba(255,255,255,0.07);transition:.2s" onmouseover="this.style.background='rgba(97,218,251,0.1)';this.style.transform='translateY(-4px)'" onmouseout="this.style.background='rgba(255,255,255,0.05)';this.style.transform='translateY(0)'">
+<div style="width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,rgba(97,218,251,0.2),rgba(97,218,251,0.08));display:flex;align-items:center;justify-content:center">
+<svg width="18" height="18" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3" stroke="#61dafb" stroke-width="1.8"/><ellipse cx="12" cy="12" rx="10" ry="4" stroke="#61dafb" stroke-width="1.5"/><ellipse cx="12" cy="12" rx="10" ry="4" stroke="#61dafb" stroke-width="1.5" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" stroke="#61dafb" stroke-width="1.5" transform="rotate(120 12 12)"/></svg>
+</div>
+<span class="text-xs font-medium text-gray-300">React</span>
+<div style="width:100%;height:2px;border-radius:2px;background:linear-gradient(90deg,#61dafb,transparent)"></div>
+</div>
+
+</div>
+</div>
+</div>
+
+</div>
+
+</section>
+
+
+<section id="services" class="py-28 px-6 max-w-6xl mx-auto">
+
+<div class="section-title">
+
+<h2 class="section-bg">SERVICES</h2>
+
+<h2 class="section-main">Services</h2>
+
+</div>
+
+<div class="grid md:grid-cols-3 gap-8">
+
+<div class="service-card">
+<div class="service-icon" style="background:linear-gradient(135deg,rgba(139,92,246,0.2),rgba(34,211,238,0.1))">
+<svg width="28" height="28" fill="none" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3" stroke="#8B5CF6" stroke-width="1.8"/><path d="M3 9h18M9 21V9" stroke="#22D3EE" stroke-width="1.8" stroke-linecap="round"/></svg>
+</div>
+<h3 class="text-xl font-semibold mb-3">WordPress Development</h3>
+<p class="text-gray-400 text-sm leading-relaxed">Custom themes, plugins and full site builds tailored to your brand and goals.</p>
+<div class="mt-6 flex flex-wrap gap-2">
+<span class="text-xs px-3 py-1 rounded-full" style="background:rgba(139,92,246,0.15);color:#a78bfa">Elementor</span>
+<span class="text-xs px-3 py-1 rounded-full" style="background:rgba(34,211,238,0.1);color:#67e8f9">ACF</span>
+<span class="text-xs px-3 py-1 rounded-full" style="background:rgba(255,255,255,0.06);color:#9ca3af">Custom Plugins</span>
+</div>
+</div>
+
+<div class="service-card">
+<div class="service-icon" style="background:linear-gradient(135deg,rgba(34,211,238,0.2),rgba(139,92,246,0.1))">
+<svg width="28" height="28" fill="none" viewBox="0 0 24 24"><path d="M6 2h12a2 2 0 012 2v16a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z" stroke="#22D3EE" stroke-width="1.8"/><path d="M9 11l2 2 4-4" stroke="#8B5CF6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 7h8M8 15h5" stroke="#22D3EE" stroke-width="1.5" stroke-linecap="round" opacity=".5"/></svg>
+</div>
+<h3 class="text-xl font-semibold mb-3">WooCommerce</h3>
+<p class="text-gray-400 text-sm leading-relaxed">High-converting ecommerce stores with smooth checkout, payments and inventory.</p>
+<div class="mt-6 flex flex-wrap gap-2">
+<span class="text-xs px-3 py-1 rounded-full" style="background:rgba(34,211,238,0.15);color:#67e8f9">WooCommerce</span>
+<span class="text-xs px-3 py-1 rounded-full" style="background:rgba(139,92,246,0.1);color:#a78bfa">Payments</span>
+<span class="text-xs px-3 py-1 rounded-full" style="background:rgba(255,255,255,0.06);color:#9ca3af">SEO</span>
+</div>
+</div>
+
+<div class="service-card">
+<div class="service-icon" style="background:linear-gradient(135deg,rgba(236,72,153,0.2),rgba(139,92,246,0.1))">
+<svg width="28" height="28" fill="none" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z" stroke="#EC4899" stroke-width="1.8" stroke-linejoin="round"/><path d="M2 17l10 5 10-5" stroke="#8B5CF6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 12l10 5 10-5" stroke="#EC4899" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" opacity=".5"/></svg>
+</div>
+<h3 class="text-xl font-semibold mb-3">Shopify</h3>
+<p class="text-gray-400 text-sm leading-relaxed">Modern Shopify stores with custom themes, apps and conversion-focused design.</p>
+<div class="mt-6 flex flex-wrap gap-2">
+<span class="text-xs px-3 py-1 rounded-full" style="background:rgba(236,72,153,0.15);color:#f9a8d4">Shopify</span>
+<span class="text-xs px-3 py-1 rounded-full" style="background:rgba(139,92,246,0.1);color:#a78bfa">Liquid</span>
+<span class="text-xs px-3 py-1 rounded-full" style="background:rgba(255,255,255,0.06);color:#9ca3af">Apps</span>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="py-28 px-6 max-w-6xl mx-auto">
+<div class="section-title">
+<h2 class="section-bg">PROJECTS</h2>
+<h2 class="section-main">Featured Work</h2>
+<p style="position:relative;color:rgba(255,255,255,0.4);font-size:14px;margin-top:10px">Real projects — live & delivering results</p>
+</div>
+
+<div class="proj-nav">
+<p style="font-size:13px;color:rgba(255,255,255,0.3)">Showing <span id="projCount">1</span> of 7</p>
+<div class="proj-nav-btns">
+<button type="button" id="projPrev"><svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+<button type="button" id="projNext"><svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+</div>
+</div>
+
+<div class="proj-carousel">
+<div class="proj-track" id="projTrack">
+
+<!-- 1: BridgeStone -->
+<div class="proj-card">
+<div class="proj-img">
+<img src="./images/project-cwc.webp" alt="BridgeStone">
+<div class="proj-overlay">
+<a href="#" target="_blank" class="proj-link">View Live ↗</a>
+<a href="projects.html" class="proj-link-ghost">Details</a>
+</div>
+</div>
+<div class="proj-body">
+<div class="proj-tag" style="background:rgba(150,88,138,0.2);box-shadow:inset 0 0 0 1px rgba(150,88,138,0.45);color:#e0b8dc"><span class="proj-tag-dot" style="background:#96588a"></span>WooCommerce</div>
+<h3 class="proj-title">BridgeStone</h3>
+<p class="proj-desc">Custom WordPress & WooCommerce build with tailored functionality and bespoke design.</p>
+<div class="proj-stack"><span>WordPress</span><span>WooCommerce</span><span>Custom Work</span></div>
+</div>
+</div>
+
+<!-- 2: Cartridge World Cyprus -->
+<div class="proj-card">
+<div class="proj-img">
+<img src="./images/project-cwc.webp" alt="Cartridge World Cyprus">
+<div class="proj-overlay">
+<a href="https://cwcyprus.com/" target="_blank" class="proj-link">View Live ↗</a>
+<a href="projects.html" class="proj-link-ghost">Details</a>
+</div>
+</div>
+<div class="proj-body">
+<div class="proj-tag" style="background:rgba(150,88,138,0.2);box-shadow:inset 0 0 0 1px rgba(150,88,138,0.45);color:#e0b8dc"><span class="proj-tag-dot" style="background:#96588a"></span>WooCommerce</div>
+<h3 class="proj-title">Cartridge World Cyprus</h3>
+<p class="proj-desc">Full ecommerce store with API integration, custom shipping, payment gateway and ACF-powered content.</p>
+<div class="proj-stack"><span>WordPress</span><span>WooCommerce</span><span>API</span><span>ACF</span><span>Custom Plugin</span></div>
+</div>
+</div>
+
+<!-- 3: Hercules Group -->
+<div class="proj-card">
+<div class="proj-img">
+<img src="./images/project-cwc.webp" alt="Hercules Group">
+<div class="proj-overlay">
+<a href="https://hercules-group.com/" target="_blank" class="proj-link">View Live ↗</a>
+<a href="projects.html" class="proj-link-ghost">Details</a>
+</div>
+</div>
+<div class="proj-body">
+<div class="proj-tag" style="background:rgba(150,88,138,0.2);box-shadow:inset 0 0 0 1px rgba(150,88,138,0.45);color:#e0b8dc"><span class="proj-tag-dot" style="background:#96588a"></span>WooCommerce</div>
+<h3 class="proj-title">Hercules Group</h3>
+<p class="proj-desc">Complex WooCommerce store with custom pricing, shipping logic, API integration and Figma-to-code build.</p>
+<div class="proj-stack"><span>WordPress</span><span>WooCommerce</span><span>Figma</span><span>Custom Price</span><span>API</span></div>
+</div>
+</div>
+
+<!-- 4: Solar Dynamics -->
+<div class="proj-card">
+<div class="proj-img">
+<img src="./images/project-cwc.webp" alt="Solar Dynamics">
+<div class="proj-overlay">
+<a href="https://solardynamics.co/" target="_blank" class="proj-link">View Live ↗</a>
+<a href="projects.html" class="proj-link-ghost">Details</a>
+</div>
+</div>
+<div class="proj-body">
+<div class="proj-tag" style="background:rgba(33,117,155,0.2);box-shadow:inset 0 0 0 1px rgba(33,117,155,0.45);color:#7ecfee"><span class="proj-tag-dot" style="background:#21759b"></span>WordPress</div>
+<h3 class="proj-title">Solar Dynamics</h3>
+<p class="proj-desc">Clean WordPress CMS site built with Elementor for a solar energy company with lead generation focus.</p>
+<div class="proj-stack"><span>WordPress</span><span>Elementor</span><span>CMS</span></div>
+</div>
+</div>
+
+<!-- 5: 876 Produce -->
+<div class="proj-card">
+<div class="proj-img">
+<img src="./images/876-logo.webp" alt="876 Produce" style="object-fit:contain;padding:40px;background:#111">
+<div class="proj-overlay">
+<a href="https://www.876produce.com/" target="_blank" class="proj-link">View Live ↗</a>
+<a href="projects.html" class="proj-link-ghost">Details</a>
+</div>
+</div>
+<div class="proj-body">
+<div class="proj-tag" style="background:rgba(149,191,71,0.2);box-shadow:inset 0 0 0 1px rgba(149,191,71,0.45);color:#c2e07a"><span class="proj-tag-dot" style="background:#95bf47"></span>Shopify</div>
+<h3 class="proj-title">876 Produce</h3>
+<p class="proj-desc">Shopify store with custom Liquid theme for a Jamaican produce brand targeting international markets.</p>
+<div class="proj-stack"><span>Shopify</span><span>Liquid</span><span>Custom Theme</span></div>
+</div>
+</div>
+
+<!-- 6: Lemesos Estates -->
+<div class="proj-card">
+<div class="proj-img">
+<img src="./images/lemesosestate-logo.png" alt="Lemesos Estates" style="object-fit:contain;padding:40px;background:#111">
+<div class="proj-overlay">
+<a href="https://lemesosestates.com/" target="_blank" class="proj-link">View Live ↗</a>
+<a href="projects.html" class="proj-link-ghost">Details</a>
+</div>
+</div>
+<div class="proj-body">
+<div class="proj-tag" style="background:rgba(33,117,155,0.2);box-shadow:inset 0 0 0 1px rgba(33,117,155,0.45);color:#7ecfee"><span class="proj-tag-dot" style="background:#21759b"></span>WordPress</div>
+<h3 class="proj-title">Lemesos Estates</h3>
+<p class="proj-desc">Real estate WordPress site with custom property listings, search filters and inquiry forms.</p>
+<div class="proj-stack"><span>WordPress</span><span>Real Estate</span><span>Custom Work</span></div>
+</div>
+</div>
+
+<!-- 7: Mentalth -->
+<div class="proj-card">
+<div class="proj-img">
+<img src="./images/Mentalth-AI-Logo.webp" alt="Mentalth" style="object-fit:contain;padding:40px;background:#111">
+<div class="proj-overlay">
+<a href="https://mentalth.org/" target="_blank" class="proj-link">View Live ↗</a>
+<a href="projects.html" class="proj-link-ghost">Details</a>
+</div>
+</div>
+<div class="proj-body">
+<div class="proj-tag" style="background:rgba(139,92,246,0.2);box-shadow:inset 0 0 0 1px rgba(139,92,246,0.45);color:#c4b5fd"><span class="proj-tag-dot" style="background:#8B5CF6"></span>WordPress</div>
+<h3 class="proj-title">Mentalth</h3>
+<p class="proj-desc">Mental health platform built on WordPress with Elementor and an integrated AI chatbot for user support.</p>
+<div class="proj-stack"><span>WordPress</span><span>Elementor</span><span>AI Chatbot</span></div>
+</div>
+</div>
+
+</div><!-- end proj-track -->
+</div><!-- end proj-carousel -->
+
+<div class="mt-10 flex gap-3 justify-center">
+<a href="projects.html" class="hero-btn-primary">
+<div style="width:28px;height:28px;border-radius:8px;background:rgba(236,72,153,0.25);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+<svg width="14" height="14" fill="none" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" stroke="rgba(255,255,255,0.7)" stroke-width="1.8"/><path d="M8 21h8M12 17v4" stroke="rgba(255,255,255,0.7)" stroke-width="1.8" stroke-linecap="round"/></svg>
+</div>
+View All Projects
+</a>
+</div>
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact" class="py-28 px-6 max-w-5xl mx-auto">
+
+<div class="section-title">
+<h2 class="section-bg">CONTACT</h2>
+<h2 class="section-main">Contact</h2>
+</div>
+
+<div class="contact-wrap">
+
+<div class="contact-info">
+<h3 class="text-2xl font-bold mb-3">Let's work <span class="gradient">together</span></h3>
+<p class="text-gray-400 text-sm leading-relaxed mb-8">Have a project in mind? I'd love to hear about it. Send me a message and I'll get back to you within 24 hours.</p>
+
+<div class="flex flex-col gap-5">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style="background:rgba(139,92,246,0.15)">
+<svg width="18" height="18" fill="none" viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2z" stroke="#8B5CF6" stroke-width="1.8"/><path d="M22 6l-10 7L2 6" stroke="#22D3EE" stroke-width="1.8" stroke-linecap="round"/></svg>
+</div>
+<div><div class="text-xs text-gray-500 mb-0.5">Email</div><div class="text-sm text-gray-200">praveenkr.webdev@gmail.com</div></div>
+</div>
+
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style="background:rgba(37,211,102,0.15)">
+<svg width="18" height="18" fill="none" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2A19.79 19.79 0 013.09 5.18 2 2 0 015.09 3h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L9.09 10.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="#25D366" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</div>
+<div><div class="text-xs text-gray-500 mb-0.5">WhatsApp</div><div class="text-sm text-gray-200">+91 98158 98567</div></div>
+</div>
+
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style="background:rgba(34,211,238,0.12)">
+<svg width="18" height="18" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="#22D3EE" stroke-width="1.8"/><path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20" stroke="#22D3EE" stroke-width="1.8" stroke-linecap="round"/></svg>
+</div>
+<div><div class="text-xs text-gray-500 mb-0.5">Website</div><div class="text-sm text-gray-200">artsbypraveen.in</div></div>
+</div>
+</div>
+</div>
+
+<div class="contact-form-side">
+<form id="contactForm" action="https://formsubmit.co/praveenkr.webdev@gmail.com" method="POST" class="flex flex-col gap-0">
+
+  <!-- hidden settings -->
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_subject" value="New Portfolio Message!">
+  <input type="text" name="_honey" style="display:none">
+
+  <div class="form-field">
+    <svg width="16" height="16" fill="none" viewBox="0 0 24 24">
+      <circle cx="12" cy="8" r="4" stroke="#8B5CF6" stroke-width="1.8"/>
+      <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" stroke="#8B5CF6" stroke-width="1.8" stroke-linecap="round"/>
+    </svg>
+    <input class="form-input" name="name" placeholder="Your Name" required>
+  </div>
+
+  <div class="form-field">
+    <svg width="16" height="16" fill="none" viewBox="0 0 24 24">
+      <path d="M4 4h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2z" stroke="#8B5CF6" stroke-width="1.8"/>
+      <path d="M22 6l-10 7L2 6" stroke="#8B5CF6" stroke-width="1.8" stroke-linecap="round"/>
+    </svg>
+    <input class="form-input" name="email" type="email" placeholder="Email Address" required>
+  </div>
+
+  <div class="form-field">
+  <svg width="16" height="16" fill="none" viewBox="0 0 24 24">
+    <path d="M22 16.92v3a2 2 0 01-2.18 2A19.79 19.79 0 013.09 5.18 2 2 0 015.09 3h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L9.09 10.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="#8B5CF6" stroke-width="1.8" stroke-linecap="round"/>
+  </svg>
+  <input 
+  class="form-input" 
+  name="phone" 
+  type="tel"
+  inputmode="numeric"
+  placeholder="Phone (10 digits)"
+  maxlength="10"
+  required
+>
+</div>
+
+  <div class="form-field textarea-field">
+    <svg width="16" height="16" fill="none" viewBox="0 0 24 24">
+      <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke="#8B5CF6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <textarea rows="4" class="form-input" name="message" placeholder="Tell me about your project" required></textarea>
+  </div>
+
+  <button type="submit" id="submitBtn" class="btn w-full mt-2" style="border-radius:12px">
+    Send Message
+  </button>
+
+  <!-- messages -->
+  <p id="successMsg" style="display:none; color:#22c55e; margin-top:10px;">
+    ✅ Thank you! Your message has been sent.
+  </p>
+
+  <p id="errorMsg" style="display:none; color:#ef4444; margin-top:10px;"></p>
+
+</form>
+</div>
+
+</div>
+
+</section>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/919815898567" target="_blank" class="wa-btn" aria-label="Chat on WhatsApp">
+<svg width="30" height="30" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16 3C9.373 3 4 8.373 4 15c0 2.385.668 4.61 1.832 6.5L4 29l7.75-1.812A11.94 11.94 0 0016 28c6.627 0 12-5.373 12-12S22.627 3 16 3z" fill="white"/>
+<path d="M21.5 18.5c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.49-1.76-1.66-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.68-1.63-.93-2.23-.24-.58-.49-.5-.68-.51-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.22 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z" fill="#25D366"/>
+</svg>
+</a>
+
+<footer class="py-16 px-6">
+
+<div class="glass max-w-6xl mx-auto px-8 py-12">
+
+<div class="grid md:grid-cols-3 gap-10 mb-10">
+
+<div>
+<!-- <div class="font-bold text-xl mb-3">ArtsByPraveen</div> -->
+<div class="font-bold flex items-center gap-2  mb-3">
+<img src="https://praveenkrwebdev.github.io/portfolio/praveen-web-design-main-logo.svg" alt="ArtsByPraveen" style="height:36px;width:auto;object-fit:contain" onerror="this.style.display='none'">
+<!-- <span>ArtsByPraveen</span> -->
+</div>
+<p class="text-gray-400 text-sm leading-relaxed">Freelance WordPress & ecommerce developer crafting fast, modern websites that convert.</p>
+</div>
+
+<div>
+<div class="font-semibold mb-4 text-gray-200">Quick Links</div>
+<div class="flex flex-col gap-2 text-gray-400 text-sm">
+<a href="#about" class="hover:text-white transition">About</a>
+<a href="#services" class="hover:text-white transition">Services</a>
+<a href="#projects" class="hover:text-white transition">Projects</a>
+<a href="#contact" class="hover:text-white transition">Contact</a>
+</div>
+</div>
+
+<div>
+<div class="font-semibold mb-4 text-gray-200">Get In Touch</div>
+<div class="flex flex-col gap-2 text-gray-400 text-sm">
+<span>praveenkr.webdev@gmail.com</span>
+<span>Available for freelance work</span>
+</div>
+<div class="flex gap-4 mt-5">
+<a href="#" class="glass w-10 h-10 flex items-center justify-center rounded-full hover:bg-white/10 transition text-sm">in</a>
+<a href="#" class="glass w-10 h-10 flex items-center justify-center rounded-full hover:bg-white/10 transition text-sm">gh</a>
+<a href="#" class="glass w-10 h-10 flex items-center justify-center rounded-full hover:bg-white/10 transition text-sm">tw</a>
+</div>
+</div>
+
+</div>
+
+<div class="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center gap-3 text-gray-500 text-sm">
+<span>© 2026 ArtsByPraveen. All rights reserved.</span>
+<span class="gradient font-medium">Designed & Built by Praveen</span>
+</div>
+
+</div>
+
+</footer>
+
+<script>
+const form = document.getElementById("contactForm");
+const btn = document.getElementById("submitBtn");
+const successMsg = document.getElementById("successMsg");
+const errorMsg = document.getElementById("errorMsg");
+
+// auto clean phone input
+form.phone.addEventListener("input", () => {
+  form.phone.value = form.phone.value.replace(/[^0-9]/g, "").slice(0, 10);
+});
+
+form.addEventListener("submit", async function(e) {
+  e.preventDefault();
+
+  successMsg.style.display = "none";
+  errorMsg.style.display = "none";
+
+  const name = form.name.value.trim();
+  const email = form.email.value.trim();
+  const phone = form.phone.value.trim();
+  const message = form.message.value.trim();
+
+  // required validation
+  if (!name || !email || !phone || !message) {
+    errorMsg.innerText = "Please fill all fields";
+    errorMsg.style.display = "block";
+    return;
+  }
+
+  // email validation
+  const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,}$/;
+  if (!email.match(emailPattern)) {
+    errorMsg.innerText = "Enter a valid email";
+    errorMsg.style.display = "block";
+    return;
+  }
+
+  // phone validation (STRICT)
+  if (!/^[0-9]{10}$/.test(phone)) {
+    errorMsg.innerText = "Enter valid 10 digit phone number";
+    errorMsg.style.display = "block";
+    return;
+  }
+
+  // loading state
+  btn.innerText = "Sending...";
+  btn.disabled = true;
+
+  try {
+    const res = await fetch(form.action, {
+      method: "POST",
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (res.ok) {
+      successMsg.style.display = "block";
+      form.reset();
+    } else {
+      throw new Error();
+    }
+
+  } catch (err) {
+    errorMsg.innerText = "Something went wrong. Try again.";
+    errorMsg.style.display = "block";
+  }
+
+  btn.innerText = "Send Message";
+  btn.disabled = false;
+});
+</script>
+<script>
+
+/* mobile menu */
+
+/* active nav highlight */
+const navLinks=document.querySelectorAll('.nav-link')
+const sections=document.querySelectorAll('section[id]')
+
+const setActive=(id)=>{
+navLinks.forEach(a=>{
+a.classList.remove('active')
+const href=a.getAttribute('href')
+if(href==='#'+id||(href==='#'&&id==='hero'))a.classList.add('active')
+})
+}
+
+new IntersectionObserver((entries)=>{
+entries.forEach(e=>{
+if(e.isIntersecting)setActive('hero')
+})
+},{rootMargin:'-40% 0px -55% 0px'}).observe(document.querySelector('.hero'))
+
+sections.forEach(sec=>{
+new IntersectionObserver((entries)=>{
+entries.forEach(e=>{
+if(e.isIntersecting)setActive(e.target.id)
+})
+},{rootMargin:'-40% 0px -55% 0px'}).observe(sec)
+})
+
+const menuBtn=document.getElementById("menuBtn")
+const mobileMenu=document.getElementById("mobileMenu")
+
+menuBtn.addEventListener("click",()=>{
+mobileMenu.classList.toggle("active")
+})
+document.getElementById('menuClose').addEventListener('click',()=>{
+mobileMenu.classList.remove("active")
+})
+
+document.querySelectorAll(".menuLink").forEach(link=>{
+link.addEventListener("click",()=>{
+mobileMenu.classList.remove("active")
+})
+})
+
+/* cursor glow */
+const glow=document.getElementById('cursorGlow')
+window.addEventListener('mousemove',e=>{
+glow.style.left=e.clientX+'px'
+glow.style.top=e.clientY+'px'
+})
+
+/* typing */
+
+const words=['Hello','नमस्ते','வணக்கம்','నమస్కారం','السلام','નમસ્તે','ਸਤ ਸ੍ਰੀ ਅਕਾਲ']
+let wi=0,ci=0,deleting=false
+const el=document.getElementById('typedText')
+
+function type(){
+const word=words[wi]
+if(!deleting){
+el.textContent=word.slice(0,ci+1)
+ci++
+if(ci===word.length){setTimeout(()=>{deleting=true;type()},1400);return}
+}else{
+el.textContent=word.slice(0,ci-1)
+ci--
+if(ci===0){deleting=false;wi=(wi+1)%words.length}
+}
+setTimeout(type,deleting?60:100)
+}
+type()
+
+/* stats counter */
+
+const statsSection=document.querySelector('.stat-card').closest('section')
+let counted=false
+
+new IntersectionObserver(entries=>{
+if(entries[0].isIntersecting && !counted){
+counted=true
+document.querySelectorAll('.stat-num').forEach(el=>{
+const target=+el.dataset.target
+const span=el.querySelector('.count')
+const duration=1800
+const step=Math.ceil(duration/target)
+let cur=0
+const timer=setInterval(()=>{
+cur++
+span.textContent=cur
+if(cur>=target)clearInterval(timer)
+},step)
+})
+}
+},{threshold:0.4}).observe(statsSection)
+
+/* carousel */
+var projTrack=document.getElementById('projTrack');
+var projOrig=Array.from(projTrack.querySelectorAll('.proj-card'));
+var projTotal=projOrig.length;
+
+/* clone cards for seamless loop */
+projOrig.forEach(function(c){projTrack.appendChild(c.cloneNode(true));});
+
+var projIdx=0;
+
+function projW(){return projOrig[0].offsetWidth+24;}
+
+function projMove(n,anim){
+projTrack.style.transition=anim?'transform .45s ease':'none';
+projTrack.style.transform='translateX(-'+(n*projW())+'px)';
+var c=document.getElementById('projCount');
+if(c)c.textContent=(n%projTotal)+1;
+}
+projMove(0,false);
+
+function projNext(){
+projIdx++;
+projMove(projIdx,true);
+/* when we land on the clone set, silently snap to real */
+if(projIdx>=projTotal){
+setTimeout(function(){projIdx=0;projMove(0,false);},450);
+}
+}
+function projPrev(){
+if(projIdx<=0){
+/* jump to clone position instantly, then animate back */
+projIdx=projTotal;
+projMove(projIdx,false);
+setTimeout(function(){projIdx=projTotal-1;projMove(projIdx,true);},20);
+}else{
+projIdx--;
+projMove(projIdx,true);
+}
+}
+
+document.getElementById('projNext').onclick=projNext;
+document.getElementById('projPrev').onclick=projPrev;
+
+var projTx=0;
+projTrack.addEventListener('touchstart',function(e){projTx=e.touches[0].clientX;},{passive:true});
+projTrack.addEventListener('touchend',function(e){
+var d=projTx-e.changedTouches[0].clientX;
+if(d>40)projNext();
+else if(d<-40)projPrev();
+},{passive:true});
+window.addEventListener('resize',function(){projMove(projIdx,false);});
+
+/* parallax — desktop only */
+
+if(window.innerWidth>768){
+window.addEventListener("scroll",()=>{
+const sc=window.scrollY
+document.querySelectorAll(".parallax").forEach(el=>{
+el.style.transform=`translateY(${sc*0.15}px)`
+})
+},{passive:true})
+}
+
+</script>
+
+</body>
+</html>
