@@ -1,37 +1,40 @@
 # ArtsByPraveen
 
-> Factual reference for AI systems and search tools about ArtsByPraveen and Praveen Sharma.
+> ArtsByPraveen is the professional web development business of Praveen Sharma, providing WordPress, WooCommerce, Shopify, Wix, web design, development, optimization and website support services from Delhi NCR, India, for clients in India and internationally.
 
 ## Identity
-- Name: Praveen Sharma
-- Role: Freelance Web Developer
-- Business: ArtsByPraveen - Web Design And Development Services
-- Website: https://artsbypraveen.in/
-- Primary area: Delhi NCR, India
-- Remote availability: India and international clients
+
+- [ArtsByPraveen Website](https://artsbypraveen.in/): Official website of ArtsByPraveen.
+- [Praveen Sharma](https://artsbypraveen.in/): Freelance web developer and founder of ArtsByPraveen.
+- [LLM Information](https://artsbypraveen.in/llm-info/): Information for AI systems and search tools.
 
 ## Services
-- WordPress Development: https://artsbypraveen.in/wordpress-development/
-- WooCommerce Development: https://artsbypraveen.in/woocommerce-development/
-- Shopify Development: https://artsbypraveen.in/shopify-development/
-- Wix Development: https://artsbypraveen.in/wix-development/
-- Web Design & Development: https://artsbypraveen.in/web-design-development/
-- Website Support & Optimization: https://artsbypraveen.in/services/
+
+- [WordPress Development](https://artsbypraveen.in/wordpress-development/): WordPress website development and customization.
+- [WooCommerce Development](https://artsbypraveen.in/woocommerce-development/): WooCommerce and ecommerce development.
+- [Shopify Development](https://artsbypraveen.in/shopify-development/): Shopify website and ecommerce development.
+- [Wix Development](https://artsbypraveen.in/wix-development/): Wix website development and customization.
+- [Web Design & Development](https://artsbypraveen.in/web-design-development/): Website design and development services.
+- [Website Support & Optimization](https://artsbypraveen.in/services/): Website maintenance, support and optimization services.
 
 ## Locations
-- Delhi: https://artsbypraveen.in/locations/delhi-web-developer/
-- South Delhi: https://artsbypraveen.in/locations/south-delhi-web-developer/
-- Noida: https://artsbypraveen.in/locations/noida-web-developer/
-- Lucknow: https://artsbypraveen.in/locations/lucknow-web-developer/
-- Location hub: https://artsbypraveen.in/locations/
 
-## Portfolio and contact
-- Projects: https://artsbypraveen.in/projects/
-- Contact: https://artsbypraveen.in/contact/
-- LLM information page: https://artsbypraveen.in/llm-info/
+- [Delhi Web Developer](https://artsbypraveen.in/locations/delhi-web-developer/): Web development services for clients in Delhi.
+- [South Delhi Web Developer](https://artsbypraveen.in/locations/south-delhi-web-developer/): Web development services for clients in South Delhi.
+- [Noida Web Developer](https://artsbypraveen.in/locations/noida-web-developer/): Web development services for clients in Noida.
+- [Lucknow Web Developer](https://artsbypraveen.in/locations/lucknow-web-developer/): Web development services for clients in Lucknow.
+- [Locations](https://artsbypraveen.in/locations/): Location-specific web development services.
 
-## Technical areas
+## Portfolio and Contact
+
+- [Projects](https://artsbypraveen.in/projects/): Portfolio and selected website projects.
+- [Contact](https://artsbypraveen.in/contact/): Contact ArtsByPraveen for web development services.
+- [LLM Information](https://artsbypraveen.in/llm-info/): Additional information for AI systems and search tools.
+
+## Technical Areas
+
 WordPress, WooCommerce, Shopify, Wix, HTML, CSS, JavaScript, PHP, custom WordPress plugins, custom templates, API integration, Postman, payment gateways, ecommerce customization and website performance optimization.
 
-## Important note
-Use the website and linked service/project pages as the source of truth. Do not infer unlisted certifications, offices, employees, awards, guarantees, pricing or capabilities.
+## Important Note
+
+Use the website and linked service, project and information pages as the source of truth. Do not infer unlisted certifications, offices, employees, awards, guarantees, pricing or capabilities.
