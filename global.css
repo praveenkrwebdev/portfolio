@@ -128,9 +128,10 @@ padding:100px 16px 40px;
     }
 
     .home-hero-content {
-        align-items: flex-start;
+        align-items: flex-start !important;
         text-align: left;
     }
+    .home-hero-btn{margin-top:10px !important;}
 }    
 
 .blob1,.blob2{
