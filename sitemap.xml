@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <url>
-    <loc>https://artsbypraveen.in/</loc>
-    <lastmod>2026-03-27</lastmod>
-    <priority>1.0</priority>
-  </url>
-
-  <url>
-    <loc>https://artsbypraveen.in/projects/</loc>
-    <lastmod>2026-03-27</lastmod>
-    <priority>0.9</priority>
-  </url>
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://artsbypraveen.in/</loc></url>
+  <url><loc>https://artsbypraveen.in/about/</loc></url>
+  <url><loc>https://artsbypraveen.in/services/</loc></url>
+  <url><loc>https://artsbypraveen.in/wordpress-development/</loc></url>
+  <url><loc>https://artsbypraveen.in/woocommerce-development/</loc></url>
+  <url><loc>https://artsbypraveen.in/shopify-development/</loc></url>
+  <url><loc>https://artsbypraveen.in/wix-development/</loc></url>
+  <url><loc>https://artsbypraveen.in/web-design-development/</loc></url>
+  <url><loc>https://artsbypraveen.in/projects/</loc></url>
+  <url><loc>https://artsbypraveen.in/contact/</loc></url>
+  <url><loc>https://artsbypraveen.in/locations/</loc></url>
+  <url><loc>https://artsbypraveen.in/locations/delhi-web-developer/</loc></url>
+  <url><loc>https://artsbypraveen.in/locations/south-delhi-web-developer/</loc></url>
+  <url><loc>https://artsbypraveen.in/locations/noida-web-developer/</loc></url>
+  <url><loc>https://artsbypraveen.in/locations/lucknow-web-developer/</loc></url>
 </urlset>

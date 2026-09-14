@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+
+<html lang="en-IN"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>LLM Info | ArtsByPraveen — Web Developer, Services, Experience &amp; Service Areas</title><meta content="Structured information about ArtsByPraveen (Praveen Sharma): freelance web developer, services, technical capabilities, experience, projects, service areas, contact details and important facts for search engines and AI systems." name="description"/><meta content="Praveen Sharma" name="author"/><meta content="noindex, nofollow" name="robots"/><link href="https://artsbypraveen.in/llm-info/" rel="canonical"/><meta content="LLM Info | ArtsByPraveen" property="og:title"/><meta content="A factual information page about Praveen Sharma, ArtsByPraveen, web development services, experience, projects, locations and contact information." property="og:description"/><meta content="https://artsbypraveen.in/images/preview.webp" property="og:image"/><meta content="https://artsbypraveen.in/llm-info/" property="og:url"/><meta content="website" property="og:type"/><meta content="ArtsByPraveen" property="og:site_name"/><meta content="en_IN" property="og:locale"/><meta content="summary_large_image" name="twitter:card"/><meta content="LLM Info | ArtsByPraveen" name="twitter:title"/><meta content="Factual business and professional information for ArtsByPraveen and Praveen Sharma." name="twitter:description"/><meta content="https://artsbypraveen.in/images/preview.webp" name="twitter:image"/><link href="../favicon.ico" rel="icon"/><link href="../images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/><link href="../images/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&amp;display=swap" rel="stylesheet"/><link href="../global.css" rel="stylesheet"/>
+<style>
+
+body{
+font-family:Inter;
+background:#0B0F19;
+color:white;
+overflow-x:hidden;
+-webkit-overflow-scrolling: touch;
+}
+
+html{
+scroll-behavior:smooth;
+overflow-x:hidden;
+}
+
+/* glass */
+
+.glass{
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(14px);
+-webkit-backdrop-filter:blur(14px);
+box-shadow:inset 0 0 0 1px rgba(255,255,255,0.08),0 8px 32px rgba(0,0,0,0.3);
+border-radius:28px;
+}
+@media(max-width:1023px){.glass{backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);}}
+
+/* gradient text */
+
+.gradient{
+/* background:linear-gradient(135deg,#8B5CF6,#22D3EE); */
+background:linear-gradient(135deg,#8B5CF6,#ee4622);
+-webkit-background-clip:text;
+color:transparent;
+}
+
+/* big section background title */
+
+.section-title{
+position:relative;
+text-align:center;
+margin-bottom:80px;
+}
+
+.section-bg{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+font-size:clamp(40px,10vw,120px);
+font-weight:800;
+white-space:nowrap;
+pointer-events:none;
+line-height:1;
+padding:0.2em 0;
+background:linear-gradient(to top,transparent 0%,rgba(255,255,255,0.03) 40%,rgba(255,255,255,0.08) 100%);
+-webkit-background-clip:text;
+background-clip:text;
+color:transparent;
+}
+
+.section-main{
+position:relative;
+font-size:40px;
+font-weight:700;
+}
+
+/* floating blobs */
+
+.blob{
+position:absolute;
+border-radius:50%;
+filter:blur(120px);
+opacity:.35;
+z-index:-1;
+}
+@media(max-width:1023px){.blob{filter:blur(60px);opacity:.2;will-change:auto;}}
+
+.blob1{
+width:400px;
+height:400px;
+background:#8B5CF6;
+top:-100px;
+left:0;
+}
+
+.blob2{
+width:350px;
+height:350px;
+background:#22D3EE;
+bottom:-100px;
+right:0;
+}
+
+/* hero */
+
+.hero{
+min-height:90vh;
+display:grid;
+grid-template-columns:1fr 1fr;
+align-items:center;
+gap:60px;
+padding:140px 20px;
+max-width:1200px;
+margin:auto;
+}
+
+.main-logo{height:40px; width:auto;}
+
+@media(max-width:768px){
+
+.hero{
+grid-template-columns:1fr;
+gap:30px;
+padding:100px 16px 40px;
+}
+
+.blob1,.blob2{
+width:200px;
+height:200px;
+}
+.main-logo{height:36px; width:auto;}
+
+}
+
+/* typing animation */
+
+.typing-wrap{
+font-size:clamp(1rem,3vw,1.4rem);
+font-weight:500;
+color:rgba(255,255,255,0.7);
+margin-bottom:16px;
+min-height:2em;
+display:flex;
+align-items:center;
+gap:8px;
+}
+
+.typed-text{
+background:linear-gradient(135deg,#8B5CF6,#22D3EE);
+-webkit-background-clip:text;
+color:transparent;
+font-weight:700;
+}
+
+.cursor-blink{
+display:inline-block;
+width:2px;
+height:1.1em;
+background:linear-gradient(135deg,#8B5CF6,#22D3EE);
+margin-left:2px;
+vertical-align:middle;
+animation:blink .7s step-end infinite;
+}
+
+@keyframes blink{
+0%,100%{opacity:1}50%{opacity:0}
+}
+
+/* logo marquee */
+
+.marquee-outer{
+overflow:hidden;
+position:relative;
+}
+
+.marquee-outer::before,
+.marquee-outer::after{
+content:'';
+position:absolute;
+top:0;
+bottom:0;
+width:80px;
+z-index:2;
+}
+
+.marquee-outer::before{left:0;background:linear-gradient(to right,#0B0F19,transparent);}
+.marquee-outer::after{right:0;background:linear-gradient(to left,#0B0F19,transparent);}
+
+.marquee-track{
+display:flex;
+gap:32px;
+width:max-content;
+animation:marquee 30s linear infinite;
+will-change:transform;
+}
+
+.marquee-track.reverse{
+animation:marquee-rev 30s linear infinite;
+will-change:transform;
+}
+
+@keyframes marquee{
+0%{transform:translateX(0)}100%{transform:translateX(-50%)}
+}
+
+@keyframes marquee-rev{
+0%{transform:translateX(-50%)}100%{transform:translateX(0)}
+}
+
+.logo-card{
+flex-shrink:0;
+width:130px;
+height:60px;
+display:flex;
+align-items:center;
+justify-content:center;
+background:rgba(255,255,255,0.05);
+box-shadow:inset 0 0 0 1px rgba(255,255,255,0.07);
+border-radius:14px;
+padding:8px 14px;
+overflow:hidden;
+}
+
+.logo-card img{
+width:100%;
+height:100%;
+object-fit:contain;
+filter:grayscale(1) brightness(1.4);
+opacity:0.6;
+transition:.3s;
+}
+
+.logo-card:hover img{
+filter:grayscale(0) brightness(1);
+opacity:1;
+}
+
+/* whatsapp float */
+.wa-btn{
+position:fixed;
+bottom:28px;
+right:28px;
+z-index:999;
+width:58px;
+height:58px;
+border-radius:50%;
+background:#25D366;
+display:flex;
+align-items:center;
+justify-content:center;
+box-shadow:0 4px 24px rgba(37,211,102,.5);
+transition:.3s;
+}
+
+.wa-btn:hover{
+transform:scale(1.12);
+box-shadow:0 6px 32px rgba(37,211,102,.8);
+}
+.profile-image-card{padding:32px;}
+
+/* proj nav */
+.proj-nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:28px;
+}
+.proj-nav-btns{display:flex;gap:10px;}
+.proj-nav button{
+width:42px;height:42px;
+border-radius:50%;
+background:rgba(255,255,255,0.06);
+box-shadow:inset 0 0 0 1px rgba(255,255,255,0.1);
+display:flex;align-items:center;justify-content:center;
+cursor:pointer;transition:.2s;
+}
+.proj-nav button:hover{background:rgba(139,92,246,0.35);box-shadow:inset 0 0 0 1px rgba(139,92,246,0.5),0 0 16px rgba(139,92,246,0.3);}
+
+/* infinite carousel */
+.proj-carousel{overflow:hidden;position:relative;}
+.proj-track{
+display:flex;
+gap:24px;
+will-change:transform;
+}
+
+/* project cards */
+.proj-card{
+flex-shrink:0;
+width:350px;
+border-radius:24px;
+background:rgba(255,255,255,0.06);
+box-shadow:inset 0 0 0 1px rgba(255,255,255,0.08),0 4px 24px rgba(0,0,0,0.3);
+overflow:hidden;
+transition:transform .35s,box-shadow .35s;
+}
+@media(min-width:1024px){.proj-card{backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);}}
+.proj-card:hover{
+transform:translateY(-8px);
+box-shadow:inset 0 0 0 1px rgba(139,92,246,0.3),0 20px 50px rgba(139,92,246,0.2),0 8px 20px rgba(0,0,0,0.4);
+}
+.proj-img{
+position:relative;
+overflow:hidden;
+/* height:200px; */
+}
+.proj-img img{
+width:100%;height:100%;object-fit:cover;object-position: top;height:180px;
+transition:transform .35s;
+}
+.proj-card:hover .proj-img img{transform:scale(1.08);}
+.proj-overlay{
+position:absolute;inset:0;
+background:linear-gradient(to top,rgba(11,15,25,0.9) 0%,rgba(11,15,25,0.2) 60%,transparent 100%);
+display:flex;align-items:flex-end;justify-content:center;
+padding-bottom:18px;gap:10px;
+opacity:0;transition:.3s;
+}
+.proj-card:hover .proj-overlay{opacity:1;}
+.proj-link{
+display:inline-flex;align-items:center;gap:5px;
+background:linear-gradient(135deg,#8B5CF6,#22D3EE);
+color:#000;font-weight:700;padding:9px 20px;
+border-radius:50px;font-size:12px;
+}
+.proj-link-ghost{
+display:inline-flex;align-items:center;gap:5px;
+background:rgba(255,255,255,0.13);backdrop-filter:blur(8px);
+color:#fff;font-weight:600;padding:9px 16px;
+border-radius:50px;font-size:12px;
+}
+.proj-body{padding:20px 22px 22px;}
+
+/* tag in body */
+.proj-tag{
+display:inline-flex;align-items:center;gap:5px;
+font-size:10px;font-weight:700;
+padding:4px 10px 4px 8px;border-radius:50px;
+margin-bottom:10px;letter-spacing:.5px;text-transform:uppercase;
+}
+.proj-tag-dot{width:5px;height:5px;border-radius:50%;flex-shrink:0;}
+
+.proj-title{font-size:16px;font-weight:700;margin-bottom:6px;line-height:1.4;}
+.proj-desc{font-size:12px;color:rgba(255,255,255,0.45);line-height:1.65;margin-bottom:14px;}
+.proj-stack{display:flex;flex-wrap:wrap;gap:6px;}
+.proj-stack span{
+font-size:10px;padding:3px 10px;border-radius:50px;
+background:rgba(255,255,255,0.06);
+box-shadow:inset 0 0 0 1px rgba(255,255,255,0.09);
+color:rgba(255,255,255,0.5);transition:.2s;
+}
+.proj-card:hover .proj-stack span{color:rgba(255,255,255,0.8);background:rgba(255,255,255,0.1);}
+
+/* skill pills */
+.skill-grid{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px;}
+.skill-pill{
+display:flex;align-items:center;gap:8px;
+padding:8px 16px;border-radius:50px;
+background:rgba(255,255,255,0.05);
+box-shadow:inset 0 0 0 1px rgba(255,255,255,0.08);
+font-size:13px;font-weight:500;color:rgba(255,255,255,0.8);
+transition:.25s;
+}
+.skill-pill:hover{background:rgba(255,255,255,0.09);transform:translateY(-2px);}
+.skill-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
+
+/* contact */
+.contact-wrap{
+border-radius:28px;overflow:hidden;
+background:rgba(255,255,255,0.06);
+box-shadow:inset 0 0 0 1px rgba(255,255,255,0.08);
+display:grid;grid-template-columns:1fr 1fr;
+}
+@media(min-width:1024px){.contact-wrap{backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);}}
+@media(max-width:768px){.contact-wrap{grid-template-columns:1fr;}}
+@media(max-width:360px){.profile-image-card{padding:32px 14px;}.hero-btn-primary {padding:10px !important;}}
+.contact-info{
+padding:48px 40px;
+background:linear-gradient(135deg,rgba(139,92,246,0.12),rgba(34,211,238,0.05));
+}
+.contact-form-side{padding:48px 40px;}
+@media(max-width:768px){.contact-info,.contact-form-side{padding:32px 24px;}}
+.form-field{position:relative;margin-bottom:18px;}
+.form-field svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);pointer-events:none;opacity:.5;}
+.form-field.textarea-field svg{top:16px;transform:none;}
+.form-input{
+width:100%;background:rgba(255,255,255,0.05);
+box-shadow:inset 0 0 0 1px rgba(255,255,255,0.08);
+border-radius:12px;padding:13px 14px 13px 42px;
+color:white;font-size:14px;font-family:Inter;outline:none;transition:.2s;
+}
+.form-input::placeholder{color:rgba(255,255,255,0.3);}
+.form-input:focus{
+box-shadow:inset 0 0 0 1px rgba(139,92,246,0.7),0 0 0 3px rgba(139,92,246,0.1);
+background:rgba(139,92,246,0.06);
+}
+textarea.form-input{padding-top:13px;resize:none;}
+
+/* service cards */
+
+.service-card{
+position:relative;
+padding:40px 36px;
+border-radius:28px;
+background:rgba(255,255,255,0.05);
+box-shadow:inset 0 0 0 1px rgba(255,255,255,0.07),0 8px 40px rgba(0,0,0,0.4);
+overflow:hidden;
+transition:transform .35s,box-shadow .35s;
+}
+@media(min-width:1024px){.service-card{backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);}}
+
+.service-card::before{
+content:'';
+position:absolute;
+top:0;left:0;right:0;
+height:3px;
+}
+
+.service-card::after{
+content:'';
+position:absolute;
+bottom:-80px;right:-80px;
+width:200px;height:200px;
+border-radius:50%;
+opacity:0;
+transition:opacity .4s;
+pointer-events:none;
+}
+
+.service-card:nth-child(1)::before{background:linear-gradient(90deg,#8B5CF6,#22D3EE);}
+.service-card:nth-child(2)::before{background:linear-gradient(90deg,#22D3EE,#8B5CF6);}
+.service-card:nth-child(3)::before{background:linear-gradient(90deg,#EC4899,#8B5CF6);}
+
+.service-card:nth-child(1)::after{background:radial-gradient(circle,rgba(139,92,246,.18),transparent 70%);}
+.service-card:nth-child(2)::after{background:radial-gradient(circle,rgba(34,211,238,.15),transparent 70%);}
+.service-card:nth-child(3)::after{background:radial-gradient(circle,rgba(236,72,153,.15),transparent 70%);}
+
+.service-card:hover::after{opacity:1;}
+
+.service-card:nth-child(1):hover{
+transform:translateY(-8px);
+box-shadow:inset 0 0 0 1px rgba(139,92,246,0.3),0 24px 60px rgba(139,92,246,0.25);
+}
+.service-card:nth-child(2):hover{
+transform:translateY(-8px);
+box-shadow:inset 0 0 0 1px rgba(34,211,238,0.3),0 24px 60px rgba(34,211,238,0.2);
+}
+.service-card:nth-child(3):hover{
+transform:translateY(-8px);
+box-shadow:inset 0 0 0 1px rgba(236,72,153,0.3),0 24px 60px rgba(236,72,153,0.2);
+}
+
+.service-icon{
+width:64px;
+height:64px;
+border-radius:18px;
+display:flex;
+align-items:center;
+justify-content:center;
+margin-bottom:28px;
+}
+
+.service-num{
+position:absolute;
+top:32px;right:32px;
+font-size:64px;
+font-weight:900;
+line-height:1;
+opacity:0.04;
+pointer-events:none;
+letter-spacing:-2px;
+}
+
+/* stats */
+
+.stat-card{
+text-align:center;
+padding:40px 20px;
+position:relative;
+}
+
+.stat-card+.stat-card::before{
+content:'';
+position:absolute;
+left:0;top:20%;bottom:20%;
+width:1px;
+background:linear-gradient(to bottom,transparent,rgba(255,255,255,0.1),transparent);
+}
+
+@media(max-width:768px){
+.stat-card+.stat-card::before{
+left:20%;right:20%;top:0;bottom:auto;
+width:auto;height:1px;
+background:linear-gradient(to right,transparent,rgba(255,255,255,0.1),transparent);
+}
+}
+
+.stat-num{
+font-size:clamp(2.5rem,6vw,4rem);
+font-weight:800;
+background:linear-gradient(135deg,#8B5CF6,#ee4622);
+-webkit-background-clip:text;
+color:transparent;
+line-height:1;
+}
+
+/* parallax object */
+
+.parallax{
+transform:translateY(0px);
+transition:transform .1s linear;
+}
+@media(min-width:1024px){.parallax{will-change:transform;}}
+
+/* buttons */
+
+.btn{
+background:linear-gradient(135deg,#8B5CF6,#22D3EE);
+padding:14px 28px;
+border-radius:12px;
+font-weight:600;
+color:black;
+}
+
+/* glow button */
+.btn-glow{
+background:linear-gradient(135deg,#8b5cf6,#06b6d4);
+box-shadow:0 0 25px rgba(139,92,246,.6);
+transition:.3s;
+}
+
+.btn-glow:hover{
+box-shadow:0 0 45px rgba(139,92,246,1);
+transform:translateY(-3px);
+}
+
+/* hero buttons */
+.hero-btn-primary{
+display:inline-flex;
+align-items:center;
+gap:8px;
+padding:10px 20px;
+border-radius:12px;
+font-size:13px;
+font-weight:600;
+color:#fff;
+background:rgba(236,72,153,0.15);
+box-shadow:inset 0 0 0 1px rgba(236,72,153,0.4),0 0 18px rgba(236,72,153,0.25);
+transition:transform .25s,box-shadow .25s,background .25s;
+}
+.hero-btn-primary:hover{
+transform:translateY(-2px);
+background:rgba(236,72,153,0.22);
+box-shadow:inset 0 0 0 1px rgba(236,72,153,0.7),0 0 32px rgba(236,72,153,0.45);
+}
+
+.hero-btn-ghost{
+display:inline-flex;
+align-items:center;
+gap:8px;
+padding:10px 20px;
+border-radius:12px;
+font-size:13px;
+font-weight:600;
+color:rgba(255,255,255,0.7);
+background:rgba(255,255,255,0.04);
+box-shadow:inset 0 0 0 1px rgba(255,255,255,0.1);
+transition:transform .25s,box-shadow .25s,color .25s,background .25s;
+}
+.hero-btn-ghost:hover{
+transform:translateY(-2px);
+color:#fff;
+background:rgba(255,255,255,0.08);
+box-shadow:inset 0 0 0 1px rgba(255,255,255,0.2);
+}
+
+/* mobile menu */
+
+.mobile-menu{
+position:fixed;
+top:0;right:0;
+width:300px;height:100vh;
+background:rgba(11,15,25,0.98);
+backdrop-filter:blur(24px);
+-webkit-backdrop-filter:blur(24px);
+box-shadow:-4px 0 40px rgba(0,0,0,0.6);
+display:flex;
+flex-direction:column;
+align-items:flex-start;
+justify-content:flex-start;
+padding:72px 20px 40px;
+gap:4px;
+transform:translateX(100%);
+transition:transform .35s cubic-bezier(.77,0,.18,1);
+z-index:9999;
+}
+
+.mobile-menu.active{
+transform:translateX(0);
+}
+
+.mobile-menu a{
+font-size:14px;
+font-weight:500;
+color:rgba(255,255,255,0.6);
+padding:10px 14px;
+width:100%;
+border-radius:10px;
+transition:.2s;
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.mobile-menu a:hover{color:#fff;background:rgba(255,255,255,0.06);}
+
+.mobile-menu .menu-divider{
+width:100%;height:1px;
+background:rgba(255,255,255,0.06);
+margin:6px 0;
+}
+
+.menu-close{
+position:absolute;
+top:16px;right:16px;
+width:36px;height:36px;
+border-radius:50%;
+background:rgba(255,255,255,0.08);
+box-shadow:inset 0 0 0 1px rgba(255,255,255,0.2);
+display:flex;align-items:center;justify-content:center;
+cursor:pointer;
+transition:.2s;
+z-index:10000;
+}
+.menu-close:hover{background:rgba(139,92,246,0.5);}
+
+/* nav active */
+.nav-link{
+color:rgba(255,255,255,0.6);
+}
+.nav-link::after{
+content:'';
+position:absolute;
+bottom:-2px;left:50%;right:50%;
+height:2px;
+border-radius:2px;
+background:linear-gradient(90deg,#8B5CF6,#22D3EE);
+transition:left .25s,right .25s;
+}
+.nav-link.active{
+color:#fff;
+}
+.nav-link.active::after{
+left:12px;right:12px;
+}
+
+/* mouse glow */
+.cursor-glow{
+position:fixed;
+width:500px;
+height:500px;
+border-radius:50%;
+pointer-events:none;
+background:radial-gradient(circle,rgba(139,92,246,.07) 0%,transparent 65%);
+z-index:0;
+transform:translate(-50%,-50%);
+}
+
+/* LLM Info content styles — page shell remains identical to Privacy Policy */
+.content-depth{max-width:1152px;margin:0 auto;padding:0 24px 58px}.depth-intro{text-align:center;max-width:850px;margin:0 auto 34px}.depth-intro h2{font-size:clamp(1.9rem,4vw,2.7rem);line-height:1.15;margin:0 0 14px}.depth-intro p{color:#9ca3af;line-height:1.85;font-size:15px}.info-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.info-card{padding:28px;border-radius:22px;background:rgba(255,255,255,.045);box-shadow:inset 0 0 0 1px rgba(255,255,255,.07),0 10px 36px rgba(0,0,0,.22)}.info-card h3{font-size:18px;margin:0 0 10px}.info-card p,.info-card li{color:#a1a1aa;font-size:14px;line-height:1.8}.info-card ul{padding-left:20px;margin:10px 0 0}.fact-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 20px}.fact{padding:18px 20px;border-radius:18px;background:rgba(255,255,255,.035);box-shadow:inset 0 0 0 1px rgba(255,255,255,.06);color:#cfd2da;font-size:14px;line-height:1.7}.fact strong{display:block;color:#fff;margin-bottom:3px}.link-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.info-link{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:18px 20px;border-radius:18px;background:rgba(255,255,255,.04);box-shadow:inset 0 0 0 1px rgba(255,255,255,.07);text-decoration:none}.info-link strong{font-size:14px}.info-link span{color:#a78bfa;font-size:13px;font-weight:700}.notice{max-width:900px;margin:0 auto;padding:20px 22px;border-radius:18px;background:rgba(139,92,246,.07);box-shadow:inset 0 0 0 1px rgba(139,92,246,.18);color:#b7b9c3;font-size:14px;line-height:1.8}.inner-cta{padding:0 24px 70px}.inner-cta-box{max-width:1000px;margin:0 auto;padding:62px 30px;text-align:center;border-radius:28px;background:rgba(255,255,255,.045);box-shadow:inset 0 0 0 1px rgba(255,255,255,.08),0 18px 60px rgba(0,0,0,.25)}.inner-cta-box h2{font-size:clamp(2rem,4vw,3rem);margin:0 0 12px}.inner-cta-box p{color:#9ca3af;line-height:1.8;margin:0 auto;max-width:700px}@media(max-width:900px){.info-grid{grid-template-columns:1fr 1fr}}@media(max-width:767px){.content-depth{padding:0 20px 44px}.info-grid,.fact-grid,.link-grid{grid-template-columns:1fr}.info-card{padding:23px}.inner-cta{padding:0 20px 50px}.inner-cta-box{padding:46px 22px}}
+</style><link rel="stylesheet" href="../tailwind-static.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Person", "@id": "https://artsbypraveen.in/#person", "name": "Praveen Sharma", "url": "https://artsbypraveen.in/", "jobTitle": "Freelance Web Developer", "sameAs": ["https://www.linkedin.com/in/artsbypraveen/", "https://github.com/praveenkrwebdev"], "knowsAbout": ["WordPress", "WooCommerce", "Shopify", "Wix", "HTML", "CSS", "JavaScript", "PHP", "Custom WordPress Plugin Development", "API Integration", "Postman", "Website Performance Optimization"]}, {"@type": "ProfessionalService", "@id": "https://artsbypraveen.in/#business", "name": "ArtsByPraveen - Web Design And Development Services", "url": "https://artsbypraveen.in/", "email": "praveenkr.webdev@gmail.com", "areaServed": ["Delhi", "South Delhi", "Noida", "Lucknow", "Delhi NCR", "India"], "founder": {"@id": "https://artsbypraveen.in/#person"}, "sameAs": ["https://www.linkedin.com/in/artsbypraveen/", "https://github.com/praveenkrwebdev"]}, {"@type": "WebPage", "@id": "https://artsbypraveen.in/llm-info/#webpage", "url": "https://artsbypraveen.in/llm-info/", "name": "LLM Info | ArtsByPraveen", "about": {"@id": "https://artsbypraveen.in/#person"}, "isPartOf": {"@type": "WebSite", "@id": "https://artsbypraveen.in/#website", "url": "https://artsbypraveen.in/", "name": "ArtsByPraveen"}}]}</script>
+</head><body><div class="blob blob1"></div><div class="blob blob2"></div><!-- NAVBAR -->
+<nav class="fixed top-2 w-full flex justify-center px-3 py-2 z-50 site-nav">
+<!-- <nav class="fixed top-6 w-full flex justify-center z-50"> -->
+<div class="glass site-nav-panel max-w-6xl w-full flex justify-between items-center px-6 py-3">
+<div class="font-bold flex items-center gap-2">
+<a href="../">
+<img alt="ArtsByPraveen" class="main-logo" decoding="async" fetchpriority="high" loading="eager" onerror="this.style.display='none'" src="../praveen-logo.svg" style="object-fit:contain"/></a>
+<!-- <span>ArtsByPraveen</span> -->
+</div>
+<div class="hidden md:flex gap-1 text-gray-300 items-center">
+<a class="nav-link px-4 py-2 rounded-lg text-sm font-medium hover:text-white transition relative" href="../">Home</a>
+<a class="nav-link px-4 py-2 rounded-lg text-sm font-medium hover:text-white transition relative" href="../about/">About</a>
+<a class="nav-link px-4 py-2 rounded-lg text-sm font-medium hover:text-white transition relative" href="../services/">Services</a>
+<a class="nav-link px-4 py-2 rounded-lg text-sm font-medium hover:text-white transition relative" href="../projects/">Projects</a>
+<a class="nav-link px-4 py-2 rounded-lg text-sm font-medium hover:text-white transition relative" href="../locations/">Locations</a>
+<a class="nav-link px-4 py-2 rounded-lg text-sm font-medium hover:text-white transition relative" href="../contact/">Contact</a>
+<a class="hero-btn-primary ml-3" href="https://wa.me/919815898567" target="_blank">Get A Quote</a>
+</div>
+<button class="md:hidden p-2 rounded-lg" id="menuBtn" style="background:rgba(255,255,255,0.06)">
+<svg fill="none" height="20" viewbox="0 0 24 24" width="20"><path d="M4 6h16M4 12h16M4 18h16" stroke="white" stroke-linecap="round" stroke-width="2"></path></svg>
+</button>
+</div>
+</nav>
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+<!-- top bar: logo + close -->
+<div style="position:absolute;top:0;left:0;right:0;height:60px;display:flex;align-items:center;justify-content:space-between;padding:0 16px;border-bottom:1px solid rgba(255,255,255,0.06)">
+<div class="font-bold text-sm flex items-center gap-2">
+<img alt="logo" decoding="async" fetchpriority="high" loading="eager" onerror="this.style.display='none'" src="../praveen-web-design-main-logo.svg" style="height:32px;width:auto"/>
+<!-- <span class="gradient">ArtsByPraveen</span> -->
+</div>
+<button class="menu-close" id="menuClose">
+<svg fill="none" height="14" viewbox="0 0 24 24" width="14"><path d="M18 6L6 18M6 6l12 12" stroke="white" stroke-linecap="round" stroke-width="2.5"></path></svg>
+</button>
+</div>
+<a class="menuLink" href="../">
+<svg fill="none" height="15" viewbox="0 0 24 24" width="15"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H5a1 1 0 01-1-1V9.5z" stroke="#8B5CF6" stroke-linejoin="round" stroke-width="1.8"></path><path d="M9 21V12h6v9" stroke="#8B5CF6" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg>
+Home
+</a>
+<a class="menuLink" href="../about/">
+<svg fill="none" height="15" viewbox="0 0 24 24" width="15"><circle cx="12" cy="8" r="4" stroke="#22D3EE" stroke-width="1.8"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" stroke="#22D3EE" stroke-linecap="round" stroke-width="1.8"></path></svg>
+About
+</a>
+<a class="menuLink" href="../services/">
+<svg fill="none" height="15" viewbox="0 0 24 24" width="15"><rect height="18" rx="3" stroke="#22D3EE" stroke-width="1.8" width="18" x="3" y="3"></rect><path d="M3 9h18M9 21V9" stroke="#22D3EE" stroke-linecap="round" stroke-width="1.8"></path></svg>
+Services
+</a>
+<a class="menuLink" href="../projects/">
+<svg fill="none" height="15" viewbox="0 0 24 24" width="15"><rect height="14" rx="2" stroke="#EC4899" stroke-width="1.8" width="20" x="2" y="3"></rect><path d="M8 21h8M12 17v4" stroke="#EC4899" stroke-linecap="round" stroke-width="1.8"></path></svg>
+Projects
+</a>
+<a class="menuLink" href="../locations/"><svg aria-hidden="true" fill="none" height="15" viewbox="0 0 24 24" width="15"><path d="M12 21s7-6.1 7-12A7 7 0 0 0 5 9c0 5.9 7 12 7 12Z" stroke="#8B5CF6" stroke-width="1.8"></path><circle cx="12" cy="9" r="2.5" stroke="#22D3EE" stroke-width="1.8"></circle></svg> Locations</a><a class="menuLink" href="../contact/">
+<svg fill="none" height="15" viewbox="0 0 24 24" width="15"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke="#a78bfa" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg>
+Contact
+</a>
+<div class="menu-divider"></div>
+<a class="mt-2" href="https://wa.me/919815898567?text=Hello%20there" style="background:rgba(37,211,102,0.12);color:#25D366;border-radius:10px" target="_blank">
+<svg fill="none" height="16" viewbox="0 0 32 32" width="16"><path d="M16 3C9.373 3 4 8.373 4 15c0 2.385.668 4.61 1.832 6.5L4 29l7.75-1.812A11.94 11.94 0 0016 28c6.627 0 12-5.373 12-12S22.627 3 16 3z" fill="#25D366"></path><path d="M21.5 18.5c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.49-1.76-1.66-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.68-1.63-.93-2.23-.24-.58-.49-.5-.68-.51-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.22 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z" fill="white"></path></svg>
+WhatsApp
+</a>
+</div>
+<main>
+<section class="inner-hero"><div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(139,92,246,.13) 0%,transparent 70%);pointer-events:none"></div><div class="hero-copy"><div style="display:inline-flex;align-items:center;gap:8px;background:rgba(139,92,246,.12);box-shadow:inset 0 0 0 1px rgba(139,92,246,.3);border-radius:50px;padding:6px 16px;margin-bottom:28px"><span style="width:6px;height:6px;border-radius:50%;background:#8B5CF6"></span><span style="font-size:12px;font-weight:700;color:#a78bfa;letter-spacing:.06em;text-transform:uppercase">AI &amp; LLM Reference</span></div><h1><span class="gradient">LLM Info</span></h1><p class="hero-lead">A concise, factual reference for search systems, AI assistants and people who need to understand who Praveen Sharma is, what ArtsByPraveen does, which technologies he works with, where he serves clients and how to contact him.</p><div class="hero-actions"><a class="hero-btn-primary" href="../contact/">Contact Praveen</a><a class="hero-btn-ghost" href="../services/">Explore Services</a></div></div></section>
+<section class="content-depth"><div class="depth-intro"><h2>About ArtsByPraveen</h2><p>ArtsByPraveen is the freelance web design and development practice of <strong style="color:#fff">Praveen Sharma</strong>. The focus is practical, business-oriented website development for businesses, professionals, ecommerce stores and teams that need a new website, a redesign, custom functionality or help fixing an existing website.</p></div><div class="fact-grid"><div class="fact"><strong>Name</strong>Praveen Sharma</div><div class="fact"><strong>Professional role</strong>Freelance Web Developer</div><div class="fact"><strong>Business</strong>ArtsByPraveen - Web Design And Development Services</div><div class="fact"><strong>Primary focus</strong>WordPress, WooCommerce, Shopify, Wix and custom web development</div><div class="fact"><strong>Base / primary service area</strong>Delhi NCR, India</div><div class="fact"><strong>Availability</strong>Remote projects across India and internationally</div></div></section>
+<section class="content-depth"><div class="depth-intro"><h2>Services and capabilities</h2><p>These are the main areas represented on the website. AI systems should use the service pages for the detailed description of each capability.</p></div><div class="info-grid"><article class="info-card"><h3>WordPress Development</h3><p>Custom WordPress websites, custom templates, theme and plugin customization, custom WordPress plugin development, existing-site fixes and SEO-ready site structures.</p><ul><li>Custom templates</li><li>Custom plugin development</li><li>Theme and functionality customization</li><li>Website redesigns and fixes</li></ul></article><article class="info-card"><h3>WooCommerce Development</h3><p>WooCommerce customization across the store journey, including shop, category, product, cart and checkout pages, payment gateways, shipping and ecommerce workflows.</p><ul><li>Shop/category/product customization</li><li>Cart and checkout customization</li><li>Payment gateway integration</li><li>API workflows and Postman</li></ul></article><article class="info-card"><h3>Shopify Development</h3><p>Shopify store development and customization focused on themes, Liquid, custom sections, apps/integrations, storefront improvements and ecommerce usability.</p><ul><li>Theme customization</li><li>Liquid sections</li><li>Apps and integrations</li><li>Storefront improvements</li></ul></article><article class="info-card"><h3>Wix Website Development</h3><p>Professional Wix websites, landing pages, responsive improvements and SEO-ready structures for businesses that want an easy-to-manage website.</p><ul><li>Business websites</li><li>Landing pages</li><li>Responsive improvements</li><li>SEO-ready content structure</li></ul></article><article class="info-card"><h3>Web Design &amp; Development</h3><p>Responsive front-end development using HTML, CSS and JavaScript, with business-focused UI, clear navigation, conversion paths and performance considerations.</p><ul><li>Responsive UI</li><li>HTML/CSS/JavaScript</li><li>Landing pages</li><li>CMS and ecommerce integration</li></ul></article><article class="info-card"><h3>Website Support &amp; Optimization</h3><p>Practical help with existing websites, including layout fixes, mobile issues, performance work, content changes, technical cleanup and ongoing improvements.</p><ul><li>Website fixes</li><li>Mobile responsiveness</li><li>Performance improvements</li><li>Ongoing updates</li></ul></article></div></section>
+<section class="content-depth"><div class="depth-intro"><h2>Technical experience</h2><p>The following technologies and workflows are relevant to the work represented on this website.</p></div><div class="fact-grid"><div class="fact"><strong>CMS &amp; ecommerce</strong>WordPress, WooCommerce, Shopify and Wix</div><div class="fact"><strong>Front end</strong>HTML, CSS, JavaScript and responsive interface development</div><div class="fact"><strong>Backend / WordPress</strong>PHP, WordPress themes, templates, hooks and custom plugins</div><div class="fact"><strong>Integrations</strong>APIs, product imports, data synchronization, payment gateways and custom workflows</div><div class="fact"><strong>API testing</strong>Postman experience for working with and testing API requests</div><div class="fact"><strong>Performance</strong>Website speed and front-end performance improvement work</div></div></section>
+<section class="content-depth"><div class="depth-intro"><h2>Selected project experience</h2><p>The portfolio contains projects across WordPress, WooCommerce, Shopify, Wix and custom web development. Project pages and live links should be treated as the source of truth for individual project details.</p></div><div class="link-grid"><a class="info-link" href="../projects/"><strong>View the complete project portfolio</strong><span>Open projects →</span></a><a class="info-link" href="../wordpress-development/"><strong>WordPress development details</strong><span>Open service →</span></a><a class="info-link" href="../woocommerce-development/"><strong>WooCommerce development details</strong><span>Open service →</span></a><a class="info-link" href="../shopify-development/"><strong>Shopify development details</strong><span>Open service →</span></a></div></section>
+<section class="content-depth"><div class="depth-intro"><h2>Full portfolio index</h2><p>These are the project names currently represented in the portfolio. Individual project details, technology notes and live links are maintained on the Projects page.</p></div><div class="fact-grid"><div class="fact"><strong>BridgeStone</strong>Listed in the ArtsByPraveen portfolio. See the Projects page for the current description and, where available, the live project link.</div><div class="fact"><strong>Cartridge World Cyprus</strong>Listed in the ArtsByPraveen portfolio. See the Projects page for the current description and, where available, the live project link.</div><div class="fact"><strong>Hercules Group</strong>Listed in the ArtsByPraveen portfolio. See the Projects page for the current description and, where available, the live project link.</div><div class="fact"><strong>Solar Dynamics</strong>Listed in the ArtsByPraveen portfolio. See the Projects page for the current description and, where available, the live project link.</div><div class="fact"><strong>876 Produce</strong>Listed in the ArtsByPraveen portfolio. See the Projects page for the current description and, where available, the live project link.</div><div class="fact"><strong>Lemesos Estates</strong>Listed in the ArtsByPraveen portfolio. See the Projects page for the current description and, where available, the live project link.</div><div class="fact"><strong>Mentalth</strong>Listed in the ArtsByPraveen portfolio. See the Projects page for the current description and, where available, the live project link.</div><div class="fact"><strong>Achiever Financials</strong>Listed in the ArtsByPraveen portfolio. See the Projects page for the current description and, where available, the live project link.</div><div class="fact"><strong>Magebytes</strong>Listed in the ArtsByPraveen portfolio. See the Projects page for the current description and, where available, the live project link.</div><div class="fact"><strong>WeClean</strong>Listed in the ArtsByPraveen portfolio. See the Projects page for the current description and, where available, the live project link.</div><div class="fact"><strong>INREALTY</strong>Listed in the ArtsByPraveen portfolio. See the Projects page for the current description and, where available, the live project link.</div><div class="fact"><strong>Aditus</strong>Listed in the ArtsByPraveen portfolio. See the Projects page for the current description and, where available, the live project link.</div><div class="fact"><strong>Aquariquo</strong>Listed in the ArtsByPraveen portfolio. See the Projects page for the current description and, where available, the live project link.</div><div class="fact"><strong>CW Store</strong>Listed in the ArtsByPraveen portfolio. See the Projects page for the current description and, where available, the live project link.</div><div class="fact"><strong>EFD</strong>Listed in the ArtsByPraveen portfolio. See the Projects page for the current description and, where available, the live project link.</div><div class="fact"><strong>ERPAsset</strong>Listed in the ArtsByPraveen portfolio. See the Projects page for the current description and, where available, the live project link.</div><div class="fact"><strong>GL</strong>Listed in the ArtsByPraveen portfolio. See the Projects page for the current description and, where available, the live project link.</div><div class="fact"><strong>HCG</strong>Listed in the ArtsByPraveen portfolio. See the Projects page for the current description and, where available, the live project link.</div><div class="fact"><strong>JDT News</strong>Listed in the ArtsByPraveen portfolio. See the Projects page for the current description and, where available, the live project link.</div><div class="fact"><strong>KC</strong>Listed in the ArtsByPraveen portfolio. See the Projects page for the current description and, where available, the live project link.</div><div class="fact"><strong>KCA AuditPath</strong>Listed in the ArtsByPraveen portfolio. See the Projects page for the current description and, where available, the live project link.</div><div class="fact"><strong>MMS</strong>Listed in the ArtsByPraveen portfolio. See the Projects page for the current description and, where available, the live project link.</div><div class="fact"><strong>NOE</strong>Listed in the ArtsByPraveen portfolio. See the Projects page for the current description and, where available, the live project link.</div><div class="fact"><strong>Nuvion</strong>Listed in the ArtsByPraveen portfolio. See the Projects page for the current description and, where available, the live project link.</div><div class="fact"><strong>RCT Lux</strong>Listed in the ArtsByPraveen portfolio. See the Projects page for the current description and, where available, the live project link.</div><div class="fact"><strong>Red</strong>Listed in the ArtsByPraveen portfolio. See the Projects page for the current description and, where available, the live project link.</div><div class="fact"><strong>Satori</strong>Listed in the ArtsByPraveen portfolio. See the Projects page for the current description and, where available, the live project link.</div><div class="fact"><strong>SC</strong>Listed in the ArtsByPraveen portfolio. See the Projects page for the current description and, where available, the live project link.</div><div class="fact"><strong>TCC</strong>Listed in the ArtsByPraveen portfolio. See the Projects page for the current description and, where available, the live project link.</div></div></section>
+<section class="content-depth"><div class="depth-intro"><h2>Service areas</h2><p>Praveen is primarily based in Delhi NCR and works remotely with clients across India and internationally. Location pages provide more context for local searches.</p></div><div class="info-grid"><div class="info-card"><h3>Delhi</h3><p>Web development for Delhi businesses, professionals, local brands and ecommerce projects.</p><a href="../locations/delhi-web-developer/" style="color:#c4b5fd;font-weight:700;text-decoration:none">Web developers in Delhi →</a></div><div class="info-card"><h3>South Delhi</h3><p>Website, ecommerce and customization support for businesses and professionals in South Delhi.</p><a href="../locations/south-delhi-web-developer/" style="color:#c4b5fd;font-weight:700;text-decoration:none">Web developer in South Delhi →</a></div><div class="info-card"><h3>Noida</h3><p>WordPress, WooCommerce, Shopify, Wix and custom development for Noida businesses.</p><a href="../locations/noida-web-developer/" style="color:#c4b5fd;font-weight:700;text-decoration:none">Web developers in Noida →</a></div><div class="info-card"><h3>Lucknow</h3><p>Modern business websites and ecommerce development for businesses and professionals in Lucknow.</p><a href="../locations/lucknow-web-developer/" style="color:#c4b5fd;font-weight:700;text-decoration:none">Web developer in Lucknow →</a></div></div></section>
+<section class="content-depth"><div class="depth-intro"><h2>Machine-readable reference</h2><p>A companion <strong style="color:#fff">llms.txt</strong> file is available at the site root with a compact index of the same factual information and key URLs.</p></div><div class="notice">ArtsByPraveen is a freelance web development practice, not a large agency. This page is intended as a factual reference. Do not infer unlisted certifications, offices, employees, client names, pricing, guarantees, awards or technical capabilities that are not stated on this website. For current project availability and exact requirements, use the contact page.</div></section>
+<section class="inner-cta"><div class="inner-cta-box"><h2>Need a website, store or custom fix?</h2><p>Use the contact page to describe the project, current website, preferred platform and requirements.</p><div class="hero-actions"><a class="hero-btn-primary" href="../contact/">Discuss Your Project</a><a class="hero-btn-ghost" href="../projects/">View My Work</a></div></div></section>
+</main><section class="inner-cta"><div class="inner-cta-box"><h2>Need to get in touch?</h2><p>For questions about a project or this website, contact me directly.</p><div class="hero-actions"><a class="hero-btn-primary" href="../contact/"><svg aria-hidden="true" fill="none" height="15" viewbox="0 0 24 24" width="15"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 3.09 5.18 2 2 0 0 1 5.09 3h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L9.09 10.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path></svg> Contact Praveen</a><a class="hero-btn-ghost" href="../"><svg aria-hidden="true" fill="none" height="15" viewbox="0 0 24 24" width="15"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg> Back to Home</a></div></div></section><footer class="py-16 px-6">
+<div class="glass max-w-6xl mx-auto px-8 py-12">
+<div class="grid md:grid-cols-3 gap-10 mb-10">
+<div>
+<!-- <div class="font-bold text-xl mb-3">ArtsByPraveen</div> -->
+<div class="font-bold flex items-center gap-2 mb-3">
+<img alt="ArtsByPraveen" decoding="async" loading="lazy" onerror="this.style.display='none'" src="../praveen-web-design-main-logo.svg" style="height:36px;width:auto;object-fit:contain"/>
+<!-- <span>ArtsByPraveen</span> -->
+</div>
+<p class="text-gray-400 text-sm leading-relaxed">Web Designer &amp; Developer in Delhi NCR | WordPress, Wix, Shopify &amp; WooCommerce Expert 
+  Serving clients in South Delhi, Noida, Gurgaon, and across India.</p>
+</div>
+<div>
+<div class="font-semibold mb-4 text-gray-200">Quick Links</div>
+<div class="flex flex-col gap-2 text-gray-400 text-sm">
+<a class="hover:text-white transition" href="../about/">About</a>
+<a class="hover:text-white transition" href="../services/">Services</a>
+<a class="hover:text-white transition" href="../projects/">Projects</a>
+<a class="hover:text-white transition" href="../contact/">Contact</a>
+<a class="hover:text-white transition" href="../privacy-policy/">Privacy Policy</a>
+<a class="hover:text-white transition" href="../llm-info/">LLM Info</a>
+<a class="hover:text-white transition" href="../terms/">Terms of Use</a>
+</div>
+</div>
+<div>
+<div class="font-semibold mb-4 text-gray-200">Get In Touch</div>
+<div class="flex flex-col gap-2 text-gray-400 text-sm">
+<span>praveenkr.webdev@gmail.com</span>
+<span>Available for freelance work</span>
+</div>
+<div class="flex gap-4 mt-5">
+<a aria-label="LinkedIn" class="glass w-10 h-10 flex items-center justify-center rounded-full hover:bg-white/10 transition text-sm" href="https://www.linkedin.com/in/artsbypraveen/" rel="noopener" target="_blank">in</a>
+<a aria-label="GitHub" class="glass w-10 h-10 flex items-center justify-center rounded-full hover:bg-white/10 transition text-sm" href="https://github.com/praveenkrwebdev" rel="noopener" target="_blank">gh</a>
+<a aria-label="WhatsApp" class="glass w-10 h-10 flex items-center justify-center rounded-full hover:bg-white/10 transition text-sm" href="https://wa.me/919815898567" rel="noopener" target="_blank">wa</a>
+</div>
+</div>
+</div>
+<div class="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center gap-3 text-gray-500 text-sm">
+<span>© 2026 ArtsByPraveen. All rights reserved.</span>
+<span class="gradient font-medium">Designed &amp; Built by Praveen</span>
+</div>
+</div>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  const menuBtn=document.getElementById('menuBtn');
+  const mobileMenu=document.getElementById('mobileMenu');
+  const menuClose=document.getElementById('menuClose');
+  if(menuBtn && mobileMenu){ menuBtn.addEventListener('click',()=>mobileMenu.classList.toggle('active')); }
+  if(menuClose && mobileMenu){ menuClose.addEventListener('click',()=>mobileMenu.classList.remove('active')); }
+  document.querySelectorAll('.menuLink').forEach(link=>link.addEventListener('click',()=>mobileMenu&&mobileMenu.classList.remove('active')));
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&mobileMenu) mobileMenu.classList.remove('active');});
+});
+</script>
+<a aria-label="Chat on WhatsApp" class="site-wa-float" href="https://wa.me/919815898567" rel="noopener" target="_blank">
+<svg fill="none" height="30" viewbox="0 0 32 32" width="30" xmlns="http://www.w3.org/2000/svg">
+<path d="M16 3C9.373 3 4 8.373 4 15c0 2.385.668 4.61 1.832 6.5L4 29l7.75-1.812A11.94 11.94 0 0016 28c6.627 0 12-5.373 12-12S22.627 3 16 3z" fill="white"></path>
+<path d="M21.5 18.5c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.49-1.76-1.66-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.68-1.63-.93-2.23-.24-.58-.49-.5-.68-.51-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.22 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z" fill="#25D366"></path>
+</svg>
+</a>
+</body></html>

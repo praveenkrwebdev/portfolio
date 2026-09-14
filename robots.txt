@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /404.html
+Disallow: /privacy-policy/
+Disallow: /terms/
+Disallow: /llm-info/
+
+Sitemap: https://artsbypraveen.in/sitemap.xml

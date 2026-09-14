@@ -1,83 +1,40 @@
-🚀 ArtsByPraveen — Freelance Web Developer Portfolio
+# ArtsByPraveen
 
-🌐 Live Website: https://artsbypraveen.in
+Production website for ArtsByPraveen — Praveen Sharma, Web Designer & Developer.
 
-👨‍💻 Professional Web Developer (WordPress • Shopify • Wix)
+## Website
 
-Hi, I’m Praveen Kumar, a freelance web developer specializing in building modern, high-performance, and conversion-focused websites.
+https://artsbypraveen.in/
 
-I help businesses, startups, and personal brands create powerful online presence using scalable technologies and clean UI/UX design.
+## Technologies
 
-💼 What I Do
+- HTML
+- CSS
+- JavaScript
+- Tailwind CSS utilities
+- GitHub Pages
 
-✔ Custom Website Development
-✔ E-commerce Store Development
-✔ Landing Pages (High Conversion)
-✔ Website Speed Optimization
-✔ Bug Fixing & Maintenance
-✔ Custom Features & Integrations
+## Main Services
 
-🛠️ Tech Stack & Expertise
-🔧 Platforms & CMS
-WordPress (Custom Themes & Plugins)
-Shopify (Liquid Development)
-Wix (Wix Editor & Wix Velo)
-💻 Frontend Development
-HTML5, CSS3, JavaScript
-Tailwind CSS
-jQuery
-⚙️ Advanced Skills
-WordPress Custom Plugin Development
-Shopify Liquid Customization
-Wix Velo (Dynamic & Database Projects)
-Elementor & Page Builders
-⚡ Why Choose Me?
-🚀 Fast & Performance-Optimized Websites
-🎯 Client-Focused Solutions (Not just design, business results)
-📱 Fully Responsive (Mobile-first approach)
-🔍 SEO-Friendly Development
-🧩 Clean, Scalable Code
-📁 Project Structure
-/
-├── index.html
-├── 404.html
-├── about/
-├── services/
-├── contact/
-├── images/
-├── favicon.ico
-├── CNAME
-├── sitemap.xml
-└── robots.txt
-🔁 Redirect System
-404.html → Handles all unknown URLs
-Custom folders → Redirect old pages to homepage or sections
-🌍 SEO & Performance Features
-Meta Tags Optimization
-Open Graph (Social Sharing)
-Structured Data (Schema Markup)
-Fast Loading (Optimized Assets)
-Clean URL Structure
-📞 Contact Me
+- WordPress Development
+- WooCommerce Development
+- Shopify Development
+- Wix Development
+- Web Design & Development
+- Website Performance Optimization
 
-📧 Email: praveenkr.webdev@gmail.com
-📱 Phone / WhatsApp: +91 9815898567
+## Service Areas
 
-🤝 Let’s Work Together
+- Delhi
+- South Delhi
+- Noida
+- Lucknow
+- Delhi NCR
+- India
+- Worldwide
 
-Looking for a developer who can build professional, fast, and scalable websites?
+## Deployment
 
-👉 Let’s collaborate and bring your ideas to life.
+The website is deployed using GitHub Pages with the custom domain:
 
-⭐ Support
-
-If you like this project:
-
-⭐ Star the repository
-🍴 Fork it
-🔗 Share with others
-📄 License
-
-This project is open-source and available under the MIT License.
-
-🔥 Built with passion by Praveen Kumar
+`artsbypraveen.in`
