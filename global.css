@@ -122,6 +122,17 @@ gap:30px;
 padding:100px 16px 40px;
 }
 
+@media (max-width: 600px) {
+    .home-hero {
+        text-align: left;
+    }
+
+    .home-hero-content {
+        align-items: flex-start;
+        text-align: left;
+    }
+}    
+
 .blob1,.blob2{
 width:200px;
 height:200px;
