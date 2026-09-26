@@ -299,6 +299,30 @@ gap:24px;
 will-change:transform;
 }
 
+.privacy-consent {
+    margin: 15px 0 20px;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.privacy-consent label {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    cursor: pointer;
+}
+
+.privacy-consent input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    margin-top: 3px;
+    flex: 0 0 auto;
+    cursor: pointer;
+}
+
+.privacy-consent a {
+    text-decoration: underline;
+}
 /* project cards */
 .proj-card{
 flex-shrink:0;
